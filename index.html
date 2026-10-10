@@ -1,0 +1,1627 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Plan Maadi</title>
+<meta name="description" content="Pick any day, who you're with and what you're into. Get a plan built from real Bengaluru events on District, HighApe, allevents and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Caveat:wght@600;700&family=Newsreader:ital,opsz,wght@1,6..72,500;1,6..72,600&family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600;700&family=Lora:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: questionnaire left, the plan drawn as a metro line right (stacks on phones). Palette borrows Namma Metro's purple and green lines. */
+:root {
+  --bg: #F3F6F1; --surface: #FFFFFF; --ink: #17221B; --muted: #56665B; --line: #D8E1D6;
+  --purple: #6A3D9E; --purple-soft: #EEE7F7; --green: #1C7A4B; --green-soft: #E2F1E8; --gulmohar: #C9432A; --gulmohar-soft: #FBE9E4;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101612; --surface: #18201A; --ink: #E6EDE5; --muted: #9CAC9F; --line: #2A362D;
+    --purple: #B69AEB; --purple-soft: #2B2340; --green: #5CC48F; --green-soft: #1A3326; --gulmohar: #F08466; --gulmohar-soft: #3A221C;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101612; --surface: #18201A; --ink: #E6EDE5; --muted: #9CAC9F; --line: #2A362D;
+  --purple: #B69AEB; --purple-soft: #2B2340; --green: #5CC48F; --green-soft: #1A3326; --gulmohar: #F08466; --gulmohar-soft: #3A221C;
+  color-scheme: dark;
+}
+/* Occasion themes. Each occasion sets its accent (light and dark), display face, page backdrop and plan-card treatment.
+   Interests add an illustration to the plan card and their own icons to the burst. */
+.wrap { --acc-l: #6A3D9E; --acc-d: #B69AEB; --gold: #E9A100; --pop: #F2B705; }
+.wrap[data-occ="date"] { --acc-l: #C2185B; --acc-d: #F48FB1; --font-display: "Cormorant Garamond", Georgia, serif; }
+.wrap[data-occ="friends"] { --acc-l: #0E7490; --acc-d: #5ED3EA; --font-display: "Caveat", "Segoe Print", cursive; }
+.wrap[data-occ="solo"] { --acc-l: #3730A3; --acc-d: #A5B4FC; --font-display: "Newsreader", Georgia, serif; }
+.wrap[data-occ="social"] { --acc-l: #C2410C; --acc-d: #FDBA74; --font-display: "Baloo 2", "Trebuchet MS", sans-serif; }
+.wrap[data-occ="kids"] { --acc-l: #1D4ED8; --acc-d: #93C5FD; --font-display: "Fredoka", "Trebuchet MS", sans-serif; }
+.wrap[data-occ="elders"] { --acc-l: #A14B05; --acc-d: #FCD34D; --font-display: "Lora", Georgia, serif; }
+.wrap { --purple: var(--acc-l); --purple-soft: color-mix(in srgb, var(--purple) 12%, var(--surface)); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .wrap { --purple: var(--acc-d); --purple-soft: color-mix(in srgb, var(--purple) 18%, var(--surface)); } }
+:root[data-theme="dark"] .wrap { --purple: var(--acc-d); --purple-soft: color-mix(in srgb, var(--purple) 18%, var(--surface)); }
+.wrap { position: relative; z-index: 0; isolation: isolate; }
+.vibe-bg { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: color-mix(in srgb, var(--purple) 4%, var(--bg)); transition: background .4s; }
+.vibe-bg::before, .vibe-bg::after { content: ""; position: absolute; inset: 0; background-repeat: no-repeat; }
+.vibe-badge { align-self: flex-start; font-family: var(--font-data); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; background: var(--purple-soft); color: var(--purple); border: 1px solid color-mix(in srgb, var(--purple) 35%, transparent); }
+h1, .plan-head h2, .stop h3, .panel h3, .section-head h2 { transition: font-family .1s; }
+.wrap[data-occ="date"] h1, .wrap[data-occ="date"] .plan-head h2, .wrap[data-occ="date"] .stop h3, .wrap[data-occ="date"] .section-head h2, .wrap[data-occ="date"] .panel h3 { font-style: italic; font-weight: 700; letter-spacing: 0; }
+.wrap[data-occ="date"] h1 { font-size: clamp(42px, 7vw, 68px); }
+.wrap[data-occ="solo"] h1, .wrap[data-occ="solo"] .plan-head h2, .wrap[data-occ="solo"] .stop h3, .wrap[data-occ="solo"] .section-head h2, .wrap[data-occ="solo"] .panel h3 { font-style: italic; font-weight: 600; letter-spacing: 0; }
+.wrap[data-occ="friends"] h1 { font-size: clamp(48px, 8vw, 76px); font-weight: 700; letter-spacing: 0; }
+.wrap[data-occ="friends"] .plan-head h2 { font-size: 36px; font-weight: 700; }
+.wrap[data-occ="friends"] .stop h3, .wrap[data-occ="friends"] .section-head h2, .wrap[data-occ="friends"] .panel h3 { font-size: 26px; font-weight: 700; letter-spacing: 0; }
+.wrap[data-occ="kids"] h1, .wrap[data-occ="social"] h1 { letter-spacing: 0; }
+
+/* Date: rose wash, scattered hearts, a dotted heart line through the plan. */
+.wrap[data-occ="date"] .vibe-bg::before { background: radial-gradient(40vw 30vw at 92% 6%, color-mix(in srgb, var(--purple) 16%, transparent), transparent 70%), radial-gradient(34vw 28vw at 4% 90%, color-mix(in srgb, var(--purple) 12%, transparent), transparent 70%); }
+.wrap[data-occ="date"] .vibe-bg::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M30 44c-6-8-18-4-16 6 1 6 9 11 16 17 7-6 15-11 16-17 2-10-10-14-16-6z' fill='%23E91E63' fill-opacity='.10'/%3E%3Cpath d='M104 104c-3-4-9-2-8 3 0 3 4 6 8 9 4-3 8-6 8-9 1-5-5-7-8-3z' fill='%23E91E63' fill-opacity='.12'/%3E%3C/svg%3E"); background-repeat: repeat; }
+.wrap[data-occ="date"] .plan { border-color: color-mix(in srgb, var(--purple) 40%, var(--line)); box-shadow: 0 10px 40px -18px color-mix(in srgb, var(--purple) 60%, transparent); }
+.wrap[data-occ="date"] .stop .rail::before { background: repeating-linear-gradient(to bottom, var(--purple) 0 5px, transparent 5px 10px); width: 3px; }
+.wrap[data-occ="date"] .stop .rail i { border: 0; background: none; width: 20px; height: 20px; margin-top: 1px; }
+.wrap[data-occ="date"] .stop .rail i::before { content: "♥"; display: block; text-align: center; font-size: 20px; line-height: 20px; color: var(--purple); font-style: normal; }
+
+/* Friends: sunny doodle wall, a taped-up polaroid plan with a sticker shadow and highlighter titles. */
+.wrap[data-occ="friends"] .vibe-bg { background: color-mix(in srgb, #FACC15 9%, var(--bg)); }
+.wrap[data-occ="friends"] .vibe-bg::after { opacity: .5; background-repeat: repeat; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' fill='none' stroke='%230E7490' stroke-opacity='.28' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M30 30l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z'/%3E%3Cpath d='M120 40c8-8 16 8 24 0s16 8 24 0'/%3E%3Ccircle cx='60' cy='140' r='16'/%3E%3Cpath d='M53 136h0M67 136h0M52 146c4 5 12 5 16 0'/%3E%3Cpath d='M160 120l-10 22h12l-8 22'/%3E%3Cpath d='M110 190c10-12 30-12 40 0'/%3E%3Cpath d='M190 190l8 8M198 190l-8 8'/%3E%3C/svg%3E"); }
+.wrap[data-occ="friends"] .plan { transform: rotate(-.7deg); border: 2px solid var(--ink); border-radius: 6px; box-shadow: 7px 7px 0 var(--purple); margin-top: 10px; }
+.wrap[data-occ="friends"] .plan::before { content: ""; position: absolute; top: -13px; left: 50%; width: 120px; height: 26px; transform: translateX(-50%) rotate(2deg); background: color-mix(in srgb, #FACC15 70%, transparent); border-radius: 2px; }
+.wrap[data-occ="friends"] .plan, .wrap[data-occ="social"] .plan, .wrap[data-occ="solo"] .plan { position: relative; }
+.wrap[data-occ="friends"] .stop h3 { align-self: flex-start; background: linear-gradient(transparent 58%, color-mix(in srgb, #FACC15 75%, transparent) 58% 92%, transparent 92%); }
+.wrap[data-occ="friends"] .chip input:checked + span { box-shadow: 3px 3px 0 var(--ink); border-color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .wrap[data-occ="friends"] .plan { transform: none; } }
+
+/* Solo: a quiet night sky with a crescent moon; the plan is a ruled journal page. */
+.wrap[data-occ="solo"] .vibe-bg { background: linear-gradient(180deg, color-mix(in srgb, var(--purple) 12%, var(--bg)), var(--bg) 70%); }
+.wrap[data-occ="solo"] .vibe-bg::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Cg fill='%233730A3' fill-opacity='.22'%3E%3Ccircle cx='20' cy='30' r='1.6'/%3E%3Ccircle cx='140' cy='14' r='1.2'/%3E%3Ccircle cx='230' cy='60' r='1.8'/%3E%3Ccircle cx='90' cy='110' r='1.2'/%3E%3Ccircle cx='270' cy='150' r='1.4'/%3E%3Ccircle cx='180' cy='180' r='1'/%3E%3C/g%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M78 20a42 42 0 1 0 22 70 34 34 0 1 1-22-70z' fill='%233730A3' fill-opacity='.16'/%3E%3C/svg%3E"); background-repeat: repeat, no-repeat; background-position: 0 0, right 6vw top 90px; }
+.wrap[data-occ="solo"] .plan { background-image: repeating-linear-gradient(transparent 0 29px, color-mix(in srgb, var(--purple) 10%, transparent) 29px 30px); }
+.wrap[data-occ="solo"] .plan::before { content: ""; position: absolute; top: 0; bottom: 0; left: 12px; width: 1.5px; background: color-mix(in srgb, #DC2626 35%, transparent); }
+
+/* Meet new people: speech bubbles everywhere, a "Hello, my name is" sticker badge and chat-bubble stops. */
+.wrap[data-occ="social"] .vibe-bg::after { opacity: .9; background-repeat: repeat; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='220' fill='none' stroke='%23C2410C' stroke-opacity='.12' stroke-width='2.5' stroke-linejoin='round'%3E%3Cpath d='M20 30h70a10 10 0 0 1 10 10v24a10 10 0 0 1-10 10H46l-14 12v-12H20a10 10 0 0 1-10-10V40a10 10 0 0 1 10-10z'/%3E%3Cpath d='M170 120h60a10 10 0 0 1 10 10v20a10 10 0 0 1-10 10h-12v12l-14-12h-34a10 10 0 0 1-10-10v-20a10 10 0 0 1 10-10z'/%3E%3Ccircle cx='60' cy='170' r='4'/%3E%3Ccircle cx='76' cy='170' r='4'/%3E%3Ccircle cx='92' cy='170' r='4'/%3E%3C/svg%3E"); }
+.wrap[data-occ="social"] .vibe-badge { border-radius: 8px; padding: 0; overflow: hidden; border: 2px solid #DC2626; background: var(--surface); color: var(--ink); text-transform: none; letter-spacing: 0; display: flex; flex-direction: column; min-width: 150px; }
+.wrap[data-occ="social"] .vibe-badge::before { content: "HELLO, my name is"; display: block; background: #DC2626; color: #fff; font-size: 10.5px; letter-spacing: .08em; padding: 3px 10px; font-weight: 600; }
+.wrap[data-occ="social"] .vibe-badge span { font-family: "Caveat", cursive; font-size: 22px; padding: 2px 10px 4px; display: block; }
+.wrap[data-occ="social"] .stop .body { background: var(--purple-soft); border-radius: 16px 16px 16px 4px; padding: 12px 14px; margin-bottom: 16px; }
+.wrap[data-occ="social"] .stop.spot .body { background: color-mix(in srgb, var(--green) 10%, var(--surface)); border-radius: 16px 16px 4px 16px; }
+
+/* Kids: balloons and a kite, a rainbow route with crayon-coloured stops, bouncy chips. */
+.wrap[data-occ="kids"] .vibe-bg::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='300'%3E%3Cpath d='M40 210 Q50 250 36 296' stroke='%23999' stroke-opacity='.4' fill='none'/%3E%3Cellipse cx='40' cy='180' rx='26' ry='32' fill='%23EF4444' fill-opacity='.22'/%3E%3Cpath d='M100 170 Q95 230 110 296' stroke='%23999' stroke-opacity='.4' fill='none'/%3E%3Cellipse cx='100' cy='140' rx='24' ry='30' fill='%23F59E0B' fill-opacity='.24'/%3E%3Cpath d='M70 120 Q76 200 64 296' stroke='%23999' stroke-opacity='.4' fill='none'/%3E%3Cellipse cx='70' cy='90' rx='22' ry='28' fill='%233B82F6' fill-opacity='.22'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='220'%3E%3Cpath d='M80 10 L130 60 L80 130 L30 60Z' fill='%2310B981' fill-opacity='.2'/%3E%3Cpath d='M80 10V130M30 60H130' stroke='%2310B981' stroke-opacity='.35'/%3E%3Cpath d='M80 130 q-14 20 0 34 t0 34' stroke='%23999' stroke-opacity='.4' fill='none'/%3E%3Cpath d='M74 150l6 4 6-4M74 176l6 4 6-4' stroke='%23EC4899' stroke-opacity='.5' fill='none' stroke-width='3'/%3E%3C/svg%3E"); background-position: left 1vw bottom 0, right 3vw top 120px; }
+.wrap[data-occ="kids"] .plan { border-radius: 26px; border: 3px dashed color-mix(in srgb, var(--purple) 45%, var(--line)); }
+.wrap[data-occ="kids"] .stop .rail::before { width: 8px; background: linear-gradient(#EF4444, #F59E0B, #EAB308, #22C55E, #3B82F6, #8B5CF6); }
+.wrap[data-occ="kids"] .stop .rail i { border-color: #EF4444; width: 18px; height: 18px; }
+.wrap[data-occ="kids"] .stop:nth-child(2) .rail i { border-color: #22C55E; }
+.wrap[data-occ="kids"] .stop:nth-child(3) .rail i { border-color: #8B5CF6; }
+.wrap[data-occ="kids"] .chip span { border-radius: 16px; border-width: 2px; }
+.wrap[data-occ="kids"] .chip:hover span { transform: translateY(-2px) rotate(-1deg); }
+.wrap[data-occ="kids"] .chip span { transition: transform .15s, background .3s, border-color .3s; }
+
+/* With elders: bigger text, a marigold-and-mango-leaf toran across the top, a kolam dot grid, a garland route. */
+.wrap[data-occ="elders"] { font-size: 16.5px; }
+.wrap[data-occ="elders"] .chip span { font-size: 15.5px; padding: 9px 15px; }
+.wrap[data-occ="elders"] .sub, .wrap[data-occ="elders"] .ev .where { font-size: 15px; }
+.wrap[data-occ="elders"] .vibe-bg { background: color-mix(in srgb, #F59E0B 6%, var(--bg)); }
+.wrap[data-occ="elders"] .vibe-bg::before { background-image: radial-gradient(color-mix(in srgb, var(--purple) 26%, transparent) 1.6px, transparent 2px); background-size: 26px 26px; background-repeat: repeat; -webkit-mask: radial-gradient(60vw 50vh at 100% 100%, #000, transparent 70%); mask: radial-gradient(60vw 50vh at 100% 100%, #000, transparent 70%); }
+.wrap[data-occ="elders"] .vibe-bg::after { height: 46px; background-repeat: repeat-x; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='46'%3E%3Cpath d='M0 4 Q30 14 60 4' stroke='%23A14B05' stroke-opacity='.5' fill='none' stroke-width='1.5'/%3E%3Ccircle cx='15' cy='14' r='7' fill='%23F59E0B' fill-opacity='.75'/%3E%3Ccircle cx='15' cy='14' r='3' fill='%23EA580C' fill-opacity='.8'/%3E%3Cpath d='M45 9 q8 14 0 32 q-8-18 0-32z' fill='%2316A34A' fill-opacity='.55'/%3E%3C/svg%3E"); }
+.wrap[data-occ="elders"] .stop .rail::before { width: 10px; background: radial-gradient(circle, #F59E0B 0 4px, transparent 4.5px) 0 0 / 10px 11px repeat-y; }
+.wrap[data-occ="elders"] .stop .rail i { border-color: #EA580C; }
+
+/* Interest illustration across the top of the plan card. */
+.banner { color: var(--purple); margin: -6px -6px 0; height: 84px; border-radius: 10px; background: color-mix(in srgb, var(--purple) 7%, var(--surface)); overflow: hidden; display: flex; align-items: flex-end; }
+.banner svg { width: 100%; height: 100%; display: block; }
+.banner .c { fill: currentColor; }
+.banner .s { fill: color-mix(in srgb, currentColor 30%, var(--surface)); }
+.banner .k { fill: var(--ink); }
+.banner .g { fill: var(--gold); }
+.banner .w { fill: var(--surface); }
+.banner .l { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.banner .lk { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; }
+.banner .ls { fill: none; stroke: color-mix(in srgb, currentColor 35%, var(--surface)); stroke-width: 2; }
+.banner text { font-family: var(--font-display); font-weight: 800; fill: var(--ink); }
+.floaty { position: fixed; bottom: -48px; z-index: 50; pointer-events: none; animation: floatUp var(--dur, 3.2s) ease-out forwards; animation-delay: var(--delay, 0s); opacity: 0; will-change: transform; }
+@keyframes floatUp { 0% { transform: translate(0, 0) rotate(0) scale(.7); opacity: 0; } 12% { opacity: 1; } 100% { transform: translate(var(--dx, 0), -105vh) rotate(var(--rot, 20deg)) scale(1.1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .floaty { display: none; } }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+a { color: var(--purple); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible + span { outline: 2px solid var(--purple); outline-offset: 2px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; }
+header.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; padding-block-end: 22px; border-bottom: 1px solid var(--line); margin-bottom: 26px; }
+.brand { display: flex; flex-direction: column; gap: 2px; }
+.brand .kn { font-family: var(--font-data); font-size: 12px; letter-spacing: .08em; color: var(--muted); }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(36px, 6vw, 58px); line-height: 1; letter-spacing: -.02em; margin: 0; }
+h1 .dot { color: var(--purple); transition: color .3s; }
+.lede { max-width: 48ch; color: var(--muted); margin: 0; }
+.lede b { color: var(--ink); font-weight: 600; }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px; align-items: start; }
+@media (max-width: 920px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+
+form { display: flex; flex-direction: column; gap: 26px; }
+fieldset.section { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.section-head { display: flex; align-items: baseline; gap: 10px; }
+.section-head h2 { font-family: var(--font-display); font-size: 21px; font-weight: 700; margin: 0; }
+.section-head span { font-family: var(--font-data); font-size: 11px; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+.q { display: flex; flex-direction: column; gap: 8px; }
+.q-label { font-weight: 600; font-size: 14px; }
+.q-label small { font-weight: 400; color: var(--muted); margin-left: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { position: relative; }
+.chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.chip span { display: inline-flex; align-items: center; gap: 6px; padding: 7px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 14px; cursor: pointer; transition: background .15s, border-color .15s; user-select: none; }
+.chip span em { font-style: normal; font-family: var(--font-data); font-size: 11px; color: var(--muted); }
+.chip input:checked + span { background: var(--purple-soft); border-color: var(--purple); font-weight: 600; }
+.chip input:checked + span::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--purple); }
+.chip input:disabled + span { opacity: .45; cursor: default; }
+.chip:hover span { border-color: var(--purple); }
+.chip .count { font-family: var(--font-data); font-size: 11px; color: var(--muted); font-weight: 400; }
+.hint { font-size: 13px; color: var(--muted); margin: 0; }
+.go { display: none; }
+@media (max-width: 920px) { .go { display: block; } }
+.btn { font: inherit; font-weight: 600; font-size: 14px; border-radius: 999px; padding: 8px 15px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; }
+.btn:hover { border-color: var(--purple); }
+.btn.primary { background: var(--purple); border-color: var(--purple); color: var(--surface); }
+.btn, .chip span, .vibe-badge { transition: background .3s, border-color .3s, color .3s; }
+
+.right { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.plan { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 18px; }
+.plan-head { display: flex; flex-direction: column; gap: 4px; }
+.eyebrow { font-family: var(--font-data); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--purple); }
+.plan-head h2 { font-family: var(--font-display); font-weight: 800; font-size: 28px; line-height: 1.1; margin: 0; text-wrap: balance; }
+.summary { display: flex; flex-wrap: wrap; gap: 6px 14px; font-family: var(--font-data); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.summary b { color: var(--ink); font-weight: 500; }
+.relaxed { font-size: 13px; color: var(--gulmohar); margin: 0; }
+
+.route { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.stop { display: grid; grid-template-columns: 64px 22px minmax(0, 1fr); column-gap: 10px; }
+.stop .time { font-family: var(--font-data); font-size: 12.5px; color: var(--muted); padding-top: 3px; text-align: right; font-variant-numeric: tabular-nums; }
+.stop .rail { position: relative; display: flex; justify-content: center; }
+.stop .rail::before { content: ""; position: absolute; top: 0; bottom: 0; width: 6px; background: var(--purple); border-radius: 3px; transition: background .3s; }
+.stop:first-child .rail::before { top: 8px; }
+.stop:last-child .rail::before { bottom: auto; height: 14px; }
+.stop .rail i { position: relative; margin-top: 5px; width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 4px solid var(--purple); }
+.stop.spot .rail i { border-color: var(--green); }
+.stop .body { padding-bottom: 22px; display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.kind { font-family: var(--font-data); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.stop h3 { font-family: var(--font-display); font-size: 19px; font-weight: 700; margin: 0; line-height: 1.2; }
+.stop p { margin: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.tag { font-family: var(--font-data); font-size: 11.5px; padding: 2px 8px; border-radius: 6px; background: var(--green-soft); color: var(--ink); font-variant-numeric: tabular-nums; }
+.tag.src { background: var(--purple-soft); }
+.tag.live { background: var(--gulmohar-soft); color: var(--gulmohar); font-weight: 500; }
+.sub { font-size: 13.5px; color: var(--muted); }
+.links { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13.5px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.copied { font-size: 13px; color: var(--green); }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; }
+.panel h3 { font-family: var(--font-display); font-size: 18px; margin: 0; }
+.panel .sub { margin: 0; }
+.evlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.ev { display: grid; grid-template-columns: 66px minmax(0, 1fr) auto; gap: 4px 12px; padding: 10px 0; border-top: 1px solid var(--line); align-items: start; }
+.ev:first-child { border-top: 0; }
+.ev .when { font-family: var(--font-data); font-size: 12px; color: var(--muted); line-height: 1.35; font-variant-numeric: tabular-nums; }
+.ev .when b { display: block; color: var(--ink); font-weight: 500; }
+.ev .what { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.ev .what a { font-weight: 600; text-decoration: none; color: var(--ink); }
+.ev .what a:hover { color: var(--purple); text-decoration: underline; }
+.ev .where { font-size: 13px; color: var(--muted); }
+.ev .side { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.ev .price { font-family: var(--font-data); font-size: 12.5px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ev button { font: inherit; font-size: 12px; background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--muted); cursor: pointer; white-space: nowrap; }
+.ev button:hover { border-color: var(--purple); color: var(--purple); }
+@media (max-width: 480px) { .ev { grid-template-columns: 58px minmax(0, 1fr); } .ev .side { grid-column: 2; flex-direction: row; align-items: center; justify-content: space-between; } }
+details.cat { border-top: 1px solid var(--line); padding-top: 8px; }
+details.cat summary { cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; }
+details.cat summary span { font-family: var(--font-data); font-size: 12px; color: var(--muted); font-weight: 400; }
+.empty { color: var(--muted); font-size: 14px; margin: 0; }
+footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display: flex; flex-direction: column; gap: 8px; max-width: 86ch; }
+footer p { margin: 0; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+/* Calendar: month grid, weekends tinted, dots show how busy each day is. */
+.quick { display: flex; flex-wrap: wrap; gap: 6px; }
+.qbtn { font: inherit; font-size: 13px; padding: 5px 11px; border-radius: 999px; border: 1px dashed var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.qbtn:hover { border-color: var(--purple); }
+.qbtn[aria-pressed="true"] { border-style: solid; border-color: var(--purple); background: var(--purple-soft); font-weight: 600; }
+.cal { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 10px 8px; max-width: 380px; }
+.cal-head { display: flex; align-items: center; justify-content: space-between; padding: 0 2px 6px; }
+.cal-head b { font-family: var(--font-display); font-size: 16px; }
+.cal-nav { font: inherit; font-size: 20px; line-height: 1; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.cal-nav:disabled { opacity: .3; cursor: default; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px 0; }
+.cal-dow { text-align: center; font-family: var(--font-data); font-size: 10.5px; color: var(--muted); padding: 2px 0 4px; text-transform: uppercase; }
+.cal-dow.we { color: var(--purple); }
+.cal-day { position: relative; font: inherit; font-size: 14px; font-variant-numeric: tabular-nums; height: 40px; border: 0; background: transparent; color: var(--ink); cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 0; }
+.cal-day.we { color: var(--purple); font-weight: 600; }
+.cal-day:disabled { color: var(--muted); opacity: .35; cursor: default; font-weight: 400; }
+.cal-day:not(:disabled):hover { background: var(--purple-soft); border-radius: 8px; }
+.cal-day.today::after { content: "today"; position: absolute; top: -1px; font-family: var(--font-data); font-size: 8px; letter-spacing: .04em; color: var(--muted); text-transform: uppercase; }
+.cal-day.in { background: var(--purple-soft); }
+.cal-day.a { border-radius: 10px 0 0 10px; } .cal-day.b { border-radius: 0 10px 10px 0; } .cal-day.a.b { border-radius: 10px; }
+.cal-day.a, .cal-day.b { background: var(--purple); color: var(--surface); }
+.cal-day.a::after, .cal-day.b::after { color: var(--surface); }
+.dots { display: block; height: 4px; width: 4px; border-radius: 2px; background: currentColor; opacity: .55; }
+.dots.d2 { width: 10px; box-shadow: none; background: radial-gradient(circle, currentColor 2px, transparent 2.2px) 0 0 / 5px 4px repeat-x; border-radius: 0; }
+.dots.d3 { width: 15px; background: radial-gradient(circle, currentColor 2px, transparent 2.2px) 0 0 / 5px 4px repeat-x; border-radius: 0; }
+
+/* Duration slider: one hour to two days, full width, a dot for every step and five labels. */
+.dur { display: flex; flex-direction: column; gap: 2px; width: 100%; }
+.dur output { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--purple); }
+.dur-read { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; margin-bottom: 4px; }
+.dur-read span { font-size: 13px; color: var(--muted); }
+.dur input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; margin: 0; background: transparent; cursor: pointer; }
+.dur input[type=range]::-webkit-slider-runnable-track { height: 8px; border-radius: 99px; background: linear-gradient(to right, var(--purple) 0 var(--fill, 30%), var(--line) var(--fill, 30%) 100%); }
+.dur input[type=range]::-moz-range-track { height: 8px; border-radius: 99px; background: var(--line); }
+.dur input[type=range]::-moz-range-progress { height: 8px; border-radius: 99px; background: var(--purple); }
+.dur input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; box-sizing: border-box; width: 24px; height: 24px; margin-top: -8px; border-radius: 50%; background: var(--surface); border: 4px solid var(--purple); box-shadow: 0 1px 4px rgba(0, 0, 0, .2); }
+.dur input[type=range]::-moz-range-thumb { box-sizing: border-box; width: 24px; height: 24px; border-radius: 50%; background: var(--surface); border: 4px solid var(--purple); box-shadow: 0 1px 4px rgba(0, 0, 0, .2); }
+.dur input[type=range]:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 99px; }
+.dur .steps { position: relative; height: 6px; margin: 2px 12px 0; }
+.dur .steps i { position: absolute; top: 0; left: calc(var(--i) / 15 * 100%); width: 4px; height: 4px; border-radius: 50%; background: var(--muted); opacity: .4; transform: translateX(-50%); }
+.dur .steps i.big { width: 6px; height: 6px; top: -1px; opacity: .55; }
+.dur .ticks { position: relative; height: 16px; margin: 2px 12px 0; font-family: var(--font-data); font-size: 11px; color: var(--muted); }
+.dur .ticks > span { position: absolute; top: 0; left: calc(var(--i) / 15 * 100%); transform: translateX(-50%); white-space: nowrap; line-height: 14px; }
+.dur .ticks > span:first-child { transform: translateX(-12px); }
+.dur .ticks > span:last-child { transform: translateX(calc(-100% + 12px)); }
+.dur .ticks .s { display: none; }
+@media (max-width: 480px) { .dur .ticks .f { display: none; } .dur .ticks .s { display: inline; } }
+.tag.metro { background: color-mix(in srgb, #8E44AD 14%, var(--surface)); }
+.select select { font: inherit; font-size: 14px; padding: 8px 34px 8px 13px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); appearance: none; -webkit-appearance: none; cursor: pointer; max-width: 100%;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: right 16px center, right 11px center; background-size: 5px 5px; background-repeat: no-repeat; }
+.select select:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+
+/* Indoors / outdoors toggle on the plan. */
+.io { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, var(--purple) 6%, var(--surface)); border: 1px solid color-mix(in srgb, var(--purple) 18%, var(--line)); }
+.io-label { font-weight: 600; font-size: 13.5px; }
+.io-seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); padding: 3px; gap: 2px; }
+.io-seg button { font: inherit; font-size: 13px; border: 0; background: transparent; color: var(--ink); padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+.io-seg button:hover { background: var(--purple-soft); }
+.io-seg button[aria-checked="true"] { background: var(--purple); color: var(--surface); font-weight: 600; }
+@media (max-width: 480px) { .io-seg { display: grid; grid-template-columns: 1fr 1fr; border-radius: 12px; } .io-seg button { border-radius: 9px; white-space: nowrap; padding: 5px 8px; text-align: center; } }
+.plan-head h2 .plus { font-size: .62em; color: var(--muted); display: block; margin-top: 4px; }
+.dayhead { margin: 6px 0 -6px; font-family: var(--font-display); font-size: 18px; display: flex; align-items: baseline; gap: 10px; }
+.dayhead span { font-family: var(--font-data); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--surface); background: var(--purple); padding: 2px 8px; border-radius: 6px; }
+.num { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--purple); color: var(--surface); font-family: var(--font-data); font-size: 10.5px; font-weight: 600; margin-right: 6px; vertical-align: 1px; letter-spacing: 0; }
+.stop.spot .kind .num { background: var(--purple); }
+
+/* The map. */
+.map { margin: 0; display: flex; flex-direction: column; gap: 8px; border-top: 1px dashed var(--line); padding-top: 14px; }
+.map figcaption { font-family: var(--font-data); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.map-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.map-stats span { display: flex; flex-direction: column; font-size: 12px; color: var(--muted); background: color-mix(in srgb, var(--purple) 6%, var(--surface)); border-radius: 10px; padding: 7px 10px; }
+.map-stats b { font-family: var(--font-display); font-size: 20px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.map-svg { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line); overflow: hidden;
+  --map-bg: color-mix(in srgb, var(--ink) 5%, var(--surface)); --map-land: var(--surface); --map-water: #A9D3EE; --map-park: color-mix(in srgb, #3FA36B 26%, var(--surface)); --map-road: color-mix(in srgb, var(--ink) 13%, var(--surface)); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .map-svg { --map-water: #24485F; } }
+:root[data-theme="dark"] .map-svg { --map-water: #24485F; }
+.m-bg { fill: var(--map-bg); }
+.m-city { fill: var(--map-land); stroke: color-mix(in srgb, var(--ink) 10%, transparent); stroke-width: 1; }
+.m-park { fill: var(--map-park); }
+.m-lake { fill: var(--map-water); }
+.m-road { fill: none; stroke: var(--map-road); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.m-orr { fill: none; stroke: var(--map-road); stroke-width: 4; stroke-linejoin: round; }
+.m-metro { fill: none; stroke-width: 2; stroke-opacity: .55; stroke-linecap: round; stroke-linejoin: round; }
+.m-stn { fill: var(--surface); stroke-width: 1.4; }
+.m-lbl { font-family: var(--font-data); font-size: 9px; fill: var(--muted); paint-order: stroke; stroke: var(--map-land); stroke-width: 3px; }
+.m-lbl.big { font-size: 13px; font-weight: 600; }
+.m-lbl.you { font-size: 10px; fill: var(--ink); font-weight: 600; }
+.m-route { fill: none; stroke: var(--purple); stroke-width: 3; stroke-dasharray: 7 5; stroke-linecap: round; stroke-linejoin: round; }
+.m-home { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 2 4; opacity: .7; }
+.m-start circle { fill: var(--ink); stroke: var(--surface); stroke-width: 2.5; }
+.m-start path { fill: var(--surface); }
+.m-stop circle { fill: var(--purple); stroke: var(--surface); stroke-width: 2.5; }
+.m-stop text { font-family: var(--font-data); font-size: 11px; font-weight: 700; fill: var(--surface); }
+.m-scale path { stroke: var(--ink); stroke-width: 2; }
+.m-scale text { font-family: var(--font-data); font-size: 9px; fill: var(--ink); }
+.legs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; font-size: 13.5px; }
+.legs b { font-variant-numeric: tabular-nums; }
+.legs .muted, .map-note { color: var(--muted); }
+.map-note { font-size: 12px; margin: 0; }
+@media (max-width: 480px) { .map-stats b { font-size: 17px; } .map-stats span { padding: 6px 8px; } }
+
+/* Grandparents and babies. */
+.plan { position: relative; }
+.mascot { position: absolute; top: -20px; right: 18px; display: flex; z-index: 2; }
+.mascot svg { width: 64px; height: 64px; border-radius: 50%; background: var(--surface); border: 3px solid var(--purple); padding: 4px 4px 0; box-shadow: 0 4px 14px -6px color-mix(in srgb, var(--purple) 70%, transparent); }
+.mascot.two svg + svg { margin-left: -14px; }
+.wrap[data-occ="kids"] .mascot svg { animation: bob 2.4s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translateY(-4px) rotate(-4deg); } }
+@media (prefers-reduced-motion: reduce) { .mascot svg { animation: none !important; } }
+.deco { position: absolute; left: 8px; bottom: 0; width: min(210px, calc((100vw - 1200px) / 2 + 6px)); display: none; }
+.deco svg { width: 100%; height: auto; display: block; }
+@media (min-width: 1440px) { .deco { display: block; } }
+.wrap[data-occ="kids"] .deco { left: auto; right: 8px; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.dayhead small { font-family: var(--font-data); font-size: 12px; font-weight: 500; color: var(--muted); margin-left: 6px; }
+.chips input:disabled + span { opacity: .55; }
+.m-stop rect { fill: var(--purple); stroke: var(--surface); stroke-width: 2.5; }
+.m-lead { stroke: var(--purple); stroke-width: 1.4; fill: none; }
+.m-tie { fill: var(--purple); stroke: var(--surface); stroke-width: 1.5; }
+@media (max-width: 480px) { .ev .side { flex-wrap: wrap; gap: 4px 8px; } .ev .price { white-space: normal; } }
+.map-stats small { font-size: 11px; font-weight: 500; margin-right: 3px; }
+.legs .dir { font-size: 12px; margin-left: 6px; white-space: nowrap; }
+.map .btn.route { display: inline-flex; margin: 10px 0 2px; font-size: 13px; padding: 8px 14px; }
+</style>
+
+<div class="wrap" id="wrap" data-occ="date">
+  <div class="vibe-bg" aria-hidden="true"><div class="deco" id="deco"></div></div>
+  <header class="top">
+    <div class="brand">
+      <span class="kn">ಪ್ಲಾನ್ ಮಾಡಿ · BENGALURU, ANY DAY</span>
+      <h1>Plan Maadi<span class="dot">.</span></h1>
+      <span class="vibe-badge" id="vibeBadge">Date mode</span>
+    </div>
+    <p class="lede" id="lede">Pick your dates and tell us who's coming. We'll build your plan from <b>what's actually on</b> in Bengaluru, with a map of where it all is.</p>
+  </header>
+
+  <div class="grid">
+    <form id="quiz" autocomplete="off" onsubmit="return false">
+      <fieldset class="section">
+        <div class="section-head"><h2>Your outing</h2><span>who and what</span></div>
+        <div class="q"><div class="q-label">What's the occasion?</div><div class="chips" data-name="occ" data-type="radio"></div></div>
+        <div class="q"><div class="q-label">What do you feel like? <small>pick as many as you like</small></div><div class="chips" data-name="like" data-type="checkbox"></div>
+          <p class="hint">Not sure? Keep “General” and we'll pick a mix. Numbers show how many listings match on the dates you picked.</p></div>
+      </fieldset>
+
+      <fieldset class="section">
+        <div class="section-head"><h2>When</h2><span>any day</span></div>
+        <div class="q"><div class="q-label">Pick a date <small>tap a second date for a range</small></div>
+          <div class="quick" id="quick"></div>
+          <div class="cal" id="cal"></div>
+          <p class="hint" id="calHint"></p></div>
+        <div class="q"><div class="q-label" id="durLabel">How long do you have?</div>
+          <div class="dur"><div class="dur-read"><output id="durOut" for="dur">5 hours</output><span id="durSub">Half a day</span></div>
+            <input type="range" id="dur" min="0" max="15" step="1" value="4" aria-labelledby="durLabel">
+            <div class="steps" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12" class="big"></i><i style="--i:13" class="big"></i><i style="--i:14" class="big"></i><i style="--i:15" class="big"></i></div>
+            <div class="ticks" aria-hidden="true"><span style="--i:0"><span class="f">1 hour</span><span class="s">1h</span></span><span style="--i:5"><span class="f">6 hours</span><span class="s">6h</span></span><span style="--i:11"><span class="f">12 hours</span><span class="s">12h</span></span><span style="--i:13"><span class="f">1 day</span><span class="s">1d</span></span><span style="--i:15"><span class="f">2 days</span><span class="s">2d</span></span></div></div></div>
+        <div class="q"><div class="q-label">When are you free? <small>pick any</small></div><div class="chips" data-name="slot" data-type="checkbox"></div><p class="hint" id="slotHint" hidden>Plans of 18 hours or more use every time of day.</p></div>
+      </fieldset>
+
+      <fieldset class="section">
+        <div class="section-head"><h2>Money and distance</h2><span>per person</span></div>
+        <div class="q"><div class="q-label">Budget per person</div><div class="chips" data-name="budget" data-type="radio"></div></div>
+        <div class="q"><label class="q-label" for="start">Where are you starting from?</label><div class="select"><select id="start"></select></div></div>
+        <div class="q"><div class="q-label">How far will you go?</div><div class="chips" data-name="reach" data-type="radio"></div></div>
+        <div class="q"><div class="q-label">Any constraint? <small>pick any that apply</small></div><div class="chips" data-name="extra" data-type="checkbox"></div></div>
+      </fieldset>
+      <div class="go"><button type="button" class="btn primary" id="jump">See my plan</button></div>
+    </form>
+
+    <div class="right">
+      <p class="sr-only" id="planStatus" aria-live="polite"></p>
+      <section class="plan" id="plan" aria-label="Your plan"><p class="empty">Loading what's on…</p></section>
+      <section class="panel" id="more"></section>
+    </div>
+  </div>
+
+  <footer>
+    <p id="fresh"><strong>Where the listings come from.</strong> Events are collected from District by Zomato, HighApe, allevents.in, Fever (Candlelight concerts), Playo and Instagram (Cubbon Reads). Date ideas come from Explore Bangalore and Splashit. Every listing links to the page where you book it.</p>
+    <p>Prices are the lowest ticket shown on the listing. Organisers change times and sell out, so check the listing before you go. Map distances are measured along real roads, using the quickest usual route by car, and drive times assume usual city traffic. Tap Directions for live traffic in Google Maps. Constraint details (smoking areas, pets, step-free access, noise) come from venue listings and reviews; when a venue doesn't say, the plan flags it so you can call ahead. BookMyShow and most Instagram pages can't be read automatically yet, so their events only appear when they're also listed elsewhere.</p>
+    <p class="credit">Road distances are worked out from road data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> and TomTom, via <a href="https://overturemaps.org" target="_blank" rel="noopener">Overture Maps</a>, under the <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener">ODbL</a>.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById("quiz");
+  var planEl = document.getElementById("plan"), moreEl = document.getElementById("more"), wrapEl = document.getElementById("wrap");
+  var calEl = document.getElementById("cal"), quickEl = document.getElementById("quick"), durEl = document.getElementById("dur"), startEl = document.getElementById("start");
+  var DATA = null, WIN = [], COUNT = {}, PLACE_EVENTS = [], METRO = [], CUR = null, STALE = false;
+  var state = { pick: null, shuffle: 0, io: "any", sel: [null, null], month: null, armed: true, likeOrder: [], shown: {} };
+
+  // Always-available places to eat and date spots, used around the main event.
+  // c is cost per person in ₹. ll: [lat, lng]. tags: date, veg, alc, quick.
+  var SPOTS = [
+    { n: "Benne dosa at CTR", a: "Malleshwaram", ll: [12.9985, 77.5690], c: [100, 250], s: ["early", "day"], tags: ["veg", "quick"], src: "Local favourite" },
+    { n: "Rava idli at MTR", a: "Lalbagh Road", ll: [12.9552, 77.5855], c: [200, 400], s: ["early", "day"], tags: ["veg"], src: "Local favourite" },
+    { n: "Masala dosa at Vidyarthi Bhavan", a: "Gandhi Bazaar", ll: [12.9450, 77.5710], c: [100, 250], s: ["early", "day"], tags: ["veg", "quick"], src: "Local favourite" },
+    { n: "Ghee podi idli at Rameshwaram Cafe", a: "Indiranagar", ll: [12.9790, 77.6400], c: [150, 300], s: ["early", "day", "eve"], tags: ["veg", "quick"], src: "Local favourite" },
+    { n: "Appam and stew at Koshy's", a: "St Marks Road", ll: [12.9750, 77.6010], c: [400, 900], s: ["day", "eve"], tags: [], src: "Local favourite" },
+    { n: "Andhra meals at Nagarjuna", a: "Residency Road", ll: [12.9700, 77.6080], c: [300, 600], s: ["day", "eve"], tags: [], src: "Local favourite" },
+    { n: "Biryani at Meghana Foods", a: "Koramangala", ll: [12.9340, 77.6250], c: [400, 800], s: ["day", "eve"], tags: [], src: "Local favourite" },
+    { n: "Burgers at Truffles", a: "Koramangala", ll: [12.9330, 77.6140], c: [400, 800], s: ["day", "eve"], tags: [], src: "Local favourite" },
+    { n: "Kerala cafe food at Dyu Art Cafe", a: "Koramangala", ll: [12.9300, 77.6290], c: [300, 500], s: ["day", "eve"], tags: ["date", "veg"], src: "Explore Bangalore", u: "https://www.explorebangalore.com/date-spots" },
+    { n: "Late-night ghee rice at Empire", a: "Church Street", ll: [12.9750, 77.6050], c: [300, 700], s: ["eve", "night"], tags: ["quick"], src: "Local favourite" },
+    { n: "Dinner at Toit", a: "Indiranagar", ll: [12.9790, 77.6405], c: [1000, 2000], s: ["eve", "night"], tags: ["alc"], src: "Local favourite" },
+    { n: "Mangalorean dinner at Karavalli", a: "Residency Road", ll: [12.9690, 77.6090], c: [2000, 2500], s: ["eve"], tags: ["date"], src: "Explore Bangalore", u: "https://www.explorebangalore.com/date-spots" },
+    { n: "Thai dinner at Rim Naam, over the koi pond", a: "MG Road", ll: [12.9730, 77.6180], c: [2500, 3000], s: ["eve"], tags: ["date"], src: "Explore Bangalore", u: "https://www.explorebangalore.com/date-spots" },
+    { n: "Rooftop drinks at High Ultra Lounge", a: "Malleshwaram", ll: [13.0130, 77.5550], c: [1750, 2500], s: ["eve", "night"], tags: ["date", "alc"], out: 1, src: "Explore Bangalore", u: "https://www.explorebangalore.com/date-spots" },
+    { n: "Lakeside rooftop at Tiamo, Conrad", a: "Ulsoor", ll: [12.9810, 77.6200], c: [1500, 2000], s: ["eve", "night"], tags: ["date", "alc"], out: 1, src: "Explore Bangalore", u: "https://www.explorebangalore.com/date-spots" },
+    { n: "Alfresco wine at Salvadores", a: "Residency Road", ll: [12.9680, 77.6070], c: [1000, 1500], s: ["day", "eve"], tags: ["date", "alc"], out: 1, src: "Explore Bangalore", u: "https://www.explorebangalore.com/date-spots" },
+    { n: "Seven-course dinner at Grasshopper", a: "Bannerghatta Road", ll: [12.8640, 77.5960], c: [3000, 3500], s: ["eve"], tags: ["date"], src: "Explore Bangalore", u: "https://www.explorebangalore.com/date-spots" },
+    { n: "Idli, vada and filter coffee at a darshini", a: "Any neighbourhood", ll: null, c: [60, 150], s: ["early", "day", "eve"], tags: ["veg", "quick"], src: "Local favourite" }
+  ];
+
+  // Everyday places: lakes, parks, museums, bookshops. Used to mix indoors and outdoors, and when nothing else fits.
+  // hrs: opening hours (24h). closed: weekdays (0 = Sunday) it's shut. p: entry fee (0 = free, null = see venue).
+  var ALL_TAGS = ["date", "friends", "solo", "social", "family", "elders", "kids"];
+  var PLACES = [
+    { t: "Walk around Sankey Tank", a: "Malleshwaram", ll: [13.0090, 77.5740], out: 1, hrs: [6, 19], h: 1, s: ["early", "eve"], p: 0 },
+    { t: "Walk under the trees in Cubbon Park", a: "Cubbon Park", ll: [12.9763, 77.5929], out: 1, hrs: [6, 18], h: 1.5, s: ["early", "day"], p: 0 },
+    { t: "Lalbagh lake loop", a: "Lalbagh", ll: [12.9507, 77.5848], out: 1, hrs: [6, 19], h: 1.5, s: ["early", "day", "eve"], p: null },
+    { t: "Walk by Ulsoor Lake", a: "Ulsoor", ll: [12.9830, 77.6200], out: 1, hrs: [6, 19], h: 1, s: ["early", "eve"], p: 0 },
+    { t: "Agara Lake walk", a: "HSR Layout", ll: [12.9230, 77.6420], out: 1, hrs: [6, 19], h: 1, s: ["early", "eve"], p: 0 },
+    { t: "Birdwatching at Puttenahalli Lake", a: "JP Nagar", ll: [12.8950, 77.5850], out: 1, hrs: [6, 18], h: 1, s: ["early", "eve"], p: 0 },
+    { t: "Kaikondrahalli Lake walk", a: "Sarjapur Road", ll: [12.9120, 77.6710], out: 1, hrs: [6, 19], h: 1, s: ["early", "eve"], p: 0 },
+    { t: "Bugle Rock park, Basavanagudi", a: "Basavanagudi", ll: [12.9430, 77.5690], out: 1, hrs: [6, 20], h: 1, s: ["early", "day", "eve"], p: 0 },
+    { t: "Browse at Blossom Book House", a: "Church Street", ll: [12.9752, 77.6045], out: 0, hrs: [10.5, 21], h: 1, s: ["day", "eve"], p: 0, tags: ["date", "friends", "solo", "elders", "family"] },
+    { t: "Visvesvaraya Industrial & Technological Museum", a: "Kasturba Road", ll: [12.9752, 77.5963], out: 0, hrs: [9.5, 18], h: 2, s: ["day"], p: null, tags: ["kids", "family", "friends", "solo", "elders"] },
+    { t: "A show at the Nehru Planetarium", a: "Sankey Road", ll: [12.9848, 77.5896], out: 0, hrs: [10.5, 17], h: 1, s: ["day"], p: null, closed: [1], tags: ["kids", "family", "date", "solo", "elders"] },
+    { t: "National Gallery of Modern Art", a: "Palace Road", ll: [12.9900, 77.5880], out: 0, hrs: [10, 17], h: 1.5, s: ["day"], p: null, closed: [1], tags: ["date", "solo", "elders", "friends", "family"] }
+  ];
+
+  var START_PTS = [
+    ["Hebbal", "N", 13.0358, 77.5970], ["Yelahanka", "N", 13.1005, 77.5963], ["RT Nagar", "N", 13.0213, 77.5960], ["Sahakara Nagar", "N", 13.0620, 77.5870], ["Kalyan Nagar / Hennur", "N", 13.0280, 77.6400], ["Thanisandra", "N", 13.0560, 77.6340],
+    ["MG Road / Church Street", "C", 12.9756, 77.6066], ["Shivajinagar", "C", 12.9850, 77.6050], ["Frazer Town", "C", 12.9980, 77.6150], ["Richmond Town", "C", 12.9640, 77.6030],
+    ["Indiranagar", "E", 12.9719, 77.6412], ["Domlur", "E", 12.9610, 77.6380], ["CV Raman Nagar", "E", 12.9850, 77.6630], ["KR Puram", "E", 13.0070, 77.6950], ["Marathahalli", "E", 12.9569, 77.7011], ["Whitefield", "E", 12.9698, 77.7500],
+    ["Koramangala", "SE", 12.9352, 77.6245], ["HSR Layout", "SE", 12.9116, 77.6474], ["Bellandur", "SE", 12.9260, 77.6762], ["Sarjapur Road", "SE", 12.9100, 77.6850], ["Electronic City", "SE", 12.8452, 77.6602],
+    ["BTM Layout", "S", 12.9166, 77.6101], ["Jayanagar", "S", 12.9250, 77.5938], ["JP Nagar", "S", 12.9063, 77.5857], ["Basavanagudi", "S", 12.9420, 77.5750], ["Banashankari", "S", 12.9255, 77.5468], ["Bannerghatta Road", "S", 12.8880, 77.5970],
+    ["Malleshwaram", "W", 13.0035, 77.5700], ["Rajajinagar", "W", 12.9910, 77.5550], ["Yeshwanthpur", "W", 13.0280, 77.5400], ["Vijayanagar", "W", 12.9700, 77.5330], ["RR Nagar / Kengeri", "W", 12.9200, 77.5100]
+  ];
+  var ZONE_NAME = { N: "North", C: "Central", E: "East", SE: "South-East", S: "South", W: "West" };
+  // 1 to 12 hours, then 18 hours, 1 day, 1½ days and 2 days. days: hours to plan on each of two days in a row.
+  var DURS = [];
+  for (var hh = 1; hh <= 12; hh++) DURS.push({ h: hh, l: hh === 1 ? "1 hour" : hh + " hours", sub: hh <= 2 ? "A quick outing" : hh <= 5 ? "Half a day" : hh <= 9 ? "Most of the day" : "A full day" });
+  DURS.push({ h: 18, l: "18 hours", sub: "Morning till around midnight" }, { h: 24, l: "1 day", sub: "The whole day, early start to past midnight" }, { h: 36, l: "1½ days", sub: "A full day, then half of the next", days: [18, 6] }, { h: 48, l: "2 days", sub: "Two full days in a row", days: [18, 18] });
+
+  var Q = {
+    slot: [["early", "Early morning", "before 9"], ["day", "Daytime", "9–5"], ["eve", "Evening", "5–9 pm"], ["night", "Late night", "9 pm+"]],
+    occ: [["date", "❤️ Date"], ["friends", "🙌 Friends hangout"], ["solo", "🌙 Solo time"], ["social", "👋 Meet new people"], ["kids", "👶 Family with kids"], ["elders", "👵 With parents or grandparents"]],
+    like: [["general", "General: surprise me"], ["comedy", "Stand-up comedy"], ["music", "Live music and gigs"], ["party", "Parties and DJ nights"], ["theatre", "Theatre, film and culture"], ["workshop", "Workshops and crafts"], ["food", "Food, brunches and tastings"], ["market", "Pop-ups and markets"], ["navratri", "Navratri and garba"], ["games", "Games and social meetups"], ["sports", "Sports and fitness"], ["outdoors", "Treks and day trips"]],
+    budget: [["500", "Under ₹500"], ["1500", "₹500–1,500"], ["4000", "₹1,500–4,000"], ["99999", "No limit"]],
+    reach: [["0", "Stay close", "under 10 km"], ["1", "Anywhere in the city"], ["2", "Out of town is fine"]],
+    extra: [["veg", "Vegetarian food"], ["noalc", "No alcohol-centred places"], ["smoke", "Smoke-free"], ["pets", "Bringing a pet"], ["kidok", "Kid-friendly"], ["wheel", "Wheelchair-friendly"], ["metro", "Near a metro station"], ["early", "Home by 9 pm"], ["quiet", "Not too loud or crowded"], ["free", "Free entry only"]]
+  };
+  var LIKE_CATS = { comedy: ["comedy"], music: ["music"], party: ["party"], theatre: ["theatre", "performance", "film", "culture"], workshop: ["workshop"], food: ["food"], market: ["market"], navratri: ["navratri"], games: ["games", "social"], sports: ["sports"], outdoors: ["trek", "daytrip", "adventure"] };
+  var CAT_LABEL = { comedy: "Comedy", music: "Live music", party: "Parties", theatre: "Theatre", performance: "Performances", film: "Film", culture: "Museums", workshop: "Workshops", food: "Food and drink", market: "Pop-ups and markets", navratri: "Navratri and garba", games: "Games", social: "Social meetups", sports: "Sports", trek: "Treks", daytrip: "Day trips", adventure: "Adventure", walk: "Lakes and parks" };
+  var DEFAULTS = { slot: ["day", "eve"], occ: "date", like: ["general"], budget: "1500", reach: "1", extra: [] };
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function parseDate(s) { var p = s.split("-"); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function iso(d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function fmt(s, opt) { return parseDate(s).toLocaleDateString("en-IN", opt || { day: "numeric", month: "short" }); }
+  function todayStr() { return iso(new Date()); }
+  function addDays(s, n) { var d = parseDate(s); d.setDate(d.getDate() + n); return iso(d); }
+  function dow(s) { return parseDate(s).getDay(); }
+  function dayName(s) { return fmt(s, { weekday: "short", day: "numeric", month: "short" }); }
+
+  function km(a, b) {
+    var R = 6371, r = Math.PI / 180, dLa = (b[0] - a[0]) * r, dLo = (b[1] - a[1]) * r;
+    var h = Math.sin(dLa / 2) * Math.sin(dLa / 2) + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(dLo / 2) * Math.sin(dLo / 2);
+    return 2 * R * Math.asin(Math.sqrt(h));
+  }
+  // Road distances and drive times between the plan's places, worked out on the real road network when the page is built
+  // (events.json "roads"). Anything not in that table falls back to an estimate from the straight-line distance.
+  var ROAD = null;
+  function llKey(ll) { return ll[0].toFixed(4) + "," + ll[1].toFixed(4); }
+  function decodeRoads(r) {
+    function u16(b64) { var bin = atob(b64), u = new Uint16Array(bin.length / 2); for (var i = 0; i < u.length; i++) u[i] = bin.charCodeAt(2 * i) | (bin.charCodeAt(2 * i + 1) << 8); return u; }
+    var idx = {}; r.pts.forEach(function (ll, i) { idx[llKey(ll)] = i; });
+    return { n: r.pts.length, idx: idx, d: u16(r.d), t: u16(r.t) };
+  }
+  function roadAt(a, b) {
+    if (!ROAD || !a || !b) return -1;
+    var i = ROAD.idx[llKey(a)], j = ROAD.idx[llKey(b)];
+    if (i == null || j == null) return -1;
+    var k = i * ROAD.n + j; return ROAD.d[k] === 65535 ? -1 : k;
+  }
+  function roadKnown(a, b) { return !!a && !!b && (llKey(a) === llKey(b) || roadAt(a, b) >= 0); }
+  // Kilometres by road.
+  function road(a, b) { if (llKey(a) === llKey(b)) return 0; var k = roadAt(a, b); return k >= 0 ? ROAD.d[k] / 100 : km(a, b) * 1.3; }
+  // Hours of driving in usual city traffic.
+  function driveH(a, b) {
+    if (llKey(a) === llKey(b)) return 0;
+    var k = roadAt(a, b); if (k >= 0) return ROAD.t[k] / 60;
+    var d = km(a, b) * 1.3; return d <= 25 ? d / 18 : 25 / 18 + (d - 25) / 40;
+  }
+  function near(a, b) {
+    if (!a || !b) return 1;
+    var d = km(a, b);
+    return d < 4 ? 2 : d < 10 ? 1 : d < 18 ? 0 : -1;
+  }
+  function isOut(e) { return e.tags.indexOf("outdoor") > -1 || ["trek", "daytrip", "adventure", "walk"].indexOf(e.cat) > -1 || /rooftop|open[- ]air|alfresco|courtyard/i.test(e.t + " " + e.venue); }
+  // Travel time between two points in hours (city traffic), never less than the 15 minutes kept between stops.
+  function travelH(a, b) { if (!a || !b) return 0.25; return Math.max(0.25, driveH(a, b)); }
+  function tooFar(p, ll) { return p.reach === 0 && ll && road(p.ll, ll) > 10; }
+
+  function buildChips(name) {
+    var box = form.querySelector('.chips[data-name="' + name + '"]');
+    var type = box.dataset.type;
+    box.innerHTML = "";
+    Q[name].forEach(function (o) {
+      var def = DEFAULTS[name];
+      var checked = Array.isArray(def) ? def.indexOf(o[0]) > -1 : def === o[0];
+      var label = document.createElement("label");
+      label.className = "chip";
+      label.innerHTML = '<input type="' + type + '" id="q-' + name + "-" + o[0] + '" name="' + name + '" value="' + o[0] + '"' + (checked ? " checked" : "") + "><span>" + esc(o[1]) + (o[2] ? " <em>" + esc(o[2]) + "</em>" : "") + (name === "like" && o[0] !== "general" ? ' <b class="count" data-c="' + o[0] + '"></b>' : "") + "</span>";
+      box.appendChild(label);
+    });
+  }
+
+  // ---------- Calendar
+  function selDates() {
+    var a = state.sel[0], b = state.sel[1] || a, out = [];
+    for (var d = a; d <= b; d = addDays(d, 1)) out.push(d);
+    return out;
+  }
+  function resetPick() { state.pick = null; state.shuffle = 0; state.shown = {}; }
+  function setSel(a, b) {
+    state.sel = [a, b && b !== a ? b : null];
+    // Only change the month shown when neither end of the selection is in view.
+    if (a.slice(0, 7) !== state.month && (b || a).slice(0, 7) !== state.month) state.month = a.slice(0, 7);
+    resetPick(); drawCal(); render();
+  }
+  function quickOpts() {
+    var t = WIN[0], last = WIN[WIN.length - 1], o = [];
+    var sat = t; while (dow(sat) !== 6 && dow(sat) !== 0) sat = addDays(sat, 1);
+    var thisWkEnd = dow(sat) === 0 ? sat : addDays(sat, 1);
+    o.push([STALE ? fmt(t, { weekday: "short", day: "numeric", month: "short" }) : "Today", t, null]);
+    if (addDays(t, 1) <= last) o.push(["Tomorrow", addDays(t, 1), null]);
+    o.push(["This weekend", sat, thisWkEnd]);
+    var nSat = addDays(dow(sat) === 6 ? sat : addDays(sat, -1), 7);
+    if (addDays(nSat, 1) <= last) o.push(["Next weekend", nSat, addDays(nSat, 1)]);
+    o.push(["Next 7 days", t, addDays(t, 6) <= last ? addDays(t, 6) : last]);
+    return o;
+  }
+  function drawQuick() {
+    var a = state.sel[0], b = state.sel[1];
+    quickEl.innerHTML = quickOpts().map(function (q, i) {
+      var on = q[1] === a && (q[2] || null) === (b || null);
+      return '<button type="button" class="qbtn" data-i="' + i + '" aria-pressed="' + on + '">' + q[0] + "</button>";
+    }).join("");
+    Array.prototype.forEach.call(quickEl.querySelectorAll("button"), function (btn) {
+      btn.onclick = function () { var q = quickOpts()[+btn.dataset.i]; setSel(q[1], q[2]); refocus('.qbtn[data-i="' + btn.dataset.i + '"]'); };
+    });
+  }
+  function drawCal() {
+    drawQuick();
+    var first = WIN[0], last = WIN[WIN.length - 1];
+    var ym = state.month || first.slice(0, 7);
+    var y = +ym.slice(0, 4), m = +ym.slice(5, 7) - 1;
+    var start = new Date(y, m, 1), days = new Date(y, m + 1, 0).getDate();
+    var lead = (start.getDay() + 6) % 7; // Monday first
+    var a = state.sel[0], b = state.sel[1] || a;
+    var prevOk = iso(new Date(y, m, 0)) >= first, nextOk = iso(new Date(y, m + 1, 1)) <= last;
+    var h = '<div class="cal-head"><button type="button" class="cal-nav" id="calPrev" aria-label="Previous month"' + (prevOk ? "" : " disabled") + '>‹</button><b id="calMonth" aria-live="polite">' + start.toLocaleDateString("en-IN", { month: "long", year: "numeric" }) + '</b><button type="button" class="cal-nav" id="calNext" aria-label="Next month"' + (nextOk ? "" : " disabled") + '>›</button></div><div class="cal-grid" role="group" aria-labelledby="calMonth">';
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].forEach(function (d, i) { h += '<span class="cal-dow' + (i > 4 ? " we" : "") + '" aria-hidden="true">' + d.slice(0, 2) + "</span>"; });
+    for (var i = 0; i < lead; i++) h += '<span aria-hidden="true"></span>';
+    for (var d = 1; d <= days; d++) {
+      var s = iso(new Date(y, m, d)), off = s < first || s > last;
+      var cls = "cal-day" + (dow(s) === 0 || dow(s) === 6 ? " we" : "") + (s === first ? " today" : "") + (s >= a && s <= b ? " in" : "") + (s === a ? " a" : "") + (s === b ? " b" : "");
+      var n = COUNT[s] || 0, dots = off ? "" : '<i class="dots d' + (n >= 30 ? 3 : n >= 14 ? 2 : 1) + '"></i>';
+      h += '<button type="button" class="' + cls + '" data-d="' + s + '"' + (off ? " disabled" : "") + ' aria-label="' + fmt(s, { weekday: "long", day: "numeric", month: "long" }) + (off ? "" : ", " + n + " listings") + '" aria-pressed="' + (s >= a && s <= b) + '">' + d + dots + "</button>";
+    }
+    h += "</div>";
+    calEl.innerHTML = h;
+    var prev = document.getElementById("calPrev"), next = document.getElementById("calNext");
+    prev.onclick = function () { state.month = iso(new Date(y, m - 1, 1)).slice(0, 7); drawCal(); refocus(document.getElementById("calPrev").disabled ? "#calNext" : "#calPrev"); };
+    next.onclick = function () { state.month = iso(new Date(y, m + 1, 1)).slice(0, 7); drawCal(); refocus(document.getElementById("calNext").disabled ? "#calPrev" : "#calNext"); };
+    Array.prototype.forEach.call(calEl.querySelectorAll(".cal-day:not([disabled])"), function (btn) {
+      btn.onclick = function () {
+        var d = btn.dataset.d, a = state.sel[0];
+        // With one date picked, a later date makes a range; otherwise the tap starts again.
+        if (a && !state.sel[1] && d > a) setSel(a, d); else setSel(d, null);
+        refocus('.cal-day[data-d="' + d + '"]');
+      };
+    });
+    // Arrow keys move between days (and months at the edges).
+    calEl.onkeydown = function (ev) {
+      var k = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 }[ev.key], cur = ev.target.dataset && ev.target.dataset.d;
+      if (!k || !cur) return;
+      var d = addDays(cur, k);
+      if (d < WIN[0] || d > WIN[WIN.length - 1]) return;
+      ev.preventDefault();
+      if (d.slice(0, 7) !== state.month) { state.month = d.slice(0, 7); drawCal(); }
+      refocus('.cal-day[data-d="' + d + '"]');
+    };
+  }
+  // Put keyboard focus back after a redraw.
+  function refocus(sel) { var el = document.querySelector(sel); if (el && !el.disabled) el.focus(); }
+  function showDur() {
+    var v = +durEl.value, d = DURS[v];
+    document.getElementById("durOut").textContent = d.l; document.getElementById("durSub").textContent = d.sub; durEl.setAttribute("aria-valuetext", d.l);
+    durEl.style.setProperty("--fill", "calc(12px + (100% - 24px) * " + (v / 15).toFixed(4) + ")");
+  }
+  function calHint(p) {
+    var el = document.getElementById("calHint"), ds = p.dates;
+    var lastDay = ds.length === 1 && addDays(ds[0], 1) > WIN[WIN.length - 1];
+    var txt = ds.length === 1 ? fmt(ds[0], { weekday: "long", day: "numeric", month: "long" }) + "." + (p.days ? (lastDay ? " We'll plan the day before and this day." : " We'll plan this day and the next.") : " Tap a later date to make it a range.")
+      : dayName(ds[0]) + " to " + dayName(ds[ds.length - 1]) + " (" + ds.length + " days). " + (p.days ? "We'll pick the best two days in a row." : "We'll pick the best day in that range.") + " Tap any date to start again.";
+    if (STALE) txt += " These listings only go up to " + fmt(WIN[0], { weekday: "long", day: "numeric", month: "long" }) + ", so plans are for that day.";
+    el.textContent = txt;
+  }
+
+  function read() {
+    var fd = new FormData(form);
+    var di = +durEl.value, st = START_PTS[+startEl.value] || START_PTS[10];
+    var long = DURS[di].h >= 18;
+    return { dates: selDates(), slot: long ? ["early", "day", "eve", "night"] : fd.getAll("slot"), durI: di, dur: DURS[di].h >= 24 && !DURS[di].days ? 20 : Math.min(DURS[di].h, 18), days: DURS[di].days || null, occ: fd.get("occ"), like: fd.getAll("like"), io: state.io, budget: +fd.get("budget"), start: st[0], ll: [st[2], st[3]], zone: st[1], reach: +fd.get("reach"), extra: fd.getAll("extra") };
+  }
+
+  function chosenCats(p) {
+    if (!p.like.length || p.like.indexOf("general") > -1) return null;
+    var c = []; p.like.forEach(function (l) { c = c.concat(LIKE_CATS[l] || []); }); return c;
+  }
+  function occOK(e, p) {
+    var tg = e.tags;
+    if (p.occ === "kids" && tg.indexOf("kids") < 0) return false;
+    if (p.occ === "elders" && !(tg.indexOf("elders") > -1 || tg.indexOf("family") > -1)) return false;
+    return true;
+  }
+
+  function fits(e, p, lv) {
+    if (e.petOnly && !hasX(p, "pets")) return false;
+    if (p.avoid && p.avoid.ids[e.id]) return false;
+    var cats = chosenCats(p);
+    if (cats && cats.indexOf(e.cat) < 0) return false;
+    if (!occOK(e, p)) return false;
+    if (!meets(e, p)) return false;
+    if (hasX(p, "early") && ((e.s.length === 1 && e.s[0] === "night") || /overnight/i.test(e.time + " " + e.t) || startHour(e, p) + e.h > 21.01)) return false;
+    if (lv.budget && e.p != null && e.p > p.budget * lv.budget) return false;
+    if (e.d >= 1 && p.reach < 2) return false;
+    if (tooFar(p, e.ll)) return false;
+    if (lv.dur && e.h > p.dur + (p.dur <= 3 ? 0.5 : 1)) return false;
+    if (lv.slot && p.slot.length && !e.s.some(function (s) { return p.slot.indexOf(s) > -1; })) return false;
+    if (lv.io && p.io === "in" && isOut(e)) return false;
+    if (lv.io && p.io === "out" && !isOut(e)) return false;
+    return true;
+  }
+
+  function score(e, p) {
+    var sc = 0;
+    if (e.tags.indexOf(p.occ) > -1) sc += 3;
+    if (p.occ === "social" && e.tags.indexOf("solo") > -1) sc += 1;
+    if (p.occ === "solo" && e.tags.indexOf("night") > -1) sc -= 1;
+    if (p.occ === "date" && (e.cat === "party")) sc -= 1;
+    sc += e.d === 0 ? near(p.ll, e.ll) * 1.2 : 0;
+    if (!e.rec) sc += 2.5;
+    if (e.place) sc -= e.petOnly ? 1 : 3.5;
+    if (p.avoid && p.avoid.cats[e.cat]) sc -= 2;
+    if (hasX(p, "kidok") && (e.tags.indexOf("kids") > -1 || e.tags.indexOf("family") > -1)) sc += 1.5;
+    if (hasX(p, "pets") && ax(e, "pe") === "y") sc += 1;
+    var fl = p.like.filter(function (l) { return l !== "general"; });
+    var ord = state.likeOrder.filter(function (l) { return fl.indexOf(l) > -1; });
+    fl.forEach(function (l) { if (ord.indexOf(l) < 0) ord.push(l); });
+    var focus = ord.length ? ord[state.shuffle % ord.length] : null;
+    if (focus && LIKE_CATS[focus].indexOf(e.cat) > -1) sc += 5.5;
+    if (hasX(p, "veg") && e.cat === "food" && e.tags.indexOf("veg") < 0) sc -= 2;
+    // Leave room in the budget for meals on longer plans.
+    if (e.p && p.budget < 99999 && e.p + Math.floor(p.dur / 5) * 60 > p.budget) sc -= 2;
+    if (e.p != null && e.p <= p.budget / 2) sc += 0.5;
+    if (e.p == null) sc -= 0.3;
+    return sc;
+  }
+
+  function allEvents() { return DATA.events.concat(PLACE_EVENTS); }
+  function candidates(p) {
+    var ds = p.dates;
+    var levels = [
+      { label: null, slot: true, io: true, budget: 1, dur: true },
+      { label: "time of day", slot: false, io: true, budget: 1, dur: true },
+      { label: "time of day and how long you have", slot: false, io: true, budget: 1, dur: false },
+      { label: "time, length, indoor/outdoor choice and budget", slot: false, io: false, budget: 1.7, dur: false }
+    ];
+    var list = [], relaxed = null, evs = allEvents();
+    for (var L = 0; L < levels.length; L++) {
+      list = [];
+      evs.forEach(function (e) {
+        if (!fits(e, p, levels[L])) return;
+        ds.forEach(function (d) { if (e.dates.indexOf(d) > -1 && stillOn(e, p, d) && homeBy(e, p, d)) list.push({ e: e, date: d }); });
+      });
+      var real = list.filter(function (x) { return !x.e.place; }).length;
+      if (real >= 2 || ((p.io === "in" || p.io === "out") && list.length) || L === levels.length - 1) { relaxed = levels[L].label; break; }
+    }
+    // One entry per event (keep the first matching day)
+    var seen = {};
+    list = list.filter(function (x) { if (seen[x.e.id]) return false; seen[x.e.id] = 1; return true; });
+    list.forEach(function (x) { x.sc = score(x.e, p) + (state.shuffle ? jitter(x.e.id, state.shuffle) : 0); });
+    list.sort(function (a, b) { return b.sc - a.sc; });
+    return { list: list, relaxed: list.length ? relaxed : null };
+  }
+
+  // "Home by 9 pm": checked against the start time the plan will really use on that date.
+  function homeBy(e, p, d) { return !hasX(p, "early") || startHour(e, p, d) + e.h <= 21.01; }
+  // A different, repeatable nudge for each listing and each press of "Show me another plan".
+  function jitter(id, n) {
+    var h = 0; for (var i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i) + n * 7919) | 0;
+    h = Math.imul(h ^ (h >>> 15), 2246822507); h ^= h >>> 13;
+    return ((h >>> 0) % 1000 / 1000 - 0.5) * 6;
+  }
+
+  var START = { early: 6, day: 11, eve: 18, night: 21.5 };
+  var CAT_START = { comedy: 19.5, party: 21.5, music: 19.5, navratri: 18.5, games: 19, theatre: 19, performance: 18.5, workshop: 11, market: 12, food: 12.5, walk: 17, culture: 11 };
+  // Hours already gone today: plans for today start from now.
+  function floorFor(d) {
+    if (d !== todayStr()) return 0;
+    var n = new Date(); return Math.ceil((n.getHours() + n.getMinutes() / 60 + 0.25) * 4) / 4;
+  }
+  // Listing times: "8:00 PM", "7:30 – 9:30 PM", "10 AM – 6:30 PM". Short ranges are a start time; long ones (4h+) are opening hours.
+  function parseTime(str) {
+    var re = /(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/gi, toks = [], m;
+    if (!/\b(am|pm)\b/i.test(str)) return null;
+    var head = str.split(/[,(;]/)[0];
+    while ((m = re.exec(head)) && toks.length < 2) { if (+m[1] <= 12 && (m[2] || m[3])) toks.push({ h: +m[1] % 12, m: +(m[2] || 0), ap: m[3] ? m[3].toLowerCase() : null }); }
+    if (!toks.length) return null;
+    var b = toks[1], a = toks[0];
+    if (!a.ap && b && b.ap) { a.ap = b.ap; var ta = a.h + (a.ap === "pm" ? 12 : 0) + a.m / 60, tb = b.h + (b.ap === "pm" ? 12 : 0) + b.m / 60; if (ta > tb) a.ap = "am"; }
+    if (!a.ap) return null;
+    var start = a.h + (a.ap === "pm" ? 12 : 0) + a.m / 60, end = b && b.ap ? b.h + (b.ap === "pm" ? 12 : 0) + b.m / 60 : null;
+    if (end != null && end <= start) end += 24;
+    return { start: start, end: end };
+  }
+  function prepTimes(e) {
+    var tm = parseTime(e.time || "");
+    if (!tm) return;
+    if (tm.end == null && e.d < 1 && /^\s*(daily\s+)?from\b|\bonwards\b/i.test(e.time)) {
+      e.hrs = [tm.start, Math.max(tm.start + e.h, 22)];
+      e.s = slotsIn(e.hrs, e.h);
+    } else if (tm.end != null && tm.end - tm.start >= 4 && e.d < 1) {
+      e.hrs = [tm.start, tm.end];
+      e.h = Math.min(e.h, tm.end - tm.start);
+      e.s = slotsIn(e.hrs, e.h);
+    } else {
+      e.tm = tm.start;
+      if (tm.end != null && tm.end - tm.start >= 0.5) e.h = tm.end - tm.start;
+    }
+  }
+  function slotsIn(hrs, h) { return ["early", "day", "eve", "night"].filter(function (k) { var r = SLOT_HRS[k]; return r[0] <= hrs[1] - h && r[1] > hrs[0]; }); }
+  function timed(e) { return e.tm != null; }
+  function stillOn(e, p, d) {
+    var f = floorFor(d);
+    if (!f) return true;
+    var st = startHour(e, p, d);
+    if (timed(e)) return st >= f - 0.25;
+    if (e.hrs && st + e.h > e.hrs[1]) return false;
+    return e.s.indexOf(slotOf(st)) > -1 || (st >= 21 && e.s.indexOf("night") > -1);
+  }
+  function startHour(e, p, d) {
+    if (e.tm != null) return e.tm;
+    var f = d ? floorFor(d) : 0;
+    if (f) { var base = startHour(e, p); return base >= f ? base : f; }
+    if (e.cat === "trek") return 3;
+    var slots = e.s.filter(function (s) { return !p.slot.length || p.slot.indexOf(s) > -1; });
+    if (!slots.length && p.slot.length) { var want = START[p.slot[0]]; slots = e.s.slice().sort(function (a, b) { return Math.abs(START[a] - want) - Math.abs(START[b] - want); }).slice(0, 1); }
+    var typical = CAT_START[e.cat], st;
+    if (typical && (slots.length ? slots : e.s).indexOf(slotOf(typical)) > -1) st = typical;
+    else st = START[slots[0] || e.s[0]];
+    if (st == null) st = e.hrs ? e.hrs[0] : 11;
+    if (e.hrs) st = Math.min(Math.max(st, e.hrs[0]), e.hrs[1] - e.h);
+    return st;
+  }
+  function slotOf(h) { h = h % 24; return h < 9 ? "early" : h < 17 ? "day" : h < 21 ? "eve" : "night"; }
+  function clock(h) {
+    h = ((h % 24) + 24) % 24;
+    var hr = Math.floor(h), mn = Math.round((h - hr) * 60); if (mn === 60) { hr++; mn = 0; }
+    return (hr % 12 || 12) + ":" + (mn < 10 ? "0" : "") + mn + " " + (hr >= 12 ? "pm" : "am");
+  }
+  function price(v) { return v == null ? "Price on listing" : v === 0 ? "Free" : "From ₹" + v.toLocaleString("en-IN"); }
+  function range(c) { return "₹" + c[0].toLocaleString("en-IN") + (c[1] > c[0] ? "–" + c[1].toLocaleString("en-IN") : ""); }
+
+  // ---------- Constraints. Venue facts come from events.json: x = { sm: smoking, pe: pets, ki: kids, wc: wheelchair, lo: loud },
+  // each "y", "n", "p" (partly) or "u" (unknown).
+  function ax(o, k) { return (o.x && o.x[k]) || "u"; }
+  function hasX(p, k) { return p.extra.indexOf(k) > -1; }
+  function metroNear(ll) {
+    if (!ll || !METRO.length) return null;
+    var best = null;
+    METRO.forEach(function (s) { var d = km(ll, [s.lat, s.lng]); if (!best || d < best.d) best = { s: s, d: d }; });
+    return best;
+  }
+  // Does an event, everyday place or food spot meet the constraints picked under "Any constraint?"
+  var BARISH = /\b(pub|bar|brew\w*|bier\w*|taproom|nightclub|resto ?bar|cocktail|lounge|tavern)\b/i;
+  function isAlc(o) { return (o.tags || []).indexOf("alc") > -1 || /21\+/.test(o.note || "") || BARISH.test((o.venue || "") + " " + (o.n || "")); }
+  function isLoud(o, cat, alc) {
+    var lo = ax(o, "lo"), tags = o.tags || [];
+    return lo === "y" || (lo === "u" && (cat === "party" || cat === "navratri" || alc || (tags.indexOf("night") > -1 && (cat === "music" || cat === "food")) || (cat === "music" && /metal|karaoke|\bdj\b|beats|tour|arena|festival/i.test(o.t || ""))));
+  }
+  function meets(o, p, isSpot) {
+    var tags = o.tags || [], alc = isAlc(o), cat = isSpot ? "food" : o.cat;
+    if ((hasX(p, "noalc") || p.occ === "kids") && alc) return false;
+    if (hasX(p, "smoke") && (ax(o, "sm") === "y" || (ax(o, "sm") === "u" && (alc || cat === "party" || (cat === "navratri" && tags.indexOf("night") > -1))))) return false;
+    if (hasX(p, "pets") && ax(o, "pe") !== "y") return false;
+    if (hasX(p, "kidok") && (ax(o, "ki") === "n" || alc || cat === "party" || tags.indexOf("night") > -1 || (!isSpot && ax(o, "ki") !== "y" && tags.indexOf("kids") < 0 && tags.indexOf("family") < 0))) return false;
+    if (hasX(p, "wheel") && (ax(o, "wc") === "n" || (ax(o, "wc") === "u" && ["trek", "daytrip", "adventure", "sports", "walk"].indexOf(cat) > -1))) return false;
+    if (hasX(p, "metro") && METRO.length) {
+      if (o.ll) { var m = metroNear(o.ll); if (!m || m.d > 1) return false; }
+      else if (!isSpot) return false;
+    }
+    if (hasX(p, "quiet") && isLoud(o, cat, alc)) return false;
+    if (hasX(p, "free") && !isSpot && o.p !== 0) return false;
+    return true;
+  }
+
+  function pickSpot(p, nb, t, wantDate, used, cap) {
+    var veg = hasX(p, "veg"), slot = t < 11 ? "early" : t < 16 ? "day" : t < 22.5 ? "eve" : "night";
+    var c = SPOTS.filter(function (s) {
+      if (used && used[s.n]) return false;
+      if (t < 11 && s.tags.indexOf("alc") > -1) return false;
+      if (veg && s.tags.indexOf("veg") < 0) return false;
+      if (!meets(s, p, true)) return false;
+      if (p.avoid && p.avoid.spots && p.avoid.spots[s.n]) return false;
+      if (s.c[0] > p.budget || s.c[0] > cap) return false;
+      if (p.io === "in" && s.out) return false;
+      if (tooFar(p, s.ll)) return false;
+      return s.s.indexOf(slot) > -1 || (slot === "eve" && s.s.indexOf("night") > -1 && t >= 20);
+    }).map(function (s) {
+      var sc = !s.ll ? -1.6 : -detour(nb, s.ll) / 2.5;
+      if (wantDate && s.tags.indexOf("date") > -1) sc += 2.5;
+      if (!wantDate && s.tags.indexOf("quick") > -1) sc += 0.5;
+      if (hasX(p, "pets") && ax(s, "pe") === "y") sc += 1;
+      if (s.c[1] > p.budget) sc -= 1.5;
+      if (p.io === "out" && s.out) sc += 0.8;
+      if ((p.occ === "elders" || p.occ === "kids") && s.tags.indexOf("alc") > -1) sc -= 2;
+      return { s: s, sc: sc };
+    }).sort(function (a, b) { return b.sc - a.sc; });
+    return c.length ? c[0].s : null;
+  }
+
+  // The hours the plan may use: the "When are you free?" slots, stretched if the chosen length needs more.
+  var SLOT_HRS = { early: [6, 9], day: [9, 17], eve: [17, 21], night: [21, 26] };
+  function bounds(p, floor) {
+    var lo = 6, hi = 26;
+    if (p.slot.length) {
+      lo = Math.min.apply(null, p.slot.map(function (s) { return SLOT_HRS[s][0]; }));
+      hi = Math.max.apply(null, p.slot.map(function (s) { return SLOT_HRS[s][1]; }));
+    }
+    var cap = endCap(p);
+    hi = Math.min(hi, cap); lo = Math.max(lo, floor);
+    if (hi - lo < p.dur) { hi = Math.min(cap, Math.max(hi, lo + p.dur)); if (hi - lo < p.dur) lo = Math.max(floor, 6, hi - p.dur); }
+    return [lo, hi];
+  }
+  function endCap(p) { return hasX(p, "early") ? 21 : (p.cap || 26); }
+  // Open stretches of time inside the plan's window, keeping 15 minutes to get between stops.
+  // Each gap is [start, end, stop before it, stop after it].
+  function gaps(plan) {
+    var out = [], cur = plan.win[0], prev = null, st = plan.stops.slice().sort(function (a, b) { return a.t - b.t; });
+    st.forEach(function (s) {
+      var a = s.t - 0.25;
+      if (a - cur > 0.01) out.push([cur, a, prev, s]);
+      if (s.t + s.h + 0.25 >= cur) { cur = s.t + s.h + 0.25; prev = s; }
+    });
+    if (plan.win[1] - cur > 0.01) out.push([cur, plan.win[1], prev, null]);
+    return out;
+  }
+  // The part of a gap a stop at ll can use once travel to and from its neighbours is allowed for.
+  function reach(g, ll) {
+    var a = g[2] ? travelH(stopLL(g[2]), ll) - 0.25 : 0, b = g[3] ? travelH(ll, stopLL(g[3])) - 0.25 : 0;
+    return [g[0] + a, g[1] - b];
+  }
+  // Where you'd be coming from and going to next at time t (home at either end).
+  function stopLL(s) { return s.spot ? s.spot.ll : s.ev.e.ll; }
+  function around(plan, t, p) {
+    var prev = null, next = null;
+    plan.stops.forEach(function (s) {
+      var ll = stopLL(s); if (!ll) return;
+      if (s.t + s.h <= t + 0.01 && (!prev || s.t > prev.t)) prev = { t: s.t, ll: ll };
+      if (s.t >= t - 0.01 && (!next || s.t < next.t)) next = { t: s.t, ll: ll };
+    });
+    return [prev ? prev.ll : p.ll, next ? next.ll : p.ll];
+  }
+  function detour(nb, ll) { return ll ? road(nb[0], ll) + road(ll, nb[1]) - road(nb[0], nb[1]) : 3; }
+  function llAround(plan, t) {
+    var best = null;
+    plan.stops.forEach(function (s) { var ll = s.spot ? s.spot.ll : s.ev.e.ll; if (ll && (!best || Math.abs(s.t - t) < best.d)) best = { ll: ll, d: Math.abs(s.t - t) }; });
+    return best ? best.ll : null;
+  }
+  function earliestFit(e, g) {
+    if (timed(e)) return null;
+    for (var c = Math.ceil(g[0] * 4 - 0.001) / 4; c + e.h <= g[1] + 0.01; c += 0.25) {
+      if (e.hrs && (c < e.hrs[0] || c + e.h > e.hrs[1])) continue;
+      if (!e.hrs && e.s.indexOf(slotOf(c)) < 0 && !(c >= 21 && e.s.indexOf("night") > -1)) continue;
+      return c;
+    }
+    return null;
+  }
+
+  // Meals go in first, wherever a breakfast, lunch or dinner window has room.
+  var MEALS = [["Breakfast", 7, 10.5], ["Lunch", 12, 15], ["Dinner", 18, 22], ["Late-night bite", 22.5, 25.5]];
+  // Is a meal window that a stop at st..st+h sits in already covered by a meal or food stop?
+  function mealTaken(plan, st, h) {
+    return MEALS.some(function (m) {
+      if (Math.min(st + h, m[2]) - Math.max(st, m[1]) < 1) return false;
+      return plan.stops.some(function (s) { return (s.spot || s.ev.e.cat === "food") && s.t < m[2] && s.t + s.h > m[1]; });
+    });
+  }
+  function addMeals(p, plan) {
+    var main = plan.stops[0], wantDate = p.occ === "date";
+    MEALS.forEach(function (m) {
+      if (m[1] > 22 && plan.win[1] < 24.5) return; // a late-night bite only on plans that run past midnight
+      var busy = plan.stops.some(function (s) { return (s.spot || s.ev.e.cat === "food") && s.t < m[2] && s.t + s.h > m[1]; });
+      if (busy) return;
+      var opts = gaps(plan).filter(function (g) { return Math.min(g[1], m[2]) - Math.max(g[0], m[1]) >= 1.25; });
+      if (!opts.length) return;
+      // Closest to the main event: right before it, or right after it.
+      function dist(g) { return Math.min(Math.abs(Math.min(g[1], m[2]) - main.t), Math.abs(Math.max(g[0], m[1]) - main.t - main.h)); }
+      opts.sort(function (a, b) { return dist(a) - dist(b); });
+      var g = opts[0], before = Math.min(g[1], m[2]) <= main.t + 0.01, mt0 = before ? Math.min(g[1], m[2]) - 1.25 : Math.max(g[0], m[1]);
+      var used = {}; plan.stops.forEach(function (s) { if (s.spot) used[s.spot.n] = 1; else used[s.ev.e.venue] = 1; });
+      var nb = around(plan, mt0, p);
+      // Within what's left of the budget; if that's nothing, the cheapest local meal (and the plan says so).
+      var spot = pickSpot(p, nb, mt0, wantDate, used, Math.max(plan.budgetLeft, 0)) || pickSpot(p, nb, mt0, wantDate, used, 150);
+      if (!spot) return;
+      var r = reach(g, spot.ll), lo = Math.max(m[1], r[0]), hi = Math.min(m[2], r[1]);
+      var mt = before ? Math.floor((hi - 1.25) * 4) / 4 : Math.ceil(lo * 4) / 4, h = Math.min(1.25, hi - mt);
+      if (mt < lo - 0.01 || h < 0.75) return;
+      var label = mt >= 22.5 ? "Late-night bite" : spot.tags.indexOf("alc") > -1 && mt >= 16 ? "Drinks" : mt < 11 ? "Breakfast" : mt < 16 ? "Lunch" : "Dinner";
+      plan.stops.push({ t: mt, h: h, kind: label + (m[1] > 22 ? "" : mt < main.t ? " before" : " after"), spot: spot });
+      plan.budgetLeft -= spot.c[0];
+    });
+  }
+  // Everyday places that can be added to this plan's day.
+  function placeOK(x, p, day) {
+    return x.dates.indexOf(day) > -1 && (!x.petOnly || hasX(p, "pets")) && !(p.avoid && p.avoid.ids[x.id]) && occOK(x, p) && !tooFar(p, x.ll);
+  }
+
+  // Then fill the remaining time with other things on that day, closest and best-fitting first.
+  function fillGaps(p, plan, list) {
+    var ids = Object.assign({}, p.avoid ? p.avoid.ids : {}), cats = {}, venues = {}, places = 0;
+    plan.stops.forEach(function (s) { if (s.ev) { ids[s.ev.e.id] = 1; cats[s.ev.e.cat] = 1; venues[s.ev.e.venue] = 1; if (s.ev.e.place) places++; } });
+    var day = plan.main.date, allowPlaces = p.dur >= 6, maxPlaces = p.dur >= 18 ? 3 : 2, maxStops = p.dur >= 18 ? 10 : 8;
+    if (allowPlaces) {
+      var have = {}; list.forEach(function (x) { have[x.e.id] = 1; });
+      list = list.concat(PLACE_EVENTS.filter(function (e) {
+        return !have[e.id] && placeOK(e, p, day) && meets(e, p) && !(p.io === "in" && isOut(e)) && !(p.io === "out" && !isOut(e));
+      }).map(function (e) { return { e: e, date: day, sc: score(e, p) }; }));
+    }
+    for (var guard = 0; guard < maxStops && plan.stops.length < maxStops; guard++) {
+      var best = null;
+      gaps(plan).filter(function (g) { return g[1] - g[0] >= 0.9; }).forEach(function (g) {
+        list.forEach(function (x) {
+          var e = x.e;
+          if (e.ll && plan.stops.some(function (s) { var l = stopLL(s); return s.ev && l && s.ev.e.cat === e.cat && km(l, e.ll) < 0.25; })) return;
+          if (ids[e.id] || venues[e.venue] || x.date !== day || e.d >= 1 || (e.place && (!allowPlaces || places >= maxPlaces || cats[e.cat]))) return;
+          if (e.p != null && e.p > Math.max(plan.budgetLeft, 0)) return;
+          // Leave time to travel from the stop before and on to the stop after.
+          var r = reach(g, e.ll), endMax = g[3] ? r[1] + 0.01 : Math.min(r[1] + 0.25, endCap(p) + 0.01);
+          var st = timed(e) ? startHour(e, p, day) : earliestFit(e, r);
+          if (st == null || st < r[0] - 0.01 || st + e.h > endMax) return;
+          if (e.cat === "food" && mealTaken(plan, st, e.h)) return;
+          var dist = detour(around(plan, st, p), e.ll);
+          if (dist > 12) return;
+          var sc = x.sc - dist / 2.5 - (cats[e.cat] ? 3 : 0) - (e.place ? 1.5 : 0);
+          if (!best || sc > best.sc) best = { x: x, st: st, sc: sc };
+        });
+      });
+      if (!best) break;
+      var e2 = best.x.e;
+      plan.stops.push({ t: best.st, h: e2.h, kind: "Then", ev: best.x });
+      ids[e2.id] = 1; cats[e2.cat] = 1; venues[e2.venue] = 1; if (e2.place) places++;
+      if (e2.p) plan.budgetLeft -= e2.p;
+    }
+  }
+
+  function buildPlan(p, cand) {
+    var list = cand.list;
+    if (!list.length) return null;
+    var main = list[0], cycled = false;
+    if (state.pick) { var f = list.filter(function (x) { return x.e.id === state.pick; })[0]; if (f) main = f; }
+    else if (state.shuffle && !p.avoid) {
+      // "Show me another plan": a main event not shown yet, until every option has had a turn.
+      var fresh = list.filter(function (x) { return !state.shown[x.e.id]; });
+      if (fresh.length) main = fresh[0];
+      else { cycled = true; if (list.length > 1 && list[0].e.id === state.lastMain) main = list[1]; }
+    }
+    var e = main.e, day = main.date, t = startHour(e, p, day), trip = e.d >= 1;
+    var plan = { main: main, relaxed: cand.relaxed, budgetLeft: p.budget - (e.p || 0), stops: [{ t: t, h: e.h, kind: trip ? (e.cat === "trek" ? "Trek" : "Day out") : e.place ? "Your outing" : "Main event", ev: main }] };
+    plan.win = [t, t + e.h];
+    if (!trip) {
+      var floor = Math.max(floorFor(day), 6, p.minStart || 0), b = bounds(p, floor);
+      var spare = Math.max(0, p.dur - e.h), w = t >= 17 ? 1 : t >= 12 ? 0.4 : 0.1;
+      var S = Math.max(b[0], Math.ceil((t - spare * w) * 4) / 4), E = Math.min(b[1], S + p.dur);
+      if (E - S < p.dur) S = Math.max(b[0], E - p.dur);
+      // Never longer than the time chosen (or the main event, if that's longer), and always around the main event.
+      var len = Math.max(p.dur, e.h), w0 = Math.min(S, t);
+      w0 = Math.max(w0, t + e.h - len);
+      w0 = Math.min(t, Math.ceil(Math.max(w0, Math.min(t, floor)) * 4) / 4);
+      plan.win = [w0, Math.max(t + e.h, Math.min(w0 + len, endCap(p)))];
+      addMeals(p, plan);
+      fillGaps(p, plan, list);
+      if (p.io === "mix") addMix(p, plan);
+    }
+    plan.stops.sort(function (a, b) { return a.t - b.t; });
+    if (plan.stops[0].kind === "Then") plan.stops[0].kind = "Start with";
+    var lo = 0, hi = 0, unknown = false;
+    plan.stops.forEach(function (s) { if (s.ev) { if (s.ev.e.p == null) unknown = true; else { lo += s.ev.e.p; hi += s.ev.e.p; } } else { lo += s.spot.c[0]; hi += s.spot.c[1]; } });
+    plan.cost = [lo, hi]; plan.unknown = unknown; plan.cycled = cycled;
+    plan.over = lo > p.budget && !/budget/.test(plan.relaxed || "");
+    return plan;
+  }
+
+  // "A mix": make sure the plan has at least one stop indoors and one outdoors (meals count by where you sit).
+  function addMix(p, plan) {
+    function out(s) { return s.spot ? !!s.spot.out : isOut(s.ev.e); }
+    var hasOut = plan.stops.some(out);
+    var hasIn = plan.stops.some(function (s) { return !out(s); });
+    if (hasOut && hasIn) return;
+    var wantOut = !hasOut, day = plan.main.date, anchor = plan.main.e.ll || p.ll;
+    var st = plan.stops.slice().sort(function (a, b) { return a.t - b.t; }), first = st[0], last = st[st.length - 1];
+    var span = last.t + last.h - first.t, floor = floorFor(day);
+    var opts = [], blocked = false;
+    PLACE_EVENTS.forEach(function (x) {
+      if (isOut(x) !== wantOut || !placeOK(x, p, day)) return;
+      if (!meets(x, p)) { blocked = true; return; }
+      if (plan.stops.some(function (s) { return s.ev && s.ev.e.id === x.id; })) return;
+      var times = [];
+      gaps(plan).forEach(function (g) { var c = earliestFit(x, reach(g, x.ll)); if (c != null) times.push(c); });
+      if (span + x.h + 0.25 <= p.dur + 0.75) {
+        times.push(Math.floor((first.t - x.h - travelH(x.ll, stopLL(first))) * 4) / 4);
+        times.push(Math.ceil((last.t + last.h + travelH(stopLL(last), x.ll)) * 4) / 4);
+      }
+      // Keep the whole plan within the time chosen.
+      times = times.filter(function (c) { return c >= Math.max(x.hrs[0], floor, 6) && c + x.h <= Math.min(x.hrs[1], endCap(p)) && Math.max(last.t + last.h, c + x.h) - Math.min(first.t, c) <= Math.max(p.dur, plan.main.e.h) + 0.5; });
+      if (times.length) opts.push({ x: x, tt: times[0], d: road(anchor, x.ll) });
+    });
+    opts = opts.filter(function (o) { return o.d < 12; }).sort(function (a, b) { return a.d - b.d; });
+    if (!opts.length) {
+      var stays = ", so this plan stays " + (wantOut ? "indoors" : "outdoors") + ".";
+      plan.mixNote = span + 1.25 > p.dur + 0.75 ? "There isn't time for both in " + DURS[p.durI].l.toLowerCase() + stays + " Give yourself longer for a mix."
+        : blocked ? "None of the " + (wantOut ? "outdoor" : "indoor") + " places nearby are confirmed for your constraints" + (hasX(p, "wheel") ? " (step-free access)" : "") + stays
+        : "Nothing " + (wantOut ? "outdoors" : "indoors") + " near this plan is open at that time" + stays;
+      return;
+    }
+    plan.stops.push({ t: opts[0].tt, h: opts[0].x.h, kind: wantOut ? "Get some fresh air" : "Step inside", ev: { e: opts[0].x, date: day } });
+  }
+
+  // One day, or two days in a row for "1½ days" and "2 days".
+  function plansFor(p) {
+    if (!p.days) { var c = candidates(p); var pl = buildPlan(p, c); return { plans: pl ? [pl] : [], cand: c }; }
+    var ds = p.dates, pairs = [], last = WIN[WIN.length - 1];
+    for (var i = 0; i + 1 < ds.length && pairs.length < 8; i++) pairs.push([ds[i], ds[i + 1]]);
+    if (!pairs.length) pairs.push(addDays(ds[0], 1) <= last ? [ds[0], addDays(ds[0], 1)] : [addDays(ds[0], -1), ds[0]]);
+    // A first day that's mostly gone (today, after noon) is only used when there's no other pair.
+    if (pairs.length > 1) { var fresh = pairs.filter(function (pr) { return floorFor(pr[0]) <= 12; }); if (fresh.length) pairs = fresh; }
+    var best = null;
+    pairs.forEach(function (pr) {
+      var f0 = floorFor(pr[0]), late = f0 > 12;
+      // Today after noon: today gets the shorter part and tomorrow the full day.
+      var d1 = late ? Math.max(2, Math.min(p.days[1] < p.days[0] ? p.days[1] : p.days[0], 24 - f0)) : p.days[0], d2 = late ? p.days[0] : p.days[1];
+      var p1 = Object.assign({}, p, { dates: [pr[0]], dur: d1, cap: 24 }), c1 = candidates(p1);
+      c1.list = c1.list.filter(function (x) { return x.e.d >= 1 || startHour(x.e, p1, x.date) + x.e.h <= 24.01; });
+      var pl1 = buildPlan(p1, c1);
+      if (!pl1) return;
+      var ids = {}, cats = {}, spots = {}, end1 = 0;
+      pl1.stops.forEach(function (s) { end1 = Math.max(end1, s.t + s.h); if (s.ev) { ids[s.ev.e.id] = 1; cats[s.ev.e.cat] = 1; } else spots[s.spot.n] = 1; });
+      // Day 2 starts after a night's sleep (or a couple of hours after an overnight trip gets back).
+      var rest = Math.max(6, Math.ceil((end1 - 24 + (end1 > 30 ? 2 : 8)) * 4) / 4);
+      var p2 = Object.assign({}, p, { dates: [pr[1]], dur: d2, minStart: rest, avoid: { ids: ids, cats: cats, spots: spots } }), c2 = candidates(p2);
+      c2.list = c2.list.filter(function (x) { return x.e.d >= 1 ? startHour(x.e, p2, x.date) >= rest - 0.01 || x.e.cat === "trek" && rest <= 6 : startHour(x.e, p2, x.date) >= rest - 0.01; });
+      var pl2 = buildPlan(p2, c2);
+      if (!pl2) return;
+      pl1.part = late ? "evening" : d1 < 8 ? "half day" : "";
+      pl2.part = d2 < 8 ? "half day" : "";
+      var sc = pl1.main.sc + pl2.main.sc;
+      if (!best || sc > best.sc) best = { sc: sc, plans: [pl1, pl2], cand: c1 };
+    });
+    return best || { plans: [], cand: { list: [] } };
+  }
+
+  function bookLink(e) {
+    if (e.place) return '<a href="' + esc(e.u) + '" target="_blank" rel="noopener">Open in Google Maps</a>';
+    return '<a href="' + esc(e.u) + '" target="_blank" rel="noopener">' + (e.src === "Instagram" ? "See on Instagram" : "Book on " + esc(e.src)) + "</a>";
+  }
+  function mapLink(q) { return '<a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q + ", Bengaluru") + '" target="_blank" rel="noopener">Map</a>'; }
+
+  // Small facts on each stop: nearest metro, and anything the picked constraints need to flag.
+  function factTags(o) {
+    var t = "", p = CUR || { extra: [] };
+    var m = o.ll ? metroNear(o.ll) : null;
+    if (m && m.d <= 1.2) t += '<span class="tag metro">Metro: ' + esc(m.s.name) + " · " + kmTxt(m.d) + "</span>";
+    if (hasX(p, "pets") && ax(o, "pe") === "y") t += '<span class="tag">Pet-friendly</span>';
+    if (hasX(p, "wheel")) t += ax(o, "wc") === "y" ? '<span class="tag">Step-free access</span>' : ax(o, "wc") === "p" ? '<span class="tag live">Partly step-free</span>' : '<span class="tag live">Access not confirmed, call ahead</span>';
+    if (hasX(p, "smoke")) { var sm = ax(o, "sm"); t += sm === "n" ? '<span class="tag">Smoke-free</span>' : '<span class="tag live">' + (sm === "p" ? "Smoking area on site" : "Smoking not confirmed, call ahead") + "</span>"; }
+    if (hasX(p, "quiet") && ax(o, "lo") === "u") t += '<span class="tag live">Noise level not confirmed</span>';
+    if (hasX(p, "veg") && o.cat === "food" && (o.tags || []).indexOf("veg") < 0) t += '<span class="tag live">Check veg options</span>';
+    return t;
+  }
+  function stopHtml(s, n) {
+    var num = '<b class="num">' + n + "</b>";
+    if (s.spot) {
+      var sp = s.spot;
+      return '<li class="stop spot"><div class="time">' + clock(s.t) + '</div><div class="rail"><i></i></div><div class="body"><span class="kind">' + num + esc(s.kind) + "</span><h3>" + esc(sp.n) + '</h3><p class="sub">' + esc(sp.a) + (sp.d ? " · " + esc(sp.d) : "") + '</p><div class="meta"><span class="tag">' + range(sp.c) + ' pp</span>' + factTags(sp) + '</div><div class="links">' + mapLink(sp.n.replace(/^.* at /, "") + " " + sp.a) + (sp.u ? '<a href="' + sp.u + '" target="_blank" rel="noopener">Source: ' + esc(sp.src) + "</a>" : "<span>" + esc(sp.src) + "</span>") + "</div></div></li>";
+    }
+    var e = s.ev.e;
+    var tags = '<span class="tag">' + (e.place && e.p == null ? "Small entry fee" : price(e.p)) + "</span>";
+    tags += '<span class="tag">' + (isOut(e) ? "Outdoors" : "Indoors") + "</span>";
+    if (!e.place) tags += e.rec ? '<span class="tag">Regular</span>' : e.dates.length === 1 ? '<span class="tag live">One day only</span>' : '<span class="tag live">Limited run</span>';
+    tags += '<span class="tag src">' + esc(e.src) + "</span>";
+    tags += factTags(e);
+    return '<li class="stop"><div class="time">' + clock(s.t) + '</div><div class="rail"><i></i></div><div class="body"><span class="kind">' + num + esc(s.kind) + "</span><h3>" + esc(e.t) + '</h3><p class="sub">' + esc(e.venue) + (e.area && e.area !== e.venue ? ", " + esc(e.area) : "") + " · " + esc(e.time) + (e.note ? ". " + esc(e.note) : "") + '</p><div class="meta">' + tags + '</div><div class="links">' + bookLink(e) + (e.ll && !e.place ? mapLink(e.venue + " " + e.area) : "") + "</div></div></li>";
+  }
+
+  function evRow(x, withPick) {
+    var e = x.e;
+    var tm = /\d:\d\d/.test(e.time) ? e.time.replace(/:00/, "") : e.time.split(",")[0];
+    var dist = "";
+    return '<li class="ev"><div class="when"><b>' + fmt(x.date, { weekday: "short" }) + " " + fmt(x.date, { day: "numeric" }) + "</b>" + esc(tm.length > 14 ? CAT_LABEL[e.cat] : tm) + '</div><div class="what"><a href="' + esc(e.u) + '" target="_blank" rel="noopener">' + esc(e.t) + '</a><span class="where">' + esc(e.venue) + (e.area && e.area !== e.venue ? ", " + esc(e.area) : "") + " · " + esc(e.src) + dist + "</span></div>" +
+      '<div class="side"><span class="price">' + price(e.p) + "</span>" + (withPick ? '<button type="button" data-pick="' + e.id + '">Plan around this</button>' : "") + "</div></li>";
+  }
+
+  function planText(p, plans) {
+    var lines = [];
+    plans.forEach(function (plan) {
+      var d = plan.main.date;
+      lines.push((lines.length ? "\n" : "") + "My " + fmt(d, { weekday: "long", day: "numeric", month: "short" }) + " plan (via Plan Maadi)");
+      plan.stops.forEach(function (s) {
+        if (s.spot) lines.push(clock(s.t) + " · " + s.spot.n + ", " + s.spot.a);
+        else lines.push(clock(s.t) + " · " + s.ev.e.t + " @ " + s.ev.e.venue + " (" + price(s.ev.e.p) + ")\n   " + s.ev.e.u);
+      });
+    });
+    return lines.join("\n");
+  }
+
+  function updateCounts(p) {
+    var ds = p.dates;
+    var base = { budget: 99, slot: false, io: false, dur: false };
+    var counts = {};
+    DATA.events.forEach(function (e) {
+      if (!ds.some(function (d) { return e.dates.indexOf(d) > -1; })) return;
+      if (!fits(e, Object.assign({}, p, { budget: 99999, like: [] }), base)) return;
+      Object.keys(LIKE_CATS).forEach(function (k) { if (LIKE_CATS[k].indexOf(e.cat) > -1) counts[k] = (counts[k] || 0) + 1; });
+    });
+    Array.prototype.forEach.call(form.querySelectorAll(".count"), function (b) { var n = counts[b.dataset.c] || 0; b.textContent = n; b.parentNode.parentNode.querySelector("input").dataset.zero = n ? "" : "1"; });
+  }
+
+  // ---------- City map, drawn here from approximate coordinates (no map service needed).
+  var GEO = {
+    city: [[13.14, 77.59], [13.11, 77.67], [13.04, 77.78], [12.96, 77.80], [12.88, 77.74], [12.80, 77.68], [12.80, 77.58], [12.85, 77.50], [12.91, 77.46], [12.99, 77.45], [13.07, 77.48], [13.12, 77.53]],
+    orr: [[13.0358, 77.5970], [13.0400, 77.6230], [13.0270, 77.6440], [13.0150, 77.6750], [13.0050, 77.6950], [12.9560, 77.7010], [12.9260, 77.6800], [12.9230, 77.6530], [12.9170, 77.6230], [12.9160, 77.6060], [12.9180, 77.5600], [12.9460, 77.5250], [12.9700, 77.5100], [12.9950, 77.5150], [13.0280, 77.5400], [13.0400, 77.5600], [13.0358, 77.5970]],
+    roads: [
+      [[12.9900, 77.5850], [13.0358, 77.5970], [13.1000, 77.5960], [13.1600, 77.6500], [13.1989, 77.7069]],
+      [[12.9600, 77.6000], [12.9170, 77.6230], [12.8452, 77.6602], [12.7400, 77.8200]],
+      [[12.9800, 77.6300], [13.0070, 77.6950], [13.0300, 77.7600], [13.0600, 77.8600]],
+      [[12.9600, 77.5650], [12.9460, 77.5300], [12.9080, 77.4870], [12.7200, 77.2800], [12.2958, 76.6394]],
+      [[13.0050, 77.5600], [13.0280, 77.5400], [13.0480, 77.5000], [13.1000, 77.4300], [13.3400, 77.1000]],
+      [[12.9400, 77.6000], [12.8880, 77.5970], [12.8000, 77.5770]],
+      [[12.9300, 77.5750], [12.8800, 77.5600], [12.8000, 77.5200]],
+      [[12.9569, 77.7011], [12.9698, 77.7500]],
+      [[13.1000, 77.5960], [13.2500, 77.7000], [13.4355, 77.7315]]
+    ],
+    metro: [
+      ["#8E44AD", [[12.9080, 77.4870], [12.9460, 77.5300], [12.9710, 77.5370], [12.9760, 77.5550], [12.9757, 77.5728], [12.9797, 77.5929], [12.9755, 77.6066], [12.9784, 77.6386], [12.9907, 77.6525], [13.0000, 77.6780], [12.9930, 77.7040], [12.9957, 77.7578]]],
+      ["#27AE60", [[13.0570, 77.4730], [13.0480, 77.5000], [13.0230, 77.5500], [12.9910, 77.5700], [12.9757, 77.5728], [12.9610, 77.5740], [12.9460, 77.5800], [12.9300, 77.5800], [12.9210, 77.5800], [12.8960, 77.5700], [12.8620, 77.5300]]],
+      ["#E0B000", [[12.9210, 77.5800], [12.9150, 77.5960], [12.9170, 77.6230], [12.9000, 77.6300], [12.8800, 77.6450], [12.8460, 77.6600], [12.8150, 77.6900]]]
+    ],
+    lakes: [[12.9830, 77.6200, 0.55], [13.0450, 77.5880, 0.6], [13.0090, 77.5740, 0.35], [12.9350, 77.6600, 1.5], [12.9450, 77.7400, 1.0], [12.9230, 77.6420, 0.45], [12.9080, 77.6150, 0.4], [12.8950, 77.5850, 0.3], [12.9120, 77.6710, 0.4]],
+    parks: [[12.9763, 77.5929, 1.0], [12.9507, 77.5848, 0.8]],
+    labels: [["Yelahanka", 13.1005, 77.5963], ["Hebbal", 13.0358, 77.5970], ["Malleshwaram", 13.0035, 77.5700], ["Rajajinagar", 12.9910, 77.5550], ["MG Road", 12.9756, 77.6066], ["Indiranagar", 12.9719, 77.6412], ["Whitefield", 12.9698, 77.7500], ["Marathahalli", 12.9569, 77.7011], ["Koramangala", 12.9352, 77.6245], ["HSR", 12.9116, 77.6474], ["Jayanagar", 12.9250, 77.5938], ["JP Nagar", 12.9063, 77.5857], ["Banashankari", 12.9255, 77.5468], ["Electronic City", 12.8452, 77.6602], ["Kengeri", 12.9080, 77.4870], ["KR Puram", 13.0070, 77.6950], ["Airport", 13.1989, 77.7069]]
+  };
+  function kmTxt(k) { return k < 0.6 ? "under 1 km" : k < 10 ? (Math.round(k * 10) / 10) + " km" : Math.round(k) + " km"; }
+  // Drive time in hours, shown to the nearest 5 minutes.
+  function minsTxt(h) { var m = Math.max(5, Math.ceil(h * 60 / 5) * 5); return m < 60 ? m + " min" : Math.floor(m / 60) + " h" + (m % 60 ? " " + (m % 60) + " min" : ""); }
+  // Google Maps directions (no key needed). Places are given by name so Google finds the real venue; the start is its map point.
+  function placeQuery(s) {
+    if (s.spot) return s.spot.ll ? s.spot.n.replace(/^.* at /, "") + ", " + s.spot.a + ", Bengaluru" : null;
+    var e = s.ev.e; if (!e.ll && /across the city/i.test(e.venue)) return null;
+    if (e.place && !e.petOnly) return e.ll.join(",");
+    return e.venue + (e.area && e.area !== e.venue ? ", " + e.area : "") + ", Bengaluru";
+  }
+  function gmapsDir(origin, dest, waypoints) {
+    return "https://www.google.com/maps/dir/?api=1&travelmode=driving&origin=" + encodeURIComponent(origin) + "&destination=" + encodeURIComponent(dest) + (waypoints && waypoints.length ? "&waypoints=" + encodeURIComponent(waypoints.join("|")) : "");
+  }
+  function stopName(s) { return s.spot ? s.spot.n.replace(/^.* at /, "") : s.ev.e.t; }
+
+  // Where each stop is, the legs between them and the total distance.
+  // A stop that can be anywhere (a darshini, courts across the city) adds no distance and sits with the stop nearest it.
+  // A stop whose exact place is only on the listing is left off, and the totals say "at least".
+  function mapData(p, plan) {
+    var pts = [], legs = [], total = 0, prev = { ll: p.ll, name: p.start, home: true, q: p.ll.join(",") }, gap = false, partial = false, known = 0, est = false;
+    var lls = plan.stops.map(function (s) { return s.spot ? s.spot.ll : s.ev.e.ll; });
+    plan.stops.forEach(function (s, i) {
+      var ll = lls[i], flex = !ll && (s.spot || /across the city/i.test(s.ev.e.venue));
+      if (flex) {
+        ll = prev.home ? null : prev.ll;
+        for (var j = i + 1; !ll && j < lls.length; j++) ll = lls[j];
+        ll = ll || p.ll;
+      }
+      var pt = { n: i + 1, ll: ll, name: stopName(s), flex: !!flex };
+      pts.push(pt);
+      if (flex) { legs.push({ to: pt, flex: true }); return; }
+      if (!ll) { legs.push({ to: pt, unknown: true }); gap = partial = true; return; }
+      var d = road(prev.ll, ll); total += d; known++; if (!roadKnown(prev.ll, ll)) est = true;
+      legs.push({ from: prev.name, fromStart: !!prev.home, afterGap: gap, to: pt, km: d, h: driveH(prev.ll, ll), est: !roadKnown(prev.ll, ll), q: placeQuery(s), fromQ: prev.q });
+      prev = { ll: ll, name: pt.name, q: placeQuery(s) }; gap = false;
+    });
+    var real = legs.filter(function (l) { return !l.flex; }), last = real[real.length - 1], firstReal = real[0];
+    var home = !known || (last && last.unknown) ? null : road(prev.ll, p.ll);
+    if (home != null && !roadKnown(prev.ll, p.ll)) est = true;
+    // The whole day as one Google Maps route: from the start, through each stop, and back.
+    var way = []; plan.stops.forEach(function (s) { var q = placeQuery(s); if (q && way.indexOf(q) < 0) way.push(q); });
+    return { pts: pts, legs: legs, total: known ? total : null, home: home, homeH: home != null ? driveH(prev.ll, p.ll) : null, partial: partial, est: est,
+      first: firstReal && !firstReal.unknown ? firstReal.km : null, route: way.length ? gmapsDir(p.ll.join(","), p.ll.join(","), way.slice(0, 9)) : null };
+  }
+
+  function mapSvg(p, md) {
+    var all = [p.ll].concat(md.pts.filter(function (x) { return x.ll; }).map(function (x) { return x.ll; }));
+    var la0 = Math.min.apply(null, all.map(function (x) { return x[0]; })), la1 = Math.max.apply(null, all.map(function (x) { return x[0]; }));
+    var lo0 = Math.min.apply(null, all.map(function (x) { return x[1]; })), lo1 = Math.max.apply(null, all.map(function (x) { return x[1]; }));
+    var padLa = Math.max((la1 - la0) * 0.22, 0.02), padLo = Math.max((lo1 - lo0) * 0.22, 0.02);
+    la0 -= padLa; la1 += padLa; lo0 -= padLo; lo1 += padLo;
+    var minSpan = 0.11;
+    if (la1 - la0 < minSpan) { var c = (la0 + la1) / 2; la0 = c - minSpan / 2; la1 = c + minSpan / 2; }
+    if (lo1 - lo0 < minSpan) { var c2 = (lo0 + lo1) / 2; lo0 = c2 - minSpan / 2; lo1 = c2 + minSpan / 2; }
+    var kx = Math.cos((la0 + la1) / 2 * Math.PI / 180), W = 360;
+    var sx = (lo1 - lo0) * kx, sy = la1 - la0, H = W * sy / sx;
+    if (H < 240) { var ny = sx * 240 / W, cy = (la0 + la1) / 2; la0 = cy - ny / 2; la1 = cy + ny / 2; sy = ny; H = 240; }
+    if (H > 340) { var nx = sy * W / 340, cx = (lo0 + lo1) / 2; lo0 = cx - nx / kx / 2; lo1 = cx + nx / kx / 2; sx = nx; H = 340; }
+    function X(ll) { return ((ll[1] - lo0) * kx / sx * W); }
+    function Y(ll) { return ((la1 - ll[0]) / sy * H); }
+    function path(arr) { return arr.map(function (ll, i) { return (i ? "L" : "M") + X(ll).toFixed(1) + " " + Y(ll).toFixed(1); }).join(""); }
+    var pxPerKm = W / (sx * 111.32);
+    var g = '<rect class="m-bg" width="' + W + '" height="' + H.toFixed(0) + '"/>';
+    g += '<path class="m-city" d="' + path(GEO.city) + 'Z"/>';
+    GEO.parks.forEach(function (k) { g += '<circle class="m-park" cx="' + X(k).toFixed(1) + '" cy="' + Y(k).toFixed(1) + '" r="' + Math.max(2, k[2] * pxPerKm).toFixed(1) + '"/>'; });
+    GEO.lakes.forEach(function (k) { g += '<ellipse class="m-lake" cx="' + X(k).toFixed(1) + '" cy="' + Y(k).toFixed(1) + '" rx="' + Math.max(1.5, k[2] * pxPerKm * 1.2).toFixed(1) + '" ry="' + Math.max(1.2, k[2] * pxPerKm * 0.8).toFixed(1) + '"/>'; });
+    GEO.roads.forEach(function (r) { g += '<path class="m-road" d="' + path(r) + '"/>'; });
+    g += '<path class="m-orr" d="' + path(GEO.orr) + '"/>';
+    GEO.metro.forEach(function (m) { g += '<path class="m-metro" stroke="' + m[0] + '" d="' + path(m[1]) + '"/>'; });
+    var hx = X(p.ll), hy = Y(p.ll);
+    // Stop markers: stops at the same spot share one marker ("3·6"); a marker that would sit on another moves aside on a short leader line.
+    var groups = [];
+    md.pts.forEach(function (pt) {
+      if (!pt.ll) return;
+      var x = X(pt.ll), y = Y(pt.ll), g0 = groups.filter(function (g) { return Math.hypot(g.x - x, g.y - y) < 14; })[0];
+      if (g0) g0.ns.push(pt.n); else groups.push({ x: x, y: y, ns: [pt.n] });
+    });
+    var boxes = [[hx - 11, hy - 11, hx + 11, hy + 11], [hx - 12, hy + 12, hx + 12, hy + 24]];
+    function hits(b) { return boxes.some(function (q) { return b[0] < q[2] && b[2] > q[0] && b[1] < q[3] && b[3] > q[1]; }); }
+    var RING = [[0, 0], [0, -26], [24, -14], [24, 14], [0, 26], [-24, 14], [-24, -14], [0, -46], [40, 0], [-40, 0]];
+    groups.forEach(function (g) {
+      g.label = g.ns.join("·"); g.w = g.label.length > 2 ? g.label.length * 6.4 + 10 : 20;
+      for (var k = 0; k < RING.length; k++) {
+        var x = Math.min(Math.max(g.x + RING[k][0], g.w / 2 + 1), W - g.w / 2 - 1), y = Math.min(Math.max(g.y + RING[k][1], 11), H - 11);
+        var b = [x - g.w / 2 - 1, y - 11, x + g.w / 2 + 1, y + 11];
+        if (!hits(b) || k === RING.length - 1) { g.mx = x; g.my = y; boxes.push(b); break; }
+      }
+    });
+    var zoomedOut = sy > 0.5;
+    var LINE_COL = { purple: "#8E44AD", green: "#27AE60", yellow: "#E0B000", pink: "#E05297", blue: "#2D7FD3" };
+    if (!zoomedOut) METRO.forEach(function (st) {
+      var ll = [st.lat, st.lng], x = X(ll), y = Y(ll);
+      if (x < 0 || x > W || y < 0 || y > H) return;
+      g += '<circle class="m-stn" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="2.2" stroke="' + (LINE_COL[String(st.line).toLowerCase().split(" ")[0]] || "#8E44AD") + '"/>';
+    });
+    // Scale bar, kept clear of labels.
+    var bar = [1, 2, 5, 10, 20, 50].filter(function (k) { return k * pxPerKm >= 40; })[0] || 50, bw = bar * pxPerKm;
+    boxes.push([6, H - 30, 12 + Math.max(bw, 34) + 4, H - 6]);
+    // Area labels only where they fit whole and clear of the pins, markers, scale and each other.
+    function label(txt, x, y, cls, w) {
+      var b = [x - w / 2 - 2, y - 9, x + w / 2 + 2, y + 4];
+      if (b[0] < 2 || b[2] > W - 2 || b[1] < 2 || b[3] > H - 2 || hits(b)) return false;
+      boxes.push(b); g += '<text class="m-lbl' + cls + '" x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" text-anchor="middle">' + txt + "</text>"; return true;
+    }
+    if (zoomedOut) { var bx = X([12.97, 77.60]), by = Y([12.97, 77.60]); label("Bengaluru", bx, by, " big", 66) || label("Bengaluru", bx, by - 22, " big", 66) || label("Bengaluru", bx, by + 26, " big", 66); }
+    else GEO.labels.forEach(function (l) { label(l[0], X([l[1], l[2]]), Y([l[1], l[2]]) + 3, "", l[0].length * 5.2); });
+    // Route: home, then each stop in order, then a faint line back home.
+    var route = [p.ll].concat(md.pts.filter(function (x) { return x.ll; }).map(function (x) { return x.ll; }));
+    if (route.length > 1) {
+      g += '<path class="m-home" d="' + path([route[route.length - 1], p.ll]) + '"/>';
+      g += '<path class="m-route" d="' + path(route) + '"/>';
+    }
+    g += '<g class="m-start"><circle cx="' + hx.toFixed(1) + '" cy="' + hy.toFixed(1) + '" r="9"/><path d="M' + (hx - 4.5).toFixed(1) + " " + (hy + 0.5).toFixed(1) + "l4.5-4.5 4.5 4.5v4h-9z" + '"/></g>';
+    g += '<text class="m-lbl you" x="' + hx.toFixed(1) + '" y="' + (hy + 21).toFixed(1) + '" text-anchor="middle">You</text>';
+    groups.forEach(function (q) {
+      var moved = Math.hypot(q.mx - q.x, q.my - q.y) > 1;
+      if (moved) g += '<path class="m-lead" d="M' + q.x.toFixed(1) + " " + q.y.toFixed(1) + "L" + q.mx.toFixed(1) + " " + q.my.toFixed(1) + '"/><circle class="m-tie" cx="' + q.x.toFixed(1) + '" cy="' + q.y.toFixed(1) + '" r="3.5"/>';
+      g += '<g class="m-stop">' + (q.w > 20 ? '<rect x="' + (q.mx - q.w / 2).toFixed(1) + '" y="' + (q.my - 10).toFixed(1) + '" width="' + q.w.toFixed(1) + '" height="20" rx="10"/>' : '<circle cx="' + q.mx.toFixed(1) + '" cy="' + q.my.toFixed(1) + '" r="10"/>') +
+        '<text x="' + q.mx.toFixed(1) + '" y="' + (q.my + 4).toFixed(1) + '" text-anchor="middle">' + q.label + "</text></g>";
+    });
+    g += '<g class="m-scale"><path d="M12 ' + (H - 12).toFixed(0) + "h" + bw.toFixed(1) + '"/><text x="12" y="' + (H - 17).toFixed(0) + '">' + bar + " km</text></g>";
+    return '<svg class="map-svg" viewBox="0 0 ' + W + " " + H.toFixed(0) + '" role="img" aria-label="Map of Bengaluru showing your starting point and the plan\'s stops">' + g + "</svg>";
+  }
+
+  function mapHtml(p, plan, md, label) {
+    var rows = md.legs.map(function (l) {
+      var n = '<li><b class="num">' + l.to.n + "</b>";
+      if (l.unknown) return n + esc(l.to.name) + ': <span class="muted">exact spot is on the listing</span></li>';
+      if (l.flex) return n + esc(l.to.name) + ': <span class="muted">any one along your route</span></li>';
+      var dir = l.q ? ' <a class="dir" href="' + esc(gmapsDir(l.fromQ, l.q)) + '" target="_blank" rel="noopener">Directions</a>' : "";
+      return n + (l.fromStart ? "From " + esc(p.start) + " to " : l.afterGap ? "From " + esc(l.from) + " to " : "Then to ") + esc(l.to.name) + ": <b>" + (l.est ? "≈ " : "") + kmTxt(l.km) + "</b> <span class=\"muted\">· about " + minsTxt(l.h) + "</span>" + dir + "</li>";
+    }).join("");
+    var trip = md.total == null ? null : md.total + (md.home || 0), atLeast = md.partial || md.home == null ? "at least " : "";
+    var stats = '<div class="map-stats"><span>From your start<b>' + (md.first != null ? kmTxt(md.first) : "–") + "</b></span><span>Round trip<b>" + (trip == null ? "–" : (atLeast ? '<small>' + atLeast + "</small>" : "") + kmTxt(trip)) + "</b></span><span>Back home<b>" + (md.home != null ? kmTxt(md.home) : "–") + "</b></span></div>";
+    return '<figure class="map"><figcaption>' + (label ? label + " on the map" : "Where it all is") + "</figcaption>" + stats + mapSvg(p, md) + '<ol class="legs">' + rows + '</ol>' + (md.route ? '<a class="btn route" href="' + esc(md.route) + '" target="_blank" rel="noopener">Open the whole route in Google Maps</a>' : "") +
+      '<p class="map-note">' + (ROAD ? "Distances are by road, on the usual quickest route by car" + (md.est ? "; ≈ marks an estimate" : "") + ". Times are for usual traffic; tap Directions for live traffic in Google Maps." : "Road distances are estimates. Times are for usual traffic; tap Directions for live traffic in Google Maps.") + "</p></figure>";
+  }
+
+  var IO_OPTS = [["in", "Indoors"], ["out", "Outdoors"], ["mix", "A mix"], ["any", "Doesn't matter"]];
+  function ioToggle() {
+    return '<div class="io"><span class="io-label" id="ioLabel">Indoors or outdoors?</span><div class="io-seg" role="radiogroup" aria-labelledby="ioLabel">' + IO_OPTS.map(function (o) {
+      return '<button type="button" role="radio" data-io="' + o[0] + '" aria-checked="' + (state.io === o[0]) + '" tabindex="' + (state.io === o[0] ? 0 : -1) + '">' + o[1] + "</button>";
+    }).join("") + "</div></div>";
+  }
+
+  function render() {
+    var p = read();
+    CUR = p;
+    applyVibe(p);
+    updateCounts(p);
+    calHint(p);
+    showDur();
+    var allDay = DURS[p.durI].h >= 18;
+    Array.prototype.forEach.call(form.querySelectorAll('input[name="slot"]'), function (i) { i.disabled = allDay; });
+    document.getElementById("slotHint").hidden = !allDay;
+    var r = plansFor(p), plans = r.plans;
+    if (!plans.length) {
+      var names = p.like.filter(function (l) { return l !== "general"; }).map(function (l) { return Q.like.filter(function (o) { return o[0] === l; })[0][1].toLowerCase(); });
+      var xl = function (k) { return Q.extra.filter(function (o) { return o[0] === k; })[0][1]; };
+      // Which "Any constraint?" pick is emptying the plan?
+      var blocker = null;
+      if (p.extra.length) p.extra.some(function (k) { if (plansFor(Object.assign({}, p, { extra: p.extra.filter(function (x) { return x !== k; }) })).plans.length) { blocker = k; return true; } return false; });
+      var tooLate = hasX(p, "early") && p.dates.length === 1 && p.dates[0] === todayStr() && floorFor(p.dates[0]) >= 20;
+      var msg = tooLate ? "It's already too late tonight to be home by 9 pm. Try tomorrow."
+        : blocker ? "Nothing on these dates is confirmed for “" + esc(xl(blocker)) + "” with your other answers."
+        : p.extra.length ? "Nothing on these dates meets all of: " + esc(p.extra.map(function (k) { return xl(k).toLowerCase(); }).join(", ")) + ". Try fewer constraints or other dates."
+        : names.length ? "There's nothing for " + esc(names.join(", ")) + " that fits your other answers on these dates. Add another interest, pick “General”, or try other dates."
+        : "Try a bigger budget, “Anywhere in the city”, or other dates.";
+      planEl.innerHTML = '<div class="plan-head"><span class="eyebrow">' + dayName(p.dates[0]) + (p.dates.length > 1 ? " to " + dayName(p.dates[p.dates.length - 1]) : "") + '</span><h2 tabindex="-1">Nothing fits all of that</h2></div>' + ioToggle() + '<p class="empty">' + msg + "</p>";
+      var later = null, endSel = p.dates[p.dates.length - 1];
+      for (var d = addDays(endSel, 1); d <= WIN[WIN.length - 1]; d = addDays(d, 1)) { if (candidates(Object.assign({}, p, { dates: [d] })).list.length) { later = d; break; } }
+      var acts = [];
+      if (blocker) acts.push('<button type="button" class="btn primary" data-drop="' + blocker + '">Drop “' + esc(xl(blocker)) + "”</button>");
+      if (later) acts.push('<button type="button" class="btn' + (acts.length ? "" : " primary") + '" id="tryLater">Show ' + dayName(later) + " instead</button>");
+      if (p.extra.length > 1 || (p.extra.length && !blocker)) acts.push('<button type="button" class="btn" id="clearX">Clear constraints</button>');
+      if (names.length && !p.extra.length) acts.push('<button type="button" class="btn' + (acts.length ? "" : " primary") + '" id="tryGeneral">Show me a mix of things</button>');
+      planEl.innerHTML += '<div class="actions">' + acts.join("") + "</div>";
+      status("No plan fits these answers.");
+      function untick(k) { var i = form.querySelector("#q-extra-" + k); if (i) i.checked = false; }
+      Array.prototype.forEach.call(planEl.querySelectorAll("[data-drop]"), function (b) { b.onclick = function () { untick(b.dataset.drop); form.dispatchEvent(new Event("change")); focusPlan(); }; });
+      if (document.getElementById("clearX")) document.getElementById("clearX").onclick = function () { p.extra.forEach(untick); form.dispatchEvent(new Event("change")); focusPlan(); };
+      if (later) document.getElementById("tryLater").onclick = function () { setSel(later, null); focusPlan(); };
+      if (document.getElementById("tryGeneral")) document.getElementById("tryGeneral").onclick = function () { var g = form.querySelector("#q-like-general"); g.checked = true; g.dispatchEvent(new Event("change", { bubbles: true })); focusPlan(); };
+      wireIo();
+      moreEl.hidden = true; return;
+    }
+    var two = plans.length > 1, main = plans[0].main;
+    var lo = 0, hi = 0, unknown = false, cover = 0;
+    var maps = plans.map(function (pl) { return mapData(p, pl); });
+    plans.forEach(function (pl, i) { lo += pl.cost[0]; hi += pl.cost[1]; unknown = unknown || pl.unknown; cover += maps[i].total + (maps[i].home || 0); });
+    if (!state.shuffle || plans[0].cycled) state.shown = {};
+    plans.forEach(function (pl) { state.shown[pl.main.e.id] = 1; });
+    state.lastMain = plans[0].main.e.id;
+    var eyebrow = two ? "Your " + dayName(plans[0].main.date) + " and " + dayName(plans[1].main.date) : "Your " + fmt(main.date, { weekday: "long", day: "numeric", month: "short" });
+    var title = two ? esc(plans[0].main.e.t) + ' <span class="plus">+ ' + esc(plans[1].main.e.t) + "</span>" : esc(main.e.t);
+    var html = bannerHtml(p) + mascotHtml(p) + '<div class="plan-head"><span class="eyebrow">' + eyebrow + "</span><h2>" + title + '</h2><div class="summary"><span>Spend <b>' + (hi ? range([lo, hi]) : "₹0") + "</b> pp" + (unknown ? " + tickets" : "") + (two ? " over 2 days" : "") + "</span><span>Starts <b>" + clock(plans[0].stops[0].t) + "</b></span><span>Round trip <b>" + (cover ? "~" + kmTxt(cover) : "–") + "</b></span></div></div>";
+    html += ioToggle();
+    var relaxed = plans[0].relaxed;
+    if (relaxed) html += '<p class="relaxed">Only a few listings matched exactly, so we loosened your ' + esc(relaxed) + ".</p>";
+    if (plans[0].cycled) html += '<p class="relaxed">That\'s every plan that fits these answers, so we\'re going round again.</p>';
+    var over = plans.filter(function (pl) { return pl.over; })[0];
+    if (over) html += '<p class="relaxed">Meals take this a little over your budget' + (two ? " (the budget counts per day)" : "") + ": " + range(over.cost) + " pp for " + (two ? "the day" : "the plan") + ".</p>";
+    plans.forEach(function (pl) {
+      // Say so when there wasn't enough to fill the time chosen.
+      var a = pl.stops[0].t, b = Math.max.apply(null, pl.stops.map(function (s) { return s.t + s.h; }));
+      if (pl.stops[0].kind !== "Trek" && pl.stops[0].kind !== "Day out" && (two ? false : p.dur >= 6) && b - a < 0.7 * p.dur)
+        html += '<p class="relaxed">We could fill ' + clock(a) + " to " + clock(b) + " with things that fit your answers" + (p.budget < 4000 ? ". A bigger budget adds more." : p.reach === 0 ? ". “Anywhere in the city” adds more." : ".") + "</p>";
+      else if (!two && p.dur >= 20 && b < 24) html += '<p class="relaxed">Nothing that fits your answers runs past midnight that day, so the plan ends at ' + clock(b) + ".</p>";
+    });
+    plans.forEach(function (pl, i) {
+      if (two) html += '<h3 class="dayhead"><span>Day ' + (i + 1) + (pl.part ? " · " + pl.part : "") + "</span>" + fmt(pl.main.date, { weekday: "long", day: "numeric", month: "short" }) + ' <small>' + (pl.cost[1] ? range(pl.cost) : "₹0") + " pp</small></h3>";
+      if (pl.mixNote) html += '<p class="relaxed">' + esc(pl.mixNote) + "</p>";
+      html += '<ol class="route">' + pl.stops.map(function (s, k) { return stopHtml(s, k + 1); }).join("") + "</ol>";
+      html += mapHtml(p, pl, maps[i], two ? "Day " + (i + 1) : "");
+    });
+    html += '<div class="actions"><button type="button" class="btn primary" id="shuffle">Show me another plan</button><button type="button" class="btn" id="copy">Copy plan</button><a class="btn" target="_blank" rel="noopener" href="https://wa.me/?text=' + encodeURIComponent(planText(p, plans)) + '">Share on WhatsApp</a><span class="copied" id="copied" hidden>Copied</span></div>';
+    planEl.innerHTML = html;
+    status("Plan for " + dayName(plans[0].main.date) + (two ? " and " + dayName(plans[1].main.date) : "") + ": " + plans.reduce(function (n, pl) { return n + pl.stops.length; }, 0) + " stops from " + clock(plans[0].stops[0].t) + ".");
+
+    var used = {}; plans.forEach(function (pl) { pl.stops.forEach(function (s) { if (s.ev) used[s.ev.e.id] = 1; }); });
+    var perCat = {}, general = !chosenCats(p);
+    var more = r.cand.list.filter(function (x) {
+      if (used[x.e.id] || x.e.place) return false;
+      if (general) { perCat[x.e.cat] = (perCat[x.e.cat] || 0) + 1; if (perCat[x.e.cat] > 1) return false; }
+      return true;
+    }).slice(0, 5);
+    moreEl.hidden = !more.length;
+    moreEl.innerHTML = "<h3>Or swap in one of these</h3>" + '<p class="sub">' + (general ? "A mix of other things on that fit your answers." : "Other listings for what you picked, best fit first.") + '</p><ul class="evlist">' + more.map(function (x) { return evRow(x, true); }).join("") + "</ul>";
+
+    document.getElementById("shuffle").onclick = function () { state.pick = null; state.shuffle++; render(); refocus("#shuffle"); };
+    document.getElementById("copy").onclick = function () {
+      var txt = planText(p, plans), done = document.getElementById("copied");
+      function ok() { done.hidden = false; setTimeout(function () { done.hidden = true; }, 1800); }
+      function fallback() { var ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); ok(); } catch (e) {} ta.remove(); }
+      try { navigator.clipboard.writeText(txt).then(ok, fallback); } catch (e) { fallback(); }
+    };
+    Array.prototype.forEach.call(document.querySelectorAll("[data-pick]"), function (b) {
+      b.onclick = function () { state.pick = b.dataset.pick; state.shuffle = 0; state.shown = {}; render(); planEl.parentNode.scrollIntoView({ behavior: "smooth", block: "start" }); focusPlan(); };
+    });
+    wireIo();
+  }
+  function wireIo() {
+    Array.prototype.forEach.call(planEl.querySelectorAll("[data-io]"), function (b) {
+      b.onclick = function () { state.io = b.dataset.io; resetPick(); render(); refocus('#plan [data-io="' + state.io + '"]'); };
+    });
+    var seg = planEl.querySelector(".io-seg");
+    if (seg) seg.onkeydown = function (ev) {
+      var k = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[ev.key];
+      if (!k) return;
+      ev.preventDefault();
+      var i = IO_OPTS.map(function (o) { return o[0]; }).indexOf(state.io);
+      planEl.querySelector('[data-io="' + IO_OPTS[(i + k + 4) % 4][0] + '"]').click();
+    };
+  }
+  // One short line for screen readers instead of re-reading the whole plan.
+  function status(t) { var el = document.getElementById("planStatus"); if (el) el.textContent = t; }
+  function focusPlan() { var h = planEl.querySelector("h2"); if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); } }
+
+  // Grandparents and babies, drawn for the elders and kids themes.
+  var AJJI = '<circle cx="60" cy="24" r="12" fill="#BDBDBD"/><g fill="#fff" stroke="#D6D6D6" stroke-width=".6"><circle cx="48" cy="21" r="3.2"/><circle cx="51" cy="13" r="3.2"/><circle cx="60" cy="9.5" r="3.2"/><circle cx="69" cy="13" r="3.2"/><circle cx="72" cy="21" r="3.2"/></g>' +
+    '<path d="M12 130C14 102 34 90 60 90S106 102 108 130Z" fill="#9F1D46"/><path d="M30 95C50 103 68 116 78 130H92C82 113 62 97 42 91Z" fill="#E9A100"/><path d="M34 98C52 106 68 118 76 130" stroke="#7A1235" stroke-width="2" fill="none"/>' +
+    '<rect x="52" y="74" width="16" height="18" rx="6" fill="#C68A5E"/><ellipse cx="60" cy="56" rx="25" ry="28" fill="#D29A6C"/>' +
+    '<path d="M35 57C32 29 88 29 85 57C82 44 74 36 60 36S38 44 35 57Z" fill="#D4D4D4"/><path d="M60 33V40" stroke="#A3A3A3" stroke-width="1.5"/>' +
+    '<circle cx="35" cy="64" r="3.2" fill="#E9A100"/><circle cx="85" cy="64" r="3.2" fill="#E9A100"/>' +
+    '<g fill="none" stroke="#3E2723" stroke-width="2.2"><circle cx="49" cy="57" r="8"/><circle cx="71" cy="57" r="8"/><path d="M57 56.5Q60 54.5 63 56.5"/></g>' +
+    '<path d="M45 58Q49 54.5 53 58M67 58Q71 54.5 75 58" stroke="#2B1B10" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="60" cy="45" r="2.4" fill="#C62828"/>' +
+    '<circle cx="42" cy="69" r="4.5" fill="#E57373" opacity=".4"/><circle cx="78" cy="69" r="4.5" fill="#E57373" opacity=".4"/>' +
+    '<path d="M60 60Q57.5 65 61 66" stroke="#A86E45" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="63.6" cy="65" r="1.7" fill="none" stroke="#E9A100" stroke-width="1.2"/>' +
+    '<path d="M51 72Q60 80 69 72" stroke="#6D3B22" stroke-width="2.2" fill="none" stroke-linecap="round"/>';
+  var THATHA = '<path d="M12 130C14 102 34 90 60 90S106 102 108 130Z" fill="#F4F1E8" stroke="#D8D2C2"/><path d="M24 104C40 96 52 104 58 130H44C40 116 32 110 22 112Z" fill="#E7D7B4" stroke="#C9A227" stroke-width="2"/>' +
+    '<path d="M52 90L60 102L68 90" stroke="#D8D2C2" stroke-width="2" fill="none"/><rect x="52" y="74" width="16" height="18" rx="6" fill="#A86C44"/>' +
+    '<circle cx="35" cy="58" r="4.5" fill="#B97A50"/><circle cx="85" cy="58" r="4.5" fill="#B97A50"/><ellipse cx="60" cy="54" rx="24" ry="29" fill="#B97A50"/>' +
+    '<path d="M36.5 62C33 48 37 40 43 39C41 47 41 54 43 63Z" fill="#EDEDED"/><path d="M83.5 62C87 48 83 40 77 39C79 47 79 54 77 63Z" fill="#EDEDED"/>' +
+    '<path d="M48 36Q60 32 72 36M50 41Q60 38 70 41" stroke="#7F4F2F" stroke-width="1.4" fill="none" opacity=".5"/>' +
+    '<g fill="none" stroke="#3E2723" stroke-width="2.2"><rect x="41" y="50" width="15" height="11" rx="4"/><rect x="64" y="50" width="15" height="11" rx="4"/><path d="M56 55H64"/></g>' +
+    '<circle cx="48.5" cy="55.5" r="2" fill="#2B1B10"/><circle cx="71.5" cy="55.5" r="2" fill="#2B1B10"/><path d="M60 59Q58 64 61 65" stroke="#7F4F2F" stroke-width="1.6" fill="none"/>' +
+    '<path d="M45 71Q52 64 60 69Q68 64 75 71Q68 75 60 72Q52 75 45 71Z" fill="#F5F5F5" stroke="#CFCFCF"/><path d="M54 77.5Q60 81 66 77.5" stroke="#5A3420" stroke-width="2" fill="none" stroke-linecap="round"/>';
+  var BABY = '<circle cx="20" cy="66" r="8" fill="#F0B88C"/><circle cx="100" cy="66" r="8" fill="#F0B88C"/><circle cx="60" cy="64" r="40" fill="#F5C7A0"/>' +
+    '<path d="M57 26C49 18 58 8 66 14C70 18 66 24 61 22" stroke="#7B4A26" stroke-width="3.5" fill="none" stroke-linecap="round"/>' +
+    '<ellipse cx="45" cy="61" rx="5" ry="6" fill="#2B1B10"/><circle cx="47" cy="59" r="1.8" fill="#fff"/><ellipse cx="75" cy="61" rx="5" ry="6" fill="#2B1B10"/><circle cx="77" cy="59" r="1.8" fill="#fff"/>' +
+    '<circle cx="35" cy="76" r="7" fill="#F48FB1" opacity=".6"/><circle cx="85" cy="76" r="7" fill="#F48FB1" opacity=".6"/>' +
+    '<rect x="49" y="80" width="22" height="7" rx="3.5" fill="#93C5FD"/><circle cx="60" cy="86" r="8" fill="#3B82F6"/><circle cx="60" cy="86" r="3.5" fill="none" stroke="#fff" stroke-width="2"/>';
+  var DECO = {
+    elders: '<svg viewBox="0 0 260 170"><path d="M10 150H250" stroke="#8D6E63" stroke-width="6" stroke-linecap="round"/><path d="M30 150V168M230 150V168" stroke="#8D6E63" stroke-width="5"/><path d="M14 132H246" stroke="#A1887F" stroke-width="5" stroke-linecap="round"/>' +
+      '<g transform="translate(8 14)">' + AJJI + '</g><g transform="translate(132 14)">' + THATHA + '</g><g transform="translate(118 112)"><path d="M0 0H18L16 22H2Z" fill="#B0BEC5"/><path d="M4 -4q3 -6 0 -12M11 -4q3 -6 0 -12" stroke="#90A4AE" stroke-width="1.5" fill="none"/></g></svg>',
+    kids: '<svg viewBox="0 0 220 170"><path d="M40 84A62 62 0 0 1 102 22V84Z" fill="#FDE68A"/><path d="M40 84A62 62 0 0 1 102 22" stroke="#F59E0B" stroke-width="3" fill="none"/>' +
+      '<g transform="translate(96 30) scale(.55)">' + BABY + '</g><path d="M30 84H180Q180 126 138 130H74Q30 126 30 84Z" fill="#3B82F6"/><path d="M40 98H170" stroke="#93C5FD" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>' +
+      '<path d="M178 84L196 44H212" stroke="#475569" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '<g fill="#fff" stroke="#475569" stroke-width="5"><circle cx="66" cy="148" r="16"/><circle cx="146" cy="148" r="16"/></g><g stroke="#475569" stroke-width="2"><path d="M66 132V164M50 148H82M146 132V164M130 148H162"/></g></svg>'
+  };
+  function mascotHtml(p) {
+    var o = themeFor(p).occ;
+    if (o === "elders") return '<div class="mascot two" aria-hidden="true"><svg viewBox="0 0 120 130">' + AJJI + '</svg><svg viewBox="0 0 120 130">' + THATHA + "</svg></div>";
+    if (o === "kids") return '<div class="mascot" aria-hidden="true"><svg viewBox="0 0 120 120">' + BABY + "</svg></div>";
+    return "";
+  }
+
+  // ---------- Themes: the occasion sets the page's look; the interest adds an illustration and its own icons.
+  var OCC_THEME = {
+    date: { label: "Date mode", fx: ["❤️", "💕", "💖", "🌹", "💌"], lede: "Two tickets, one table, zero planning stress. Built from what's <b>actually on</b> in Bengaluru on the day you pick." },
+    friends: { label: "Gang's all here", fx: ["🙌", "🤘", "📸", "🍕", "👯", "🥳"], lede: "Rally the gang. We'll find the one thing everyone agrees on from what's <b>actually on</b> that day." },
+    solo: { label: "Me time", fx: ["🌙", "📖", "☕", "🎧", "✨"], n: 9, lede: "A day in your own good company. Quiet corners, good shows and no small talk, from what's <b>actually on</b>." },
+    social: { label: "New in town", fx: ["👋", "💬", "🤝", "🙂", "☕"], lede: "New city, new people. Plans where saying hi is the whole point, picked from what's <b>actually on</b>." },
+    kids: { label: "Kids' day out", fx: ["👶", "🍼", "🎈", "🧸", "👶", "🪁", "🐣"], lede: "Little legs, big day out. Kid-friendly picks from what's <b>actually on</b>, with a snack stop on the way." },
+    elders: { label: "Ajji-approved", fx: ["👵", "👴", "🌼", "☕", "👵", "🪔"], n: 10, lede: "A gentle day out with Amma, Appa, Ajji and Thatha. Easy venues, good seats and early evenings, from what's <b>actually on</b>." }
+  };
+  var LIKE_THEME = {
+    general: { label: "", fx: [] },
+    comedy: { label: "Comedy", fx: ["🎤", "😂", "🤣"] },
+    music: { label: "Live music", fx: ["🎸", "🎶", "🎧"] },
+    party: { label: "Party", fx: ["🪩", "🎉", "✨"] },
+    theatre: { label: "Theatre", fx: ["🎭", "🎟️", "🍿"] },
+    workshop: { label: "Workshops", fx: ["🎨", "🧶", "🏺"] },
+    food: { label: "Food", fx: ["☕", "🍛", "🥞"] },
+    market: { label: "Pop-ups", fx: ["🛍️", "🏷️", "👗"] },
+    navratri: { label: "Garba", fx: ["🪔", "💃", "🥁"] },
+    games: { label: "Games", fx: ["🎲", "♟️", "🧩"] },
+    sports: { label: "Sports", fx: ["🏸", "🏏", "⚽"] },
+    outdoors: { label: "Treks", fx: ["⛰️", "🥾", "🌄"] }
+  };
+  // Simple line drawings, one per interest, coloured by the occasion's accent.
+  var BANNERS = {
+    general: '<path class="s" d="M0 84 H360 V90 H0z"/><rect class="s" x="118" y="52" width="124" height="32"/><rect class="c" x="152" y="40" width="56" height="12"/><path class="c" d="M160 40 Q180 8 200 40z"/><path class="lk" d="M180 8 V0"/><path class="ls" d="M130 58V84M146 58V84M214 58V84M230 58V84"/><rect class="c" x="252" y="58" width="96" height="20" rx="7"/><rect class="w" x="262" y="62" width="14" height="8" rx="2"/><rect class="w" x="282" y="62" width="14" height="8" rx="2"/><rect class="w" x="302" y="62" width="14" height="8" rx="2"/><rect class="w" x="322" y="62" width="14" height="8" rx="2"/><circle class="s" cx="40" cy="60" r="20"/><circle class="s" cx="70" cy="66" r="14"/><path class="lk" d="M40 70V84M70 72V84"/>',
+    comedy: '<path class="s" d="M300 0 L210 90 H350 Z" opacity=".7"/><path class="lk" d="M120 90V46"/><ellipse class="c" cx="120" cy="34" rx="12" ry="16"/><path class="ls" d="M110 30h20M110 38h20"/><path class="lk" d="M104 90h32"/><text x="160" y="40" font-size="22" transform="rotate(-8 160 40)">HA!</text><text x="40" y="58" font-size="18" transform="rotate(6 40 58)">HA HA</text><text x="250" y="70" font-size="26" transform="rotate(-4 250 70)">HAHA</text>',
+    music: '<path class="ls" d="M0 24H360M0 34H360M0 44H360M0 54H360M0 64H360"/><circle class="c" cx="60" cy="54" r="7"/><path class="l" d="M67 54V22"/><circle class="c" cx="96" cy="44" r="7"/><path class="l" d="M103 44V14 L130 20 V48"/><circle class="c" cx="123" cy="48" r="7"/><circle class="c" cx="170" cy="34" r="7"/><path class="l" d="M177 34V6"/><g transform="rotate(-25 290 50)"><circle class="c" cx="270" cy="62" r="18"/><circle class="c" cx="290" cy="50" r="14"/><circle class="w" cx="276" cy="58" r="5"/><rect class="k" x="296" y="40" width="54" height="6" rx="2"/><rect class="k" x="346" y="37" width="12" height="12" rx="2"/></g>',
+    party: '<path class="lk" d="M180 0V18"/><circle class="c" cx="180" cy="42" r="24"/><path class="ls" d="M158 34H202M156 44H204M160 54H200M170 19V65M180 18V66M190 19V65" style="stroke: var(--surface); stroke-opacity:.6"/><path class="l" d="M140 40H110M220 40H250M150 70L128 86M210 70L232 86M150 14L130 0M210 14L230 0" opacity=".6"/><path class="g" d="M60 30l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/><path class="g" d="M300 56l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/><path class="c" d="M90 66l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/><path class="c" d="M280 14l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/>',
+    theatre: '<rect class="c" x="0" y="0" width="360" height="12"/><path class="c" d="M0 12 H120 Q110 40 120 90 H0z"/><path class="c" d="M360 12 H240 Q250 40 240 90 H360z"/><path class="ls" d="M20 12 Q30 50 18 90M50 12 Q60 50 48 90M80 12 Q90 50 78 90M340 12 Q330 50 342 90M310 12 Q300 50 312 90M280 12 Q270 50 282 90" style="stroke: var(--surface); stroke-opacity:.35"/><ellipse class="s" cx="180" cy="84" rx="70" ry="10"/><circle class="g" cx="160" cy="50" r="12"/><circle class="k" cx="156" cy="47" r="2"/><circle class="k" cx="164" cy="47" r="2"/><path class="lk" d="M154 54 Q160 60 166 54" style="stroke-width:2"/><circle class="s" cx="200" cy="50" r="12"/><circle class="k" cx="196" cy="47" r="2"/><circle class="k" cx="204" cy="47" r="2"/><path class="lk" d="M194 58 Q200 52 206 58" style="stroke-width:2"/>',
+    workshop: '<path class="s" d="M90 20 C150 0 230 14 240 46 C248 74 200 90 150 84 C120 80 132 64 116 60 C96 56 70 70 60 54 C50 38 64 28 90 20z"/><circle cx="112" cy="34" r="8" fill="#E84393"/><circle cx="146" cy="24" r="8" fill="#F9A825"/><circle cx="182" cy="28" r="8" fill="#43A047"/><circle class="c" cx="212" cy="44" r="8"/><circle cx="196" cy="68" r="8" fill="#1E88E5"/><path class="lk" d="M250 80 L300 20"/><path class="c" d="M296 24 l10 -12 l4 4 l-10 12z"/><path class="s" d="M310 90 C300 70 330 66 322 50 H346 C338 66 368 70 358 90z"/><path class="lk" d="M20 70 q12 -20 24 0 t24 0" style="stroke-width:2"/>',
+    food: '<ellipse class="s" cx="110" cy="80" rx="60" ry="8"/><path class="c" d="M78 44 H142 L134 80 H86z"/><ellipse class="c" cx="110" cy="44" rx="32" ry="6"/><path class="l" d="M96 34 q-8-10 0-18 t0-16M112 32 q-8-10 0-18M126 34 q-8-10 0-18" opacity=".7"/><ellipse class="s" cx="260" cy="80" rx="90" ry="8"/><path class="g" d="M180 76 L340 62 L340 78 Z"/><path class="ls" d="M200 74 L330 64" style="stroke: var(--ink); stroke-opacity:.25"/><circle class="c" cx="200" cy="58" r="7"/><circle cx="220" cy="54" r="7" fill="#43A047" opacity=".8"/>',
+    market: '<path class="lk" d="M0 10 Q90 40 180 14 T360 12" style="stroke-width:2"/><path class="c" d="M20 15 L36 22 L24 44z"/><path class="g" d="M56 24 L74 28 L62 50z"/><path class="c" d="M96 28 L114 29 L104 54z"/><path class="s" d="M136 25 L154 22 L146 48z"/><path class="c" d="M196 13 L214 12 L206 38z"/><path class="g" d="M236 14 L254 15 L244 40z"/><path class="c" d="M276 16 L294 14 L286 40z"/><path class="s" d="M316 13 L334 12 L326 38z"/><rect class="c" x="150" y="54" width="44" height="36" rx="4"/><path class="lk" d="M162 56 q10 -18 20 0" style="stroke-width:2.5"/><rect class="s" x="206" y="64" width="32" height="26" rx="3"/>',
+    navratri: '<g transform="rotate(30 120 50)"><rect class="c" x="116" y="0" width="8" height="100" rx="4"/><rect class="g" x="114" y="20" width="12" height="6"/><rect class="g" x="114" y="70" width="12" height="6"/></g><g transform="rotate(-30 120 50)"><rect class="c" x="116" y="0" width="8" height="100" rx="4"/><rect class="g" x="114" y="20" width="12" height="6"/><rect class="g" x="114" y="70" width="12" height="6"/></g><path class="s" d="M200 72 Q230 92 260 72 Z"/><path class="g" d="M230 70 Q220 56 230 44 Q240 56 230 70z"/><circle class="c" cx="310" cy="64" r="22"/><circle class="g" cx="302" cy="58" r="3"/><circle class="g" cx="316" cy="58" r="3"/><circle class="g" cx="310" cy="70" r="3"/><rect class="c" x="300" y="36" width="20" height="8" rx="2"/><path class="g" d="M40 40l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>',
+    games: '<g transform="rotate(-12 110 50)"><rect class="c" x="80" y="22" width="56" height="56" rx="10"/><circle class="w" cx="96" cy="38" r="5"/><circle class="w" cx="120" cy="62" r="5"/><circle class="w" cx="108" cy="50" r="5"/></g><g transform="rotate(14 190 56)"><rect class="s" x="166" y="32" width="48" height="48" rx="9"/><circle class="k" cx="180" cy="46" r="4"/><circle class="k" cx="200" cy="46" r="4"/><circle class="k" cx="180" cy="66" r="4"/><circle class="k" cx="200" cy="66" r="4"/></g><path class="c" d="M270 90 L278 60 Q262 56 266 44 Q270 34 282 38 Q284 24 296 24 Q308 24 310 38 Q322 34 326 44 Q330 56 314 60 L322 90z"/><rect class="g" x="20" y="30" width="34" height="48" rx="4" transform="rotate(-10 37 54)"/>',
+    sports: '<path class="ls" d="M0 82 H360"/><g transform="rotate(-35 90 48)"><rect class="c" x="80" y="10" width="20" height="62" rx="6"/><rect class="k" x="86" y="70" width="8" height="22" rx="3"/></g><circle cx="150" cy="70" r="11" fill="#C62828"/><path d="M142 64 q8 6 16 0M142 76 q8 -6 16 0" stroke="#fff" stroke-width="1.5" fill="none"/><circle class="k" cx="250" cy="66" r="9"/><path class="s" d="M244 60 L222 20 L282 20 L256 60z"/><path class="ls" d="M232 22 L248 60M252 20 L252 58M272 22 L254 60" style="stroke: var(--ink); stroke-opacity:.35"/><circle class="g" cx="320" cy="64" r="14"/><path class="lk" d="M308 58 q12 6 24 0" style="stroke-width:1.5"/>',
+    outdoors: '<circle class="g" cx="280" cy="30" r="16"/><path class="s" d="M0 90 L70 30 L120 70 L180 20 L250 80 L300 50 L360 86 V90z"/><path class="c" d="M0 90 L50 56 L100 84 L160 46 L230 90z"/><path class="c" d="M200 90 L270 60 L330 90z"/><path class="lk" d="M150 90 q20 -14 40 -10 t40 -16" style="stroke-dasharray:4 6; stroke-width:2"/><path class="k" d="M330 90 l8 -22 l8 22z"/><path class="k" d="M20 90 l7 -18 l7 18z"/>'
+  };
+  var lastKey = null;
+  function themeFor(p) {
+    var focus = p.like.filter(function (l) { return l !== "general"; }).pop() || "general";
+    return { occ: p.occ || "date", like: focus };
+  }
+  function applyVibe(p) {
+    var t = themeFor(p), o = OCC_THEME[t.occ], l = LIKE_THEME[t.like];
+    wrapEl.dataset.occ = t.occ;
+    var deco = document.getElementById("deco"); if (deco.dataset.occ !== t.occ) { deco.dataset.occ = t.occ; deco.innerHTML = DECO[t.occ] || ""; }
+    var badge = document.getElementById("vibeBadge");
+    var text = o.label + (l.label ? " · " + l.label : "");
+    if (t.occ === "social") badge.innerHTML = "<span>" + esc(l.label ? l.label + " fan" : "Up for anything") + "</span>"; else badge.textContent = text;
+    document.getElementById("lede").innerHTML = o.lede;
+    var key = t.occ + "/" + t.like;
+    if (lastKey !== null && key !== lastKey) burst(t);
+    lastKey = key;
+  }
+  function bannerHtml(p) { var k = themeFor(p).like; return '<div class="banner" aria-hidden="true"><svg viewBox="0 0 360 90" preserveAspectRatio="xMidYMax meet">' + BANNERS[k] + "</svg></div>"; }
+  function burst(t) {
+    try { if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return; } catch (e) {}
+    var o = OCC_THEME[t.occ], set = o.fx.concat(LIKE_THEME[t.like].fx, LIKE_THEME[t.like].fx), n = o.n || 16;
+    for (var i = 0; i < n; i++) {
+      var el = document.createElement("span");
+      el.className = "floaty"; el.setAttribute("aria-hidden", "true");
+      el.textContent = set[Math.floor(Math.random() * set.length)];
+      el.style.left = (4 + Math.random() * 88) + "vw";
+      el.style.fontSize = (18 + Math.random() * 18) + "px";
+      el.style.setProperty("--dur", ((o.n ? 4.2 : 2.6) + Math.random() * 1.6) + "s");
+      el.style.setProperty("--delay", (Math.random() * 0.8) + "s");
+      el.style.setProperty("--dx", (Math.random() * 120 - 60) + "px");
+      el.style.setProperty("--rot", (Math.random() * 60 - 30) + "deg");
+      document.body.appendChild(el);
+      setTimeout(function (x) { x.remove(); }.bind(null, el), 7000);
+    }
+  }
+
+  function init(data) {
+    DATA = data;
+    var t = todayStr(), w0 = data.window ? data.window[0] : t, w1 = data.window ? data.window[1] : t;
+    WIN = [];
+    for (var d = t > w0 ? t : w0; d <= w1; d = addDays(d, 1)) WIN.push(d);
+    // Listings older than today (an old saved copy): plan their last day and say so.
+    STALE = !WIN.length;
+    if (STALE) WIN = [w1];
+    data.events.forEach(function (e) { prepTimes(e); e.dates.forEach(function (d) { COUNT[d] = (COUNT[d] || 0) + 1; }); });
+    METRO = data.metro || [];
+    if (data.roads) ROAD = decodeRoads(data.roads);
+    if (data.spots) data.spots.forEach(function (s) { SPOTS.push(s); });
+    var attrs = data.attrs || {};
+    SPOTS.forEach(function (s) { if (attrs[s.n]) s.x = attrs[s.n]; if (/rooftop|alfresco|garden|lakeside/i.test(s.n + " " + (s.d || ""))) s.out = 1; });
+    PLACES.forEach(function (pl) { if (attrs[pl.t]) pl.x = attrs[pl.t]; });
+    // With a pet along, pet-friendly cafes can be the outing itself.
+    var petCafes = SPOTS.filter(function (s) { return s.x && s.x.pe === "y" && s.ll; }).map(function (s, i) {
+      var open = s.s.indexOf("early") > -1 ? 8 : 11, close = s.s.indexOf("night") > -1 ? 23 : 22;
+      return { id: "petcafe-" + i, t: "Slow afternoon at " + s.n + " with your pet", dates: WIN.slice(), time: "Open " + clock(open) + " – " + clock(close), venue: s.n, area: s.a, z: "X", cat: "food", p: s.c[0],
+        tags: ["date", "friends", "solo", "social", "family"].concat(s.x.ki === "y" ? ["kids", "elders"] : []).concat(s.tags.indexOf("alc") > -1 ? ["alc"] : []), src: "Pet-friendly pick", u: s.u,
+        note: "Pet-friendly according to its listing; call ahead to check", rec: true, s: s.s, h: 1.5, d: 0, ll: s.ll, place: true, petOnly: true, hrs: [open, close], x: s.x };
+    });
+    PLACE_EVENTS = PLACES.map(function (pl, i) {
+      return { id: "place-" + i, t: pl.t, dates: WIN.filter(function (d) { return !pl.closed || pl.closed.indexOf(dow(d)) < 0; }), time: "Open " + clock(pl.hrs[0]) + " – " + clock(pl.hrs[1]), venue: pl.a, area: "", z: "X", cat: pl.out ? "walk" : "culture", p: pl.p,
+        tags: (pl.tags || ALL_TAGS).concat(pl.out ? ["outdoor"] : []), src: "Local favourite", u: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(pl.t.replace(/^.* (at|around|in|by) /, "") + ", " + pl.a + ", Bengaluru"),
+        note: "Hours can change, so check before you go", rec: true, s: pl.s, h: pl.h, d: 0, ll: pl.ll, place: true, hrs: pl.hrs, x: pl.x };
+    }).concat(petCafes);
+    if (!METRO.length) Q.extra = Q.extra.filter(function (o) { return o[0] !== "metro"; });
+    ["slot", "occ", "like", "budget", "reach", "extra"].forEach(buildChips);
+    var groups = {};
+    START_PTS.forEach(function (s, i) { (groups[s[1]] = groups[s[1]] || []).push('<option value="' + i + '"' + (s[0] === "Indiranagar" ? " selected" : "") + ">" + esc(s[0]) + "</option>"); });
+    startEl.innerHTML = ["N", "C", "E", "SE", "S", "W"].map(function (z) { return '<optgroup label="' + ZONE_NAME[z] + '">' + groups[z].join("") + "</optgroup>"; }).join("");
+    state.sel = [floorFor(WIN[0]) >= 20 && WIN.length > 1 ? WIN[1] : WIN[0], null];
+    // App shortcuts open with ?when=today, tomorrow or weekend.
+    var when = (/[?&]when=([a-z-]+)/.exec(location.search) || [])[1], wq = { today: "Today", tomorrow: "Tomorrow", weekend: "This weekend" }[when];
+    var fromShortcut = false;
+    quickOpts().forEach(function (q) { if (q[0] === wq) { state.sel = [q[1], q[2] && q[2] !== q[1] ? q[2] : null]; fromShortcut = true; } });
+    state.month = state.sel[0].slice(0, 7);
+    drawCal();
+    var u = parseDate(data.updated);
+    document.getElementById("fresh").innerHTML = "<strong>Where the listings come from.</strong> " + data.events.length + " listings collected on " + u.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" }) + " from " + (data.sources || []).join(", ").replace(/, ([^,]*)$/, " and $1") + ", covering " + dayName(WIN[0]) + " to " + dayName(WIN[WIN.length - 1]) + ". Date ideas come from Explore Bangalore and Splashit. Every listing links to the page where you book it.";
+    form.addEventListener("change", function (ev) {
+      var t = ev.target;
+      if (t.name === "like") {
+        state.likeOrder = state.likeOrder.filter(function (v) { return v !== t.value; });
+        if (t.checked && t.value !== "general") state.likeOrder.unshift(t.value);
+        var boxes = form.querySelectorAll('input[name="like"]');
+        if (t.value === "general" && t.checked) Array.prototype.forEach.call(boxes, function (i) { if (i.value !== "general") i.checked = false; });
+        else if (t.checked) form.querySelector("#q-like-general").checked = false;
+        if (!form.querySelectorAll('input[name="like"]:checked').length) form.querySelector("#q-like-general").checked = true;
+      }
+      resetPick();
+      render();
+    });
+    durEl.addEventListener("input", showDur);
+    document.getElementById("jump").onclick = function () { planEl.parentNode.scrollIntoView({ behavior: "smooth", block: "start" }); };
+    render();
+    // On phones the plan sits below the questions, so a shortcut goes straight to it.
+    if (fromShortcut && window.matchMedia && matchMedia("(max-width: 920px)").matches) planEl.parentNode.scrollIntoView({ block: "start" });
+    setTimeout(function () { burst(themeFor(read())); }, 400);
+  }
+
+  if (/[?&]debug\b/.test(location.search)) window.__pm = { read: read, candidates: candidates, buildPlan: buildPlan, gaps: gaps, plansFor: plansFor, state: state, mapData: function (p, pl) { return mapData(p, pl); }, mapHtml: function (p, pl, md) { return mapHtml(p, pl, md, ""); }, minsTxt: function (h) { return minsTxt(h); }, driveH: driveH, roadKnown: roadKnown, gmapsDir: gmapsDir, DATA: function () { return DATA; }, meets: meets, isOut: isOut, isAlc: isAlc, isLoud: isLoud, travelH: travelH, road: road, ax: ax, startHour: startHour, metroNear: metroNear, START_PTS: START_PTS, DURS: DURS, render: render };
+  fetch("events.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(init).catch(function (err) {
+    planEl.innerHTML = '<p class="empty">The listings didn\'t load. Refresh the page to try again.</p>';
+    if (window.console) console.error(err);
+  });
+})();
+</script>
+
+</body></html>
