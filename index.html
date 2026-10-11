@@ -425,7 +425,9 @@ details.addcal > summary::-webkit-details-marker { display: none; }
 .fb-status.ok { color: var(--green); }
 .fb-status.err { color: var(--gulmohar); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-.team { display: flex; flex-direction: column; gap: 16px; }
+.team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
+@media (max-width: 560px) { .team { grid-template-columns: minmax(0, 1fr); } }
+#aboutStory { max-width: 78ch; }
 .person { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 14px; align-items: start; }
 .person .av { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--purple-soft); color: var(--purple); font-family: var(--font-display); font-weight: 800; font-size: 18px; }
 .person b { display: block; font-size: 16px; }
@@ -552,17 +554,15 @@ footer details p { margin: 0 0 8px; }
   </section>
 
   <section class="band" id="about" aria-labelledby="aboutTitle">
-    <div class="cards2">
-      <div class="card">
-        <h3 id="aboutTitle">The people behind Plan Maadi</h3>
-        <p class="sub" id="aboutStory"></p>
-        <div class="team" id="team"></div>
-      </div>
-      <div class="card" id="contact">
-        <h3>Business enquiries</h3>
-        <p class="sub">Venues, organisers and brands: for listings, partnerships or anything else, write to us.</p>
-        <div id="mails"></div>
-      </div>
+    <div class="card">
+      <h3 id="aboutTitle">The people behind Plan Maadi</h3>
+      <p class="sub" id="aboutStory"></p>
+      <div class="team" id="team"></div>
+    </div>
+    <div class="card" id="contact">
+      <h3>Business enquiries</h3>
+      <p class="sub">Venues, organisers and brands: for listings, partnerships or anything else, write to us.</p>
+      <div id="mails"></div>
     </div>
   </section>
 
@@ -1922,35 +1922,84 @@ footer details p { margin: 0 0 8px; }
   function bannerArt(k) { return BANNERS[k] || (/^fest-/.test(k) ? BANNERS.festival : BANNERS.general); }
   function bannerHtml(p) { return '<div class="banner" aria-hidden="true"><svg viewBox="0 0 360 90" preserveAspectRatio="xMidYMax meet">' + bannerArt(themeFor(p).like) + "</svg></div>"; }
 
-  // ---------- What's the hype this week: three standout events in the next seven days, one per kind.
-  // To choose them yourself, add "highlights": ["event-id", "event-id", "event-id"] to events.json.
-  var HYPE_CAT = { music: 3, comedy: 3, theatre: 3, performance: 3, film: 2, food: 2, market: 2, culture: 2, navratri: 1.5, workshop: 1, games: 1, social: 1, sports: 1, party: 0 };
+  // ---------- What's the hype this week: three things in the next seven days that most people would enjoy.
+  // A festival that's on comes first (its places are checked by hand). The rest are standout events: one-offs and short
+  // runs that suit most groups, at a well-known venue or by a named act, at an everyday price. Never a bar night, a class,
+  // a mixer, an adults-only show or something that's on every week. To choose them yourself, add "highlights": ["event-id", …] to events.json; the scraper
+  // can also add "pop" (how many people the listing shows as interested or going), which counts for a lot.
+  var HYPE_CAT = { music: 2, comedy: 2, theatre: 2, performance: 2, culture: 1.5, film: 1.5, market: 1, food: 1, sports: 1 };
+  // Stages and grounds where a show is an occasion (not the exhibition halls that host a sale every weekend).
+  var HYPE_VENUE = /chowdiah|ranga shankara|jagriti|prestige centre for performing|bangalore international centre|museum of art|alliance fran|palace grounds|bangalore palace|good shepherd|town hall|kalakshetra|seva sadana|gayana samaja|chinnaswamy|kanteerava|science gallery/i;
+  var HYPE_ACT = /\blive\b|\btour\b|tribute|festival|\bfest\b|utsav|mahotsav|mela|premier league|concert|last show/i;
+  // Adults-only nights, and shopping or trade shows (a jewellery "festival" is a sale).
+  var NOT_FOR_ALL = /\b(18|21)\s*\+|adults?[- ]only|dirty|ladies'? night|singles|dating|roast|jewel|\bexpo\b|trade (show|fair)|\bsale\b|property|wedding|summit|conference|business school|career/i;
+  var CITY_CENTRE = [12.9757, 77.6055];
+  var BROAD = ["friends", "date", "family", "elders", "kids"];
   function hypePicks() {
-    var a = WIN[0], b = addDays(a, 6);
-    function inWeek(e) { return e.dates.filter(function (d) { return d >= a && d <= b; }); }
-    var chosen = (DATA.highlights || []).map(function (id) { return DATA.events.filter(function (e) { return e.id === id; })[0]; }).filter(function (e) { return e && inWeek(e).length; });
-    var cats = {}; chosen.forEach(function (e) { cats[e.cat] = 1; });
-    DATA.events.filter(function (e) { return inWeek(e).length && !e.rec && !e.fest && !e.hide && e.ll && e.p != null && e.dates.length <= 4 && chosen.indexOf(e) < 0 && !/to be announced/i.test(e.venue); }).map(function (e) {
-      var weekend = inWeek(e).some(function (d) { return dow(d) === 0 || dow(d) >= 5; });
-      return { e: e, sc: (HYPE_CAT[e.cat] || 0) + (e.dates.length === 1 ? 1.5 : 0.5) + (e.p >= 299 ? 1 : 0) + (weekend ? 1 : 0) };
-    }).sort(function (x, y) { return y.sc - x.sc || (x.e.t < y.e.t ? -1 : 1); }).forEach(function (x) {
-      if (chosen.length < 3 && !cats[x.e.cat]) { chosen.push(x.e); cats[x.e.cat] = 1; }
+    var a = WIN[0], b = addDays(a, 6), late = floorFor(a);
+    function inWeek(e) {
+      return e.dates.filter(function (d) {
+        // Today only counts if it hasn't already started (or closed).
+        return d >= a && d <= b && (d !== a || (e.tm != null ? e.tm > late : !e.hrs || e.hrs[1] - 1 > late));
+      });
+    }
+    var picks = [];
+    // Festivals on this week, with something to plan on one of its days: at most two, leaving room for an event.
+    FESTS.filter(function (f) { return f.shown && f.from <= b && f.to >= a; }).slice(0, 2).forEach(function (f) {
+      var cats = LIKE_CATS[f.cat], items = DATA.events.filter(function (e) { return !e.hide && (cats.indexOf(e.cat) > -1 || e.alsoCat === f.cat) && inWeek(e).length; });
+      var days = festDays(f).filter(function (d) { return items.some(function (e) { return inWeek(e).indexOf(d) > -1; }); });
+      if (days.length) picks.push({ f: f, n: items.length, d: days.filter(function (d) { return dow(d) === 0 || dow(d) === 6; })[0] || days[0] });
     });
-    return chosen.slice(0, 3);
+    // Then any picked by hand, then the best of the rest.
+    (DATA.highlights || []).forEach(function (id) {
+      var e = DATA.events.filter(function (x) { return x.id === id; })[0];
+      if (e && inWeek(e).length && picks.length < 3) picks.push({ e: e, d: inWeek(e)[0] });
+    });
+    var used = {}; picks.forEach(function (x) { if (x.e) { used[x.e.cat] = used[x.e.venue] = 1; } });
+    DATA.events.filter(function (e) {
+      var broad = BROAD.filter(function (t) { return e.tags.indexOf(t) > -1; }).length, alc = e.tags.indexOf("alc") > -1;
+      return HYPE_CAT[e.cat] && !e.fest && !e.hide && !e.alsoCat && e.ll && inWeek(e).length && e.dates.length <= 4 && !e.rec &&
+        !(e.p > 2000) && broad >= 2 && !(alc && e.tags.indexOf("family") < 0 && e.tags.indexOf("elders") < 0) &&
+        !NOT_FOR_ALL.test(e.t + " " + (e.note || "")) && !/to be announced|not named|\btba\b/i.test(e.venue);
+    }).map(function (e) {
+      var days = inWeek(e), weekend = days.some(function (d) { return dow(d) === 0 || dow(d) >= 5; });
+      var sc = HYPE_CAT[e.cat] + 0.7 * BROAD.filter(function (t) { return e.tags.indexOf(t) > -1; }).length + (e.dates.length === 1 ? 1 : 0.5) + (weekend ? 1 : 0) +
+        (HYPE_VENUE.test(e.venue) ? 1.5 : 0) + (HYPE_ACT.test(e.t) ? 1 : 0) + (km(CITY_CENTRE, e.ll) > 13 ? -1 : 0) + (e.p == null ? -1 : 0) +
+        (e.pop ? Math.min(2.5, Math.log10(1 + e.pop) * 0.8) : 0);
+      return { e: e, d: days.filter(function (d) { return dow(d) === 0 || dow(d) >= 5; })[0] || days[0], sc: sc };
+    }).sort(function (x, y) { return y.sc - x.sc || (x.e.t < y.e.t ? -1 : 1); }).forEach(function (x) {
+      // One of each kind, and one per venue.
+      if (picks.length < 3 && !used[x.e.cat] && !used[x.e.venue]) { picks.push(x); used[x.e.cat] = used[x.e.venue] = 1; }
+    });
+    return picks.slice(0, 3);
   }
   function renderHype() {
     var picks = hypePicks(), box = document.getElementById("hypeGrid"), a = WIN[0], b = addDays(a, 6);
     var likeOf = {}; Object.keys(LIKE_CATS).forEach(function (k) { LIKE_CATS[k].forEach(function (c) { likeOf[c] = k; }); });
     document.getElementById("hype").hidden = !picks.length;
     if (!picks.length) return;
-    document.getElementById("hypeSub").textContent = "Three standout things on in Bengaluru between " + dayName(a) + " and " + dayName(b) + ".";
-    box.innerHTML = picks.map(function (e) {
-      var d = e.dates.filter(function (x) { return x >= a && x <= b; })[0], tm = /\d/.test(e.time) ? " · " + e.time.split(",")[0] : "";
-      return '<article class="hype"><div class="banner" aria-hidden="true"><svg viewBox="0 0 360 90" preserveAspectRatio="xMidYMax meet">' + bannerArt(likeOf[e.cat]) + '</svg></div><div class="hype-body"><span class="hype-when">' + esc(dayName(d) + tm) + "</span><h3>" + esc(e.t) + '</h3><p class="sub">' + esc(e.venue) + (e.area && e.area !== e.venue ? ", " + esc(e.area) : "") +
-        '</p><div class="hype-foot"><span class="price">' + price(e.p) + '</span><a href="' + esc(e.u) + '" target="_blank" rel="noopener" data-track="hype-book">Book on ' + esc(e.src) + '</a><button type="button" class="btn primary" data-hype="' + esc(e.id) + '" data-day="' + d + '">Plan my day around this</button></div></div></article>';
+    document.getElementById("hypeSub").textContent = (picks.length === 1 ? "The one thing" : ["", "", "Two", "Three"][picks.length] + " things") + " most worth going to in Bengaluru, " + dayName(a) + " to " + dayName(b) + ".";
+    function card(art, when, title, sub, foot) {
+      return '<article class="hype"><div class="banner" aria-hidden="true"><svg viewBox="0 0 360 90" preserveAspectRatio="xMidYMax meet">' + bannerArt(art) + '</svg></div><div class="hype-body"><span class="hype-when">' + esc(when) + "</span><h3>" + esc(title) + '</h3><p class="sub">' + esc(sub) + '</p><div class="hype-foot">' + foot + "</div></div></article>";
+    }
+    box.innerHTML = picks.map(function (x) {
+      var f = x.f, e = x.e, plan = '<button type="button" class="btn primary" data-day="' + x.d + '" ' + (f ? 'data-fest="' + esc(f.cat) + '"' : 'data-hype="' + esc(e.id) + '"') + ">Plan my day around this</button>";
+      if (f) return card(f.cat, "Festival · " + (f.from <= a ? "on now, until " + dayName(f.to) : dayName(f.from) + " – " + dayName(f.to)), f.name,
+        f.teaser || x.n + " places and events on the planner this week", '<span class="price">Only on these days</span>' + plan);
+      var tm = /\d/.test(e.time) ? " · " + e.time.split(",")[0] : "";
+      return card(likeOf[e.cat], dayName(x.d) + tm, e.t, e.venue + (e.area && e.area !== e.venue ? ", " + e.area : ""),
+        '<span class="price">' + price(e.p) + '</span><a href="' + esc(e.u) + '" target="_blank" rel="noopener" data-track="hype-book">Book on ' + esc(e.src) + "</a>" + plan);
     }).join("");
-    Array.prototype.forEach.call(box.querySelectorAll("[data-hype]"), function (btn) {
-      btn.onclick = function () { track("hype-plan"); setSel(btn.dataset.day, null); state.pick = btn.dataset.hype; render(); planEl.scrollIntoView({ behavior: smooth(), block: "start" }); focusPlan(); };
+    Array.prototype.forEach.call(box.querySelectorAll("[data-day]"), function (btn) {
+      btn.onclick = function () {
+        track(btn.dataset.fest ? "hype-fest" : "hype-plan");
+        // A festival: pick its interest (which also brings up its follow-up questions), on its best day this week.
+        var fb = btn.dataset.fest && form.querySelector('input[name="like"][value="' + btn.dataset.fest + '"]');
+        if (fb && !fb.checked) { fb.checked = true; fb.dispatchEvent(new Event("change", { bubbles: true })); }
+        setSel(btn.dataset.day, null);
+        if (btn.dataset.hype) { state.pick = btn.dataset.hype; render(); }
+        planEl.scrollIntoView({ behavior: smooth(), block: "start" }); focusPlan();
+      };
     });
   }
 

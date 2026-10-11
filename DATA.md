@@ -52,6 +52,7 @@ Up to two festival buttons show at once: the one with the higher `priority` firs
       "priority": 1,                       // optional; higher shows first when two festivals overlap
       "days": [ { "date": "2026-10-19", "label": "Ashtami" } ],
       "about": "One or two plain sentences of context, shown when the festival is picked.",
+      "teaser": "One short line for its card in What's the hype this week.",
       "keywords": ["durga puja", "pujo", "pandal", "dhunuchi", "sindoor khela"],
       "tips": ["Go after 9 pm on Ashtami to skip the worst crowds."],
       "sources": [ { "name": "Deccan Herald", "url": "https://…", "date": "2026-10-08" } ],
@@ -143,4 +144,19 @@ Meal stops (breakfast, lunch, coffee, dinner, late-night bites) are chosen from 
 - `attrs`: venue facts for built-in places, keyed by name
 - `metro`: stations with name, line, lat, lng
 - `roads`: the pre-computed road distance and drive-time table between known points
-- `highlights` (optional): up to three event ids to show in "What's the hype this week" instead of the automatic picks
+- `highlights` (optional): event ids to show in "What's the hype this week" ahead of the automatic picks. Keep this list when you rebuild the file.
+- `pop` (optional, on any event): how many people the listing shows as interested or going. It's the strongest sign that something is worth highlighting, so capture it wherever a source shows it.
+
+### How "What's the hype this week" chooses
+
+Three cards for the next seven days, picked for what most people would enjoy:
+
+1. **Festivals first.** Any festival from festivals.json that's on this week, at most two, shown with its `teaser`.
+2. **Then `highlights`**, if set.
+3. **Then the best events.** These must be:
+   - one-offs or short runs (up to four dates, never weekly or recurring)
+   - suitable for at least two kinds of group (friends, dates, family, elders, kids)
+   - ₹2,000 or less
+   - not a bar night, a class, a mixer, a sale or trade show, or an adults-only (18+) show
+
+   Points go to music, comedy, theatre and performances; well-known stages such as Chowdiah, Ranga Shankara, Jagriti and the Prestige Centre; named acts and tours; weekends; and a high `pop`. Venues far from the centre and listings with no price lose points. There's one card per kind of event and one per venue.
