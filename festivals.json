@@ -1,0 +1,5367 @@
+{
+ "updated": "2026-10-10",
+ "festivals": [
+  {
+   "id": "navaratri-dasara-2026",
+   "name": "Navratri",
+   "chip": "Festival: Navratri",
+   "color": "#9C4221",
+   "from": "2026-10-11",
+   "to": "2026-10-21",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2026-10-11",
+     "label": "Day 1 · Ghatasthapana"
+    },
+    {
+     "date": "2026-10-17",
+     "label": "Saraswati Puja"
+    },
+    {
+     "date": "2026-10-19",
+     "label": "Durga Ashtami"
+    },
+    {
+     "date": "2026-10-20",
+     "label": "Mahanavami · Ayudha Puja"
+    },
+    {
+     "date": "2026-10-21",
+     "label": "Vijayadashami"
+    }
+   ],
+   "about": "Bengaluru celebrates with Bombe Habba doll displays at home, doll markets in Basavanagudi, daily alankaras at temples and Ayudha Puja on Mahanavami, alongside garba and dandiya nights across the city.",
+   "keywords": [
+    "dasara",
+    "dussehra",
+    "gombe",
+    "bombe habba",
+    "golu",
+    "ayudha puja",
+    "vijayadashami",
+    "saraswati puja",
+    "sharannavaratri",
+    "navratri",
+    "navaratri"
+   ],
+   "sources": [
+    {
+     "name": "Dates: sakshipost.com",
+     "url": "https://www.sakshipost.com/news/national/karnataka-releases-2026-holiday-calendar-full-list-general-and-restricted-holidays",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Karnataka Govt 2026 general holidays (Notification-I, reported by Sakshi Post on 3 Dec 2025): Mahanavami/Ayudha Puja Tue 20 Oct, Vijayadashami Wed 21 Oct (https://www.sakshipost.com/news/national/karnataka-releases-2026-holiday-calendar-full-list-general-and-restricted-holidays). Mysuru Dasara schedule from a state government meeting: 11-21 Oct, Jamboo Savari on 21 Oct (Siasat, 10 Jul 2026: https://www.siasat.com/mysuru-dasara-2026-from-october-11-jumbo-savari-on-october-21-3505227/). Drik Panchang (Bengaluru): Ghatasthapana 11 Oct; Durgashtami Mon 19 Oct (https://www.drikpanchang.com/navratri/durga-puja/mahashtami-date-time.html?geoname-id=1277333&year=2026); Ayudha Puja Tue 20 Oct (https://www.drikpanchang.com/navratri/durga-puja/ayudha-puja-date-time.html?geoname-id=1277333&year=2026). DISAGREEMENT: Drik Panchang's Bengaluru Navratri and Vijayadashami pages (https://www.drikpanchang.com/navratri/ashwin-shardiya-navratri-dates.html?geoname-id=1277333&year=2026) and the central DoPT list (https://www.staffnews.in/2025/07/list-of-holidays-2026-closed-holidays.html) put Vijayadashami/Dussehra on Tue 20 Oct. Drik's Mysore Dasara page agrees with Karnataka on Wed 21 Oct (https://www.drikpanchang.com/dasara/mysore/mysore-dasara-date-time.html?year=2026). For Bengaluru, use 21 Oct.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "gandhi-bazaar-dasara-doll-gombe-shops",
+     "t": "Gandhi Bazaar Dasara doll (gombe) shops",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9459,
+      77.5706
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Clay and painted doll sets for Bombe Habba displays. Crowds were building ahead of Dasara 2026",
+     "u": "https://newsable.asianetnews.com/gallery/karnataka-news/bengaluru-colourful-navaratri-dolls-draw-crowds-to-gandhi-bazaar-ahead-of-dasara-2026-udt9238",
+     "src": "newsable.asianetnews.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "yuva-dasara-by-yuvaka-sangha-yuvapatha",
+     "t": "Yuva Dasara by Yuvaka Sangha (Yuvapatha)",
+     "area": "Jayanagar 4th T Block",
+     "ll": [
+      12.9273,
+      77.5871
+     ],
+     "hrs": [
+      10,
+      21
+     ],
+     "hoursText": "Dasara doll exhibition 10 am-8 pm; concerts from 5:45 pm (10-21 Oct 2026)",
+     "about": "Dasara doll exhibition plus nightly concerts, Yakshagana and bhajans for all of Navaratri",
+     "u": "https://yuvakasangha.org/yuvadasara/",
+     "src": "yuvakasangha.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "sri-banashankari-amma-temple",
+     "t": "Sri Banashankari Amma Temple",
+     "area": "Banashankari (Kanakapura Road)",
+     "ll": [
+      12.916,
+      77.5731
+     ],
+     "hrs": [
+      6.5,
+      20.5
+     ],
+     "hoursText": "6:30 am-1 pm and 4:30-8:30 pm on regular days (state temple portal)",
+     "p": 0,
+     "about": "Special alankaras and big crowds through Navaratri and on Vijayadashami",
+     "u": "https://www.etvbharat.com/en/!state/vijayadashami-in-bengaluru-a-festival-of-faith-unity-and-harmony-enn25100203929",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "sri-sringeri-shankara-math-sharadamba-shankarapu",
+     "t": "Sri Sringeri Shankara Math (Sharadamba), Shankarapuram",
+     "area": "Shankarapuram, Basavanagudi",
+     "ll": [
+      12.9507,
+      77.57
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Sharannavaratri Mahotsava, with a different alankara of Goddess Sharada each day. 2026 edition announced",
+     "u": "https://www.sringeri.net/branches/karnataka/bangalore/shankarapuram",
+     "src": "sringeri.net",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "kr-market-flower-market-ayudha-puja-shopping",
+     "t": "KR Market flower market (Ayudha Puja shopping)",
+     "area": "KR Market / City Market",
+     "ll": [
+      12.9657,
+      77.5763
+     ],
+     "hrs": [
+      6,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Ash gourds, flowers and banana stems for Ayudha Puja. Prices spike in the days before",
+     "u": "https://newskarnataka.com/bengaluru/festive-rush-in-bengaluru-markets-sends-ash-gourd-and-flower-prices-soaring/01102025/",
+     "src": "newskarnataka.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "cats": [
+    "navratri"
+   ],
+   "facets": [
+    {
+     "id": "want",
+     "q": "What would you like?",
+     "opts": [
+      {
+       "id": "garba",
+       "label": "Garba and dandiya nights",
+       "match": "garba|dandiya|raas"
+      },
+      {
+       "id": "learn",
+       "label": "Learn garba or dandiya",
+       "match": "workshop|class|learn|beginner|bootcamp"
+      },
+      {
+       "id": "dolls",
+       "label": "Doll displays and doll markets",
+       "match": "doll|gombe|bombe|yuva dasara"
+      },
+      {
+       "id": "temples",
+       "label": "Temples and alankaras",
+       "match": "temple|\\bmath\\b|sharadamba|alankara"
+      },
+      {
+       "id": "ayudha",
+       "label": "Ayudha Puja shopping",
+       "match": "ayudha|flower market"
+      }
+     ]
+    }
+   ],
+   "foodKey": "navratri",
+   "cuisine": [
+    "gujarati",
+    "rajasthani",
+    "udupi",
+    "south-indian"
+   ],
+   "veg": true
+  },
+  {
+   "id": "durga-puja-2026",
+   "name": "Durga Puja",
+   "chip": "Festival: Durga Puja",
+   "color": "#B3261E",
+   "from": "2026-10-15",
+   "to": "2026-10-21",
+   "showFrom": "2026-10-01",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2026-10-15",
+     "label": "Panchami · Anandamela"
+    },
+    {
+     "date": "2026-10-16",
+     "label": "Shashthi"
+    },
+    {
+     "date": "2026-10-17",
+     "label": "Saptami"
+    },
+    {
+     "date": "2026-10-18",
+     "label": "Saptami / Ashtami"
+    },
+    {
+     "date": "2026-10-19",
+     "label": "Ashtami · Sandhi Puja"
+    },
+    {
+     "date": "2026-10-20",
+     "label": "Navami"
+    },
+    {
+     "date": "2026-10-21",
+     "label": "Dashami · Sindoor khela"
+    }
+   ],
+   "about": "Bengaluru's community pujas run from Panchami on Thursday 15 October, when many hold an Anandamela of home-cooked Bengali food, to Bijoya Dashami on Wednesday 21 October. Everyone is welcome: go for the idols and pandal themes, the bhog, dhunuchi naach and the evening culture programmes.",
+   "keywords": [
+    "durga puja",
+    "durga pujo",
+    "durgotsav",
+    "durgotsab",
+    "durgotsob",
+    "pujo",
+    "pandal",
+    "dhunuchi",
+    "sindoor khela",
+    "sindur khela",
+    "anandamela",
+    "bijoya"
+   ],
+   "tips": [
+    "Check your pandal's own schedule for Ashtami: almanacs differ this year. EBCA, Sanskritik and Aikatan hold the Ashtami pushpanjali on Sunday 18 October with Sandhi Puja at 7:26–8:14 am on Monday 19 October. Jayamahal does Ashtami on the 19th, with Sandhi Puja at 10:27–11:15 am.",
+    "Thursday 15 October (Panchami) is Anandamela night at many pujas, including Sarathi, the Bengalee Association, SCA Indiranagar, RT Nagar, SBCA and Jayamahal: home-cooked Bengali food before the puja proper begins.",
+    "For bhog, go around lunchtime. EBCA serves free bhog 11:30 am–1 pm (a special bhog 2–4 pm on Ashtami and Navami), Sanskritik 1–3 pm and Jayamahal around 1–1:30 pm. Sarathi takes take-away bhog bookings on its website.",
+    "Ashtami and Navami evenings bring the heaviest crowds, traffic and parking trouble. See the big Koramangala pujas (Sarathi, with Kolaj nearby) before evening.",
+    "Metro-friendly: BARSHA is right behind Electronic City station and ECCA is about 400 m from it (Yellow Line); PBCA at KTPO is about 400 m from Kundalahalli (Purple Line).",
+    "Pandals are spread across the city. For several in one day, an hourly cab rental usually beats single rides.",
+    "EBCA Whitefield asks visitors to book a free QR entry pass on allevents. Dandiya nights, such as ECCA's on 20 October, are ticketed.",
+    "Apartment pujas, such as Prestige Shantiniketan's, may close their gates to non-residents when crowded, so if you're coming from elsewhere, pick the big association grounds."
+   ],
+   "sources": [
+    {
+     "name": "Drik Panchang (Bengaluru calendar)",
+     "url": "https://www.drikpanchang.com/navratri/durga-puja/durga-puja-calendar.html?geoname-id=1277333",
+     "date": "2026-10-10"
+    },
+    {
+     "name": "Asianet Newsable, 9 Oct 2026",
+     "url": "https://newsable.asianetnews.com/gallery/lifestyle/bengaluru-durga-puja-guide-2026-10-pandals-to-visit-for-memorable-celebration-pq2n2lo",
+     "date": "2026-10-09"
+    },
+    {
+     "name": "My Travelling Stilettos, updated 4 Oct 2026",
+     "url": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "date": "2026-10-04"
+    },
+    {
+     "name": "organisers' websites and schedules",
+     "url": "",
+     "date": "2026-10-10"
+    },
+    {
+     "name": "allevents",
+     "url": "https://allevents.in/bangalore/durga%20puja",
+     "date": "2026-10-10"
+    }
+   ],
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "jayamahal",
+     "t": "Jayamahal Durga Puja",
+     "venue": "Jayamahal Ladies Club",
+     "area": "Jayamahal",
+     "ll": [
+      13.0013,
+      77.5976
+     ],
+     "hrs": [
+      8.5,
+      22.5
+     ],
+     "hoursText": "Programme from 8:30 am to about 10:30 pm",
+     "dates": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 0,
+     "about": "The organiser bills this as Bengaluru's 'record 72nd consecutive year' of Durga Puja. JCA was started in 1955 and has used the same venue since 1973. A themed pandal, fashion show, Dhunuchi Naach competition and Dollu Kunitha are planned.",
+     "food": "Food festival and food stalls. Traditional bhog is served by volunteers (times above).",
+     "rituals": [
+      {
+       "date": "2026-10-15",
+       "time": "7:00 pm",
+       "what": "Ananda Mela & 'Nirvejal Adda'"
+      },
+      {
+       "date": "2026-10-16",
+       "time": "8:30 am",
+       "what": "Sasthi Puja and Kalparambha"
+      },
+      {
+       "date": "2026-10-16",
+       "time": "6:00 pm",
+       "what": "Amantran and Adhibas"
+      },
+      {
+       "date": "2026-10-16",
+       "time": "8:00 pm",
+       "what": "Uttam Kumar tribute programme (after 19:30 inauguration)"
+      },
+      {
+       "date": "2026-10-17",
+       "time": "12:00 pm",
+       "what": "Saptami Pushpanjali"
+      },
+      {
+       "date": "2026-10-17",
+       "time": "1:30 pm",
+       "what": "Bhog"
+      },
+      {
+       "date": "2026-10-17",
+       "time": "7:00 pm",
+       "what": "Arati, then Thaat Kathak Academy (19:30) and Odette fashion show (20:30)"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "12:00 pm",
+       "what": "Adhik Saptami Pushpanjali (bhog 13:30)"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "8:00 pm",
+       "what": "Achin Pakhi folk band"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "9:00 am",
+       "what": "Maha Ashtami Pushpanjali"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "10:27–11:15 am",
+       "what": "Sandhi Puja"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "1:00 pm",
+       "what": "Bhog"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "7:30 pm",
+       "what": "Dhunuchi Naach (members, then open floor), Dollu Kunitha (20:30), Rishi (21:30)"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "11:30 am",
+       "what": "Navami Pushpanjali, Homa 12:15, Bhog 13:00"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "8:00 pm",
+       "what": "Rahul Dev & team (Indian Idol 2017 Golden Mic winner)"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "11:00 am",
+       "what": "Baran (Debi Boron)"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "2:00 pm",
+       "what": "Immersion procession starts"
+      }
+     ],
+     "u": "https://jayamahal.org/",
+     "src": "jayamahal.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "nearby",
+     "big": 1
+    },
+    {
+     "id": "bengalee-association",
+     "t": "The Bengalee Association Durga Puja",
+     "venue": "The Bengalee Association, Assaye Road",
+     "area": "Ulsoor",
+     "ll": [
+      12.9881,
+      77.6196
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 0,
+     "about": "One of Bengaluru's oldest Bengali associations. Its puja has been described as synonymous with Durga Puja in Bangalore since 1959, and it is known for a large food court (2025).",
+     "food": "Anandamela on 15 Oct. A 2025 guide mentions a large food court (aloo bhaja, kosha). No 2026 bhog timings published.",
+     "rituals": [
+      {
+       "date": "2026-10-15",
+       "time": "",
+       "what": "Anandamela (food festival)"
+      }
+     ],
+     "u": "https://thebengaleeassociation.com/",
+     "src": "thebengaleeassociation.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "rt-nagar",
+     "t": "RT Nagar Durgotsav",
+     "venue": "Palace Ground, Gate 9 (Princess Green)",
+     "area": "Palace Grounds",
+     "ll": [
+      12.9992,
+      77.5897
+     ],
+     "hrs": [
+      6.5,
+      22
+     ],
+     "hoursText": "Programme from 6:30 am to about 10 pm",
+     "dates": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "The 2026 theme is 'The Labyrinth (Machine aligned immersive art)', with idol and theme from Kolkata and Chandannagar lights. The organiser bills it as 'the biggest Durga Puja of Bangalore' and expects 2.5 lakh+ visitors.",
+     "food": "The organiser lists a free community lunch for 7,000+ devotees, 24 non-corporate food stalls, 30 flea stalls and an Anandamela on 15 Oct.",
+     "rituals": [
+      {
+       "date": "2026-10-15",
+       "time": "7:00 pm",
+       "what": "Inauguration, Anandamela (home-cooked food festival), live cultural programme"
+      },
+      {
+       "date": "2026-10-16",
+       "time": "1:00 pm",
+       "what": "Sasthi Bihita Puja, Pushpanjali"
+      },
+      {
+       "date": "2026-10-16",
+       "time": "6:00–7:30 pm",
+       "what": "Bodhon and prasad distribution. Amantran, Adhibas and Sandhya Arati at 19:00. Concert at 19:30."
+      },
+      {
+       "date": "2026-10-17",
+       "time": "9:30–11:30 am",
+       "what": "Nabapatrika Stapan & Kalparambha"
+      },
+      {
+       "date": "2026-10-17",
+       "time": "1:30 pm",
+       "what": "Saptami Bihita Puja, Pushpanjali (prasad 18:30, arati 19:30)"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "4:30–5:53 am",
+       "what": "Saptami Bihita Adhik Puja, Pushpanjali"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "1:30 pm",
+       "what": "Community bhog / prasad distribution"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "7:30 pm",
+       "what": "Headline concert"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "6:30 am",
+       "what": "Maha Ashtami Pushpanjali (first round)"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "7:26–8:14 am",
+       "what": "Sandhi Puja with Deep Utsav (108 lamps), Pushpanjali, Balidan"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "1:30 pm",
+       "what": "Maha Ashtami bhog distribution"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "7:30 pm",
+       "what": "Dhunuchi Nach and Dandiya"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "6:30–9:31 am",
+       "what": "Mahanabami Puja and Pushpanjali"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "1:30 pm",
+       "what": "Yagna / Homa and bhog"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "7:30 pm",
+       "what": "Headline concert"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "7:30–10:47 am",
+       "what": "Dashami Puja, Aparajita Puja"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "3:30 pm",
+       "what": "Debibaran"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "8:00 pm",
+       "what": "Debi Boron & Sindoor Khela, immersion procession to Ulsoor Lake, Bijaya Sammelan (all listed at 20:00)"
+      }
+     ],
+     "u": "https://rtnagardurgapuja.org/",
+     "src": "rtnagardurgapuja.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "area",
+     "big": 1
+    },
+    {
+     "id": "sarathi",
+     "t": "Sarathi Durgotsav",
+     "venue": "Mangala Kalyana Mantapa",
+     "area": "Koramangala",
+     "ll": [
+      12.9369,
+      77.6168
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "p": 0,
+     "out": 0,
+     "about": "Organiser's '24th year Durgotsav (2026)', billed as one of the most attended socio-cultural events in Bangalore. No. 1 in a 2026 guide's city top 15, and known for long darshan queues (2025).",
+     "food": "Food stalls. Take-away bhog can be booked online on the organiser's site.",
+     "rituals": [
+      {
+       "date": "2026-10-15",
+       "time": "",
+       "what": "Anandamela food festival and Dhaki competition"
+      }
+     ],
+     "u": "https://sarathionline.org/durga-puja-event-bangalore/",
+     "src": "sarathionline.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue",
+     "big": 1
+    },
+    {
+     "id": "oikotan-hebbal",
+     "t": "Oikotan Hebbal Durgotsav",
+     "venue": "EBISU Convention Center",
+     "area": "Thanisandra",
+     "ll": [
+      13.0828,
+      77.6334
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 0,
+     "about": "Ranked in the city top 3 by a 2026 guide. Known for large themed pandals: 2026 theme Egypt, after Kashi Vishwanath (2024) and Bhagavad Gita (2025).",
+     "rituals": [
+      {
+       "date": "2026-10-19",
+       "time": "",
+       "what": "Rahul Dutta live (Maha Ashtami night)"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "",
+       "what": "Lopamudra Mitra live (Maha Navami night)"
+      }
+     ],
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "ebca-whitefield",
+     "t": "EBCA Maha Durga Puja",
+     "venue": "Sri Manjunatha Swamy Kalyana Mantapa",
+     "area": "Whitefield (Katamnallur)",
+     "ll": [
+      13.0506,
+      77.7602
+     ],
+     "hrs": [
+      6,
+      21
+     ],
+     "hoursText": "Puja from about 6 am; evening prasad 7–8:30 pm",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "p": 0,
+     "out": 0,
+     "about": "Ninth year. The 2026 edition adds a Bengali book fair ('5000+ Bengali books'), live Patachitra scroll painting and a Baul akhara.",
+     "food": "Free bhog daily, with a special bhog on Ashtami and Navami from 14:00 to 16:00. The 'Food Street' has kathi rolls, phuchka and rosogolla, and the organiser cites 100+ food and craft stalls.",
+     "rituals": [
+      {
+       "date": "2026-10-16",
+       "time": "5:57–6:30 pm",
+       "what": "Bodhon, Amantran & Adhibas. 'Maddox Square Book Fair' (Bengali books) opens."
+      },
+      {
+       "date": "2026-10-17",
+       "time": "7:41–10:03 am",
+       "what": "Nabapatrika Prabesh, Sthapan & Saptami Puja (Pushpanjali 10:05)"
+      },
+      {
+       "date": "2026-10-17",
+       "time": "8:00 am",
+       "what": "48-hour Maha Havan begins (17-18 Oct, per AllEvents)"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "6:14–10:03 am",
+       "what": "Maha Ashtami Puja (Pushpanjali 10:05)"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "2:00–4:00 pm",
+       "what": "Kumari Puja with special bhog"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "7:26–8:14 am",
+       "what": "Sandhi Puja (Bali Daan 07:50, 108 diyas). Pushpanjali 08:15. Additional Ashtami puja 08:14-10:02 with Pushpanjali 10:05."
+      },
+      {
+       "date": "2026-10-20",
+       "time": "9:06–9:31 am",
+       "what": "Maha Navami Puja (Pushpanjali 09:35)"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "2:00–4:00 pm",
+       "what": "Kumari Puja with special bhog"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "",
+       "what": "Dhunuchi Naach & Dandiya Night"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "6:14–9:06 am",
+       "what": "Dashami Puja (Pushpanjali listed at 09:05)"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "",
+       "what": "Sindur Khela, Bisarjan, Bijoya Sammilani"
+      },
+      {
+       "date": "daily",
+       "time": "11:30 am–1:00 pm",
+       "what": "Free bhog (khichuri, labra, papad, chutney)"
+      },
+      {
+       "date": "daily",
+       "time": "7:00–8:30 pm",
+       "what": "Evening prasad (luchi, alur dom, payesh)"
+      }
+     ],
+     "u": "https://ebcafamily.com/durga-puja-bangalore-2026.php",
+     "src": "ebcafamily.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue",
+     "big": 1
+    },
+    {
+     "id": "barsha",
+     "t": "BARSHA Mahapujo",
+     "venue": "South Avenue Grounds, behind Electronic City metro",
+     "area": "Electronic City",
+     "ll": [
+      12.8565,
+      77.6635
+     ],
+     "hrs": [
+      8,
+      22
+     ],
+     "hoursText": "Daily puja and bhog from 8 am",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "2026 theme 'ANCHAL'. One of the city's biggest pujas (started 2014), moving this year from Haralur (off Sarjapur Road) to a new Electronic City ground.",
+     "food": "The organiser's undated site cites 40+ stalls. A 2025 guide mentions 30+ Bengali food stalls.",
+     "u": "https://www.barshabangalore.org/",
+     "src": "barshabangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "nearby",
+     "big": 1
+    },
+    {
+     "id": "kolaj",
+     "t": "Kolaj Durga Puja",
+     "venue": "Sri Krishna Temple Kalyana Mandapa",
+     "area": "Koramangala 5th Block",
+     "ll": [
+      12.9335,
+      77.6188
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 0,
+     "about": "Known for artwork the members create for the pandal each year. In 2025 it also ran children's art competitions and a magic show.",
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "sca-indiranagar",
+     "t": "SCA Indiranagar Durga Puja",
+     "venue": "Sishu Griha Senior School Ground",
+     "area": "New Thippasandra",
+     "ll": [
+      12.9735,
+      77.6557
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "Celebrating its 58th year in 2026, making it one of east Bengaluru's longest-running pujas. Past editions featured Agomoni dance and Bengali music evenings (2025).",
+     "food": "Anandamela on 15 Oct. The association's Facebook page has advertised stall bookings for 2026.",
+     "rituals": [
+      {
+       "date": "2026-10-15",
+       "time": "",
+       "what": "Anandamela (food festival)"
+      }
+     ],
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "pbca-ktpo",
+     "t": "PBCA Durga Puja",
+     "venue": "KTPO Convention Centre",
+     "area": "Whitefield",
+     "ll": [
+      12.9789,
+      77.7188
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 0,
+     "about": "Billed as the '23rd edition' of PBCA's Durga Puja and Dussehra festivities (association active since 2004), held at KTPO. A 2026 guide lists it as an author favourite and in its city top 15.",
+     "food": "The PBCA site mentions 60+ food and commercial stalls.",
+     "u": "https://pbca.in/",
+     "src": "pbca.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "wca-whitefield",
+     "t": "Whitefield Cultural Association Durga Puja",
+     "venue": "Ground behind Mahaveer Tranquil",
+     "area": "Nallurhalli, Whitefield",
+     "ll": [
+      12.9691,
+      77.7335
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "24th year, with a 2026 theme of 'Sun Chariot'. A big-ground puja with a fair: rides, food stalls, and balloon and toy hawkers.",
+     "food": "Food stalls as part of a fair (2026 guide). A 2025 guide recommends bhog on Saptami, Ashtami and Navami.",
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "nearby"
+    },
+    {
+     "id": "ecca",
+     "t": "ECCA Durga Puja",
+     "venue": "White Feather Convention Centre",
+     "area": "Electronic City",
+     "ll": [
+      12.8591,
+      77.6608
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 0,
+     "about": "Frequent winner of Sharad Sanman awards and in the 2026 guide's city top 15. In 2025 (its 13th year) it ran daily cultural shows, Dhunuchi naach and a shopping bazaar.",
+     "food": "Food stalls at the Dandiya night. In 2025 there was a food court and daily bhog.",
+     "rituals": [
+      {
+       "date": "2026-10-20",
+       "time": "8:00–11:00 pm",
+       "what": "ECCA Dandiya Night '26 (ticketed) with live performance by Hitesh & Rishabh Mehta"
+      }
+     ],
+     "u": "https://allevents.in/bangalore/ecca-dandiya-night-26-electronic-city/4100030742282513",
+     "src": "allevents",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "sanskritik",
+     "t": "Sanskritik Durga Puja",
+     "venue": "Elite Banquets Hall, Puttenahalli Road",
+     "area": "JP Nagar 6th Phase",
+     "ll": [
+      12.9025,
+      77.583
+     ],
+     "hrs": [
+      7.5,
+      22
+     ],
+     "hoursText": "Puja from 7:30 am; culture programme until 10 pm",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "p": 0,
+     "out": 0,
+     "about": "Sanskritik's 12th-year celebration, an indoor banquet-hall puja with daily cultural evenings and Dhunuchi naach.",
+     "food": "Daily bhog, distributed 13:00-15:00 on 17-20 Oct. Members get complimentary bhog coupons.",
+     "rituals": [
+      {
+       "date": "2026-10-16",
+       "time": "10:30 am",
+       "what": "Shashthi Pushpanjali (puja 08:30)"
+      },
+      {
+       "date": "2026-10-16",
+       "time": "6:30 pm",
+       "what": "Bodhan, Amontran, Adhibaas. Boron 19:00-20:00. Cultural programme 20:30-22:00."
+      },
+      {
+       "date": "2026-10-17",
+       "time": "10:30 am",
+       "what": "Saptami Pushpanjali (Nabapatrika snan & puja 08:30)"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "10:00 am",
+       "what": "Maha Ashtami Pushpanjali (puja 08:30)"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "7:26–8:14 am",
+       "what": "Sandhi Puja. Maha Ashtami Adhik Puja 09:30, Pushpanjali 10:30."
+      },
+      {
+       "date": "2026-10-20",
+       "time": "10:30 am",
+       "what": "Navami Pushpanjali (puja 08:00, Homa 10:00)"
+      },
+      {
+       "date": "2026-10-17",
+       "time": "1:00–3:00 pm",
+       "what": "Bhog distribution daily (bhog offered 12:30)"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "1:00–3:00 pm",
+       "what": "Bhog distribution daily (bhog offered 12:30)"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "1:00–3:00 pm",
+       "what": "Bhog distribution daily (bhog offered 12:30)"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "1:00–3:00 pm",
+       "what": "Bhog distribution daily (bhog offered 12:30)"
+      },
+      {
+       "date": "2026-10-17",
+       "time": "6:30–7:30 pm",
+       "what": "Sandhya Arati, then cultural programme 20:00-22:00"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "6:30–7:30 pm",
+       "what": "Sandhya Arati, then cultural programme 20:00-22:00"
+      },
+      {
+       "date": "2026-10-19",
+       "time": "6:30–7:30 pm",
+       "what": "Sandhya Arati, then cultural programme 20:00-22:00"
+      },
+      {
+       "date": "2026-10-20",
+       "time": "6:30–7:30 pm",
+       "what": "Sandhya Arati, then cultural programme 20:00-22:00"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "10:00 am",
+       "what": "Dashami Pushpanjali (Dashami puja 07:30, Aparajita puja 08:30)"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "11:00 am–1:00 pm",
+       "what": "Sindoor Khela"
+      },
+      {
+       "date": "2026-10-21",
+       "time": "2:00 pm",
+       "what": "Pratima Bisarjan"
+      }
+     ],
+     "u": "https://sanskritik.org/wp-content/uploads/2026/10/Durga-puja-2026-schedule-bangalore.pdf",
+     "src": "sanskritik.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "karba",
+     "t": "KARBA Durga Puja",
+     "venue": "Shankaraa Foundation",
+     "area": "Kanakapura Road",
+     "ll": [
+      12.8857,
+      77.5557
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "Turns 15 in 2026 and is in the city top 15. Described as well organised and well decorated; LBB (2025) called it the largest pujo in south Bangalore.",
+     "food": "In 2025, street-style Kolkata food and trinket shopping (LBB).",
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "area"
+    },
+    {
+     "id": "sbca-hulimavu",
+     "t": "SBCA Durga Puja",
+     "venue": "Ramalingeshwara Cave Temple",
+     "area": "Hulimavu",
+     "ll": [
+      12.8757,
+      77.5956
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "Turns 30 in 2026. The puja is held in a cave-temple setting. In 2025 it had band performances (Oxygen on Rocks, Achin Pakhi), a conch-blowing contest and Dhunuchi dance.",
+     "food": "Anandamela on 15 Oct.",
+     "rituals": [
+      {
+       "date": "2026-10-15",
+       "time": "",
+       "what": "Anandamela (food festival)"
+      }
+     ],
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "nearby"
+    },
+    {
+     "id": "binb",
+     "t": "BinB Durgotsav",
+     "venue": "Chandrodaya Convention Centre",
+     "area": "Dairy Circle, Bannerghatta Road",
+     "ll": [
+      12.9314,
+      77.6017
+     ],
+     "hrs": [
+      10,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 0,
+     "about": "In a 2026 guide's city top 15. Pre-pandemic editions were at the AIBACO ground in BTM. It moved in 2022 and again in 2025, to this convention centre.",
+     "food": "Food stalls and a flea market (stall bookings advertised). No bhog details published.",
+     "u": "https://allevents.in/bangalore/binb-durgotsav-2026/200030420755254",
+     "src": "allevents",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "eisha-hsr",
+     "t": "EISHA HSR Durgotsav",
+     "venue": "HSR BDA Complex",
+     "area": "HSR Layout",
+     "ll": [
+      12.9137,
+      77.6375
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "11th year. The 2026 pandal theme is inspired by Jamini Roy's art.",
+     "rituals": [
+      {
+       "date": "2026-10-19",
+       "time": "7:00 pm",
+       "what": "Chhau dance performance"
+      }
+     ],
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "assam-society",
+     "t": "Assam Society Durga Puja",
+     "venue": "Freedom International School grounds",
+     "area": "HSR Layout",
+     "ll": [
+      12.9165,
+      77.6421
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "Assamese community's 14th Durga Puja, with daily puja and bhog, cultural programmes and a Dandiya night.",
+     "food": "Daily bhog, food stalls and flea stalls (AllEvents listing).",
+     "u": "https://allevents.in/bangalore/14th-shree-shree-durga-puja-2026-freedom-international-school-grounds-hsr-layout/200030738583909",
+     "src": "allevents",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "venue"
+    },
+    {
+     "id": "sorrba",
+     "t": "SORRBA Durgotsob",
+     "venue": "Samskruti Pavilion, Sulikunte",
+     "area": "Sarjapur Road",
+     "ll": [
+      12.8882,
+      77.7292
+     ],
+     "hrs": [
+      10,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 0,
+     "about": "A large-scale puja, in the city top 15 of a 2026 guide. In 2025 it featured theatre, gigs, Bollywood concerts, Dhunuchi dance and a dandiya night.",
+     "food": "In 2025, Kolkata street food from stalls run by home chefs (LBB).",
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "area"
+    },
+    {
+     "id": "sreehatta-hoodi",
+     "t": "Bengaluru Sreehatta Sammelani Durga Puja",
+     "venue": "The Occasion events lawn",
+     "area": "Hoodi",
+     "ll": [
+      12.9919,
+      77.7162
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "Puja of Bengaluru's Sylheti (Sreehatta) community, with prayers, Pushpanjali, bhog and cultural events alongside Sylheti traditions.",
+     "food": "Bhog is offered (no timings published).",
+     "u": "https://newsable.asianetnews.com/gallery/lifestyle/bengaluru-durga-puja-guide-2026-10-pandals-to-visit-for-memorable-celebration-pq2n2lo",
+     "src": "Asianet Newsable",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "area"
+    },
+    {
+     "id": "nbcs-kali-bari",
+     "t": "NBCS Durga Puja at Bangalore Kali Bari",
+     "venue": "Bangalore Kali Bari, FTI Colony",
+     "area": "Nandini Layout",
+     "ll": [
+      13.0119,
+      77.5514
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 0,
+     "about": "Run by a 49-year-old association. The puja is held inside a Kali temple, which also hosts Kali Puja and Jagadhatri Puja.",
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "nearby"
+    },
+    {
+     "id": "aikatan-rr-nagar",
+     "t": "Aikatan Durgotsav",
+     "venue": "Subhas Bhavan Ground, Ideal Homes",
+     "area": "RR Nagar",
+     "ll": [
+      12.9273,
+      77.5183
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "RR Nagar puja run by the Bengali club Aikatan (founded 1984), covering west Bengaluru. The 2024 pandal was inspired by Dakshineswar Kali Temple.",
+     "rituals": [
+      {
+       "date": "2026-10-17",
+       "time": "11:00 am",
+       "what": "Kids' fancy dress competition (Saptami)"
+      },
+      {
+       "date": "2026-10-18",
+       "time": "11:00 am",
+       "what": "Quiz (Ashtami). Kids' dance/drama and solo performances in the evening."
+      },
+      {
+       "date": "2026-10-19",
+       "time": "9:30 am",
+       "what": "Dhunuchi Naach (Sandhi Puja day). Adult songs and solo performances in the evening."
+      },
+      {
+       "date": "2026-10-20",
+       "time": "11:00 am",
+       "what": "Shankhadhwani (conch blowing). Evening fashion show 'History of Sarees' and ladies' folk dance."
+      }
+     ],
+     "u": "https://aikatan.in/",
+     "src": "aikatan.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "area"
+    },
+    {
+     "id": "jbca-kr-puram",
+     "t": "JBCA Durga Puja",
+     "venue": "ITI Ground, by the KR Puram hanging bridge",
+     "area": "KR Puram",
+     "ll": [
+      13.0034,
+      77.6849
+     ],
+     "hrs": [
+      9,
+      22
+     ],
+     "hoursText": "Hours not published yet",
+     "dates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-21"
+     ],
+     "h": 1,
+     "out": 1,
+     "about": "In the 2026 guide's city top 15. This year's dhak will be played by an all-women team of dhakis.",
+     "food": "Food stalls, rides and shops (2026 guide).",
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "My Travelling Stilettos",
+     "checked": "2026-10-10",
+     "year_of_info": 2026,
+     "coords": "nearby"
+    }
+   ],
+   "priority": 1,
+   "facets": [
+    {
+     "id": "see",
+     "q": "What would you like?",
+     "opts": [
+      {
+       "id": "rituals",
+       "label": "Pushpanjali and rituals",
+       "match": "anjali|pushpanjali|sandhi|arati|aarti|bodhon|kumari puja|homa|nabapatrika",
+       "on": "rituals"
+      },
+      {
+       "id": "bhog",
+       "label": "Bhog and Bengali food",
+       "match": "bhog|prasad|food|anandamela|ananda mela|stalls|khichuri|luchi"
+      },
+      {
+       "id": "culture",
+       "label": "Culture nights and dhunuchi naach",
+       "match": "dhunuchi|cultural|concert|\\bband\\b|dance|programme|folk|chhau|fashion|competition|kathak|baul|\\blive\\b|kunitha"
+      },
+      {
+       "id": "sindoor",
+       "label": "Sindoor khela",
+       "match": "sindoor|sindur",
+       "on": "rituals"
+      },
+      {
+       "id": "big",
+       "label": "The biggest pujas",
+       "field": "big"
+      }
+     ]
+    }
+   ],
+   "foodKey": "durga-puja",
+   "cuisine": [
+    "bengali",
+    "odia",
+    "assamese"
+   ]
+  },
+  {
+   "id": "kannada-rajyotsava-2026",
+   "name": "Kannada Rajyotsava",
+   "chip": "Festival: Kannada Rajyotsava",
+   "color": "#B71C1C",
+   "from": "2026-11-01",
+   "to": "2026-11-01",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2026-11-01",
+     "label": "Rajyotsava"
+    }
+   ],
+   "about": "The state's formation day. The CM hoists the flag at Kanteerava Stadium, Rajyotsava awards are presented near Vidhana Soudha, and red-yellow Kannada flags and Kannada cultural events appear across the city all through November.",
+   "keywords": [
+    "rajyotsava",
+    "kannada rajyotsava",
+    "karnataka rajyotsava",
+    "karnataka day",
+    "kannada flag",
+    "bhuvaneshwari",
+    "kannada",
+    "kannadiga",
+    "rajyotsava awards",
+    "november 1",
+    "nadadevi",
+    "kannada habba"
+   ],
+   "sources": [
+    {
+     "name": "Dates: sakshipost.com",
+     "url": "https://www.sakshipost.com/news/national/karnataka-releases-2026-holiday-calendar-full-list-general-and-restricted-holidays",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Fixed date, 1 November (state formed on 1 Nov 1956). Karnataka Govt 2026 list notes it falls on Sunday 1 Nov 2026 (https://www.sakshipost.com/news/national/karnataka-releases-2026-holiday-calendar-full-list-general-and-restricted-holidays). No 2026 programme had been announced as of 10 Oct 2026.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "sree-kanteerava-stadium-state-function",
+     "t": "Sree Kanteerava Stadium (state function)",
+     "area": "Kasturba Road",
+     "ll": [
+      12.9693,
+      77.5927
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Morning flag hoisting (2024)",
+     "about": "The CM hoists the flag here on 1 Nov, followed by a parade",
+     "u": "https://www.newsonair.gov.in/cm-siddaramaiah-hoists-national-flag-at-kantheerava-stadium-for-69th-kannada-rajyotsava",
+     "src": "newsonair.gov.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "vidhana-soudha-illumination-and-awards",
+     "t": "Vidhana Soudha (illumination and awards)",
+     "area": "Ambedkar Veedhi",
+     "ll": [
+      12.9797,
+      77.5906
+     ],
+     "hrs": [
+      18.5,
+      22
+     ],
+     "hoursText": "Lit on weekends and public holidays, 6:30-10 pm (2025 schedule)",
+     "p": 0,
+     "about": "Illuminated seat of government. In 2024 the Rajyotsava awards were given in front of it at 4 pm",
+     "u": "https://www.nativeplanet.com/news/banglore-vidhana-soudha-now-lit-every-weekend-40-more-heritage-sites-to-shine-next-check-schedule-015987.html",
+     "src": "nativeplanet.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "nadadevi-bhuvaneshwari-statue",
+     "t": "Nadadevi Bhuvaneshwari statue",
+     "area": "Vidhana Soudha west side",
+     "ll": [
+      12.9802,
+      77.5887
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "25-ft bronze statue of Kannada's tutelary goddess, unveiled Jan 2025. The CM offered floral tribute here on 1 Nov 2025",
+     "u": "https://www.newsonair.gov.in/karnataka-celebrates-70th-kannada-rajyotsava",
+     "src": "newsonair.gov.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "kannada-sahitya-parishat",
+     "t": "Kannada Sahitya Parishat",
+     "area": "Chamarajpet (Pampa Mahakavi Road)",
+     "ll": [
+      12.9587,
+      77.5717
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "Kannada literary body. Offered a Rajyotsava discount on its books in 2025",
+     "u": "https://www.newsonair.gov.in/karnataka-celebrates-70th-kannada-rajyotsava",
+     "src": "newsonair.gov.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "foodKey": "rajyotsava",
+   "cuisine": [
+    "karnataka",
+    "udupi",
+    "south-indian"
+   ]
+  },
+  {
+   "id": "deepavali-2026",
+   "name": "Deepavali",
+   "chip": "Festival: Deepavali",
+   "color": "#8A5A00",
+   "from": "2026-11-06",
+   "to": "2026-11-11",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2026-11-06",
+     "label": "Dhanteras"
+    },
+    {
+     "date": "2026-11-08",
+     "label": "Naraka Chaturdashi · Lakshmi Puja"
+    },
+    {
+     "date": "2026-11-10",
+     "label": "Balipadyami"
+    },
+    {
+     "date": "2026-11-11",
+     "label": "Bhai Dooj"
+    }
+   ],
+   "about": "Families shop the old markets for diyas, akash kandils, flowers, silk and lights, and buy green crackers from police-licensed temporary stalls (411 stalls in 2025). Bursting is allowed only from 8 to 10 pm, per the Supreme Court direction. Balipadyami is the main Deepavali holiday in Karnataka; a 2021 Muzrai order set Gopuja (cow worship) at state temples that evening.",
+   "keywords": [
+    "deepavali",
+    "diwali",
+    "deepotsava",
+    "diya",
+    "green crackers",
+    "crackers",
+    "lakshmi puja",
+    "naraka chaturdashi",
+    "balipadyami",
+    "bali padyami",
+    "akash kandil",
+    "rangoli",
+    "festival of lights",
+    "govardhan puja",
+    "bhai dooj"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/diwali/diwali-puja-calendar.html?geoname-id=1277333&year=2026",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru) Diwali calendar: Dhanteras 6 Nov, Narak Chaturdashi and Lakshmi Puja Sun 8 Nov, Govardhan Puja/Bali Pratipada Tue 10 Nov, Bhaiya Dooj Wed 11 Nov (https://www.drikpanchang.com/diwali/diwali-puja-calendar.html?geoname-id=1277333&year=2026). Abhyanga snana timing is from https://www.drikpanchang.com/festivals/abhyangsnan/festivals-abhyangsnan-timings.html?geoname-id=1277333. Karnataka Govt 2026 list: Balipadyami/Deepavali Tue 10 Nov is a general holiday. Naraka Chaturdashi 8 Nov is not a holiday because it falls on a Sunday (https://www.sakshipost.com/news/national/karnataka-releases-2026-holiday-calendar-full-list-general-and-restricted-holidays). DoPT 2026: Diwali Sun 8 Nov (https://www.staffnews.in/2025/07/list-of-holidays-2026-closed-holidays.html); restricted holidays Naraka Chaturdasi 8 Nov, Govardhan Puja Mon 9 Nov, Bhai Duj 11 Nov (https://www.staffnews.in/2025/07/list-of-holidays-2026-restricted-holidays.html). DISAGREEMENT: Govardhan Puja is 9 Nov in DoPT but Bali Pratipada is 10 Nov in Drik and Karnataka. Some aggregators (BankBazaar) give a Deepavali holiday on 9 Nov.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "chickpet-market-bvk-iyengar-road",
+     "t": "Chickpet market & BVK Iyengar Road",
+     "area": "Chickpet",
+     "ll": [
+      12.9698,
+      77.5757
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Silk sarees and jewellery for Deepavali, plus lights and lamps on BVK Iyengar Road",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "commercial-street",
+     "t": "Commercial Street",
+     "area": "Shivajinagar / Tasker Town",
+     "ll": [
+      12.9822,
+      77.6083
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Festive clothes, sarees, decor and jewellery shopping",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "jayanagar-4th-block-market",
+     "t": "Jayanagar 4th Block market",
+     "area": "Jayanagar",
+     "ll": [
+      12.9298,
+      77.5843
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Akash kandils, clay diyas and marigold or jasmine garlands",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "malleswaram-8th-cross-market",
+     "t": "Malleswaram 8th Cross market",
+     "area": "Malleswaram",
+     "ll": [
+      12.9982,
+      77.5714
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Diyas, torans, puja items, fairy lights and lanterns",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "gandhi-bazaar",
+     "t": "Gandhi Bazaar",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9459,
+      77.5706
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Earthen diyas, puja items, sweets and Mysore silk",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "kr-market-city-market",
+     "t": "KR Market (City Market)",
+     "area": "KR Market / City Market",
+     "ll": [
+      12.9657,
+      77.5763
+     ],
+     "hrs": [
+      6,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Wholesale flower hub. Marigold and garland prices surge before festivals",
+     "u": "https://newskarnataka.com/bengaluru/festive-rush-in-bengaluru-markets-sends-ash-gourd-and-flower-prices-soaring/01102025/",
+     "src": "newskarnataka.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "iskcon-sri-radha-krishna-temple-hare-krishna-hil",
+     "t": "ISKCON Sri Radha Krishna Temple (Hare Krishna Hill)",
+     "area": "Rajajinagar (Chord Road)",
+     "ll": [
+      13.0099,
+      77.5511
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "Month-long Kartika Deepotsava lamp offering (7 Oct-5 Nov in 2025) and Govardhana Puja",
+     "u": "https://donations.iskconbangalore.org/festivalsevaslist",
+     "src": "donations.iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "foodKey": "deepavali",
+   "cuisine": [
+    "sweets",
+    "gujarati",
+    "rajasthani",
+    "north-indian"
+   ]
+  },
+  {
+   "id": "kadalekai-parishe-2026",
+   "name": "Kadalekai Parishe",
+   "chip": "Festival: Kadalekai Parishe",
+   "color": "#6D4C41",
+   "from": "2026-12-07",
+   "to": "2026-12-11",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2026-12-07",
+     "label": "Opening day (expected)"
+    }
+   ],
+   "about": "A centuries-old groundnut fair. Farmers offer their first groundnut harvest to the giant Nandi at Dodda Basavana Gudi, and vendors line Bull Temple Road selling raw, boiled and roasted groundnuts, toys and snacks. The road is closed to traffic and the fair has been run plastic-free (2025). Malleswaram holds a separate, earlier groundnut fair (8-10 Nov in 2025).",
+   "keywords": [
+    "kadalekai",
+    "kadlekai",
+    "kadalekayi",
+    "parishe",
+    "groundnut",
+    "peanut",
+    "groundnut fair",
+    "basavanagudi",
+    "bull temple",
+    "dodda basavanna",
+    "dodda ganapathi",
+    "karthika",
+    "kartika"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/vrats/amavasyadates.html?geoname-id=1277333&year=2026",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "NOT ANNOUNCED as of 10 Oct 2026. The Muzrai Department and GBA usually announce it in November. The fair is held on the last Monday of Kartika masa (amanta). In 2026 Kartika runs from 10 Nov to the Amavasya of 8 Dec (https://www.drikpanchang.com/vrats/amavasyadates.html?geoname-id=1277333&year=2026), so the expected main day is Mon 7 Dec 2026. This rule matches the past dates: Mon 11 Dec 2023, Mon 25 Nov 2024 (2 days, 25-26 Nov) and Mon 17 Nov 2025 (first 5-day edition, to 21 Nov). The 'to' date of 11 Dec assumes the 2025 five-day format repeats, and the length depends on the Muzrai announcement. Sources: https://www.oneindia.com/bengaluru/basavanagudi-kadalekai-parishe-2025-five-day-groundnut-fair-runs-until-november-21-7919019.html ; https://www.oneindia.com/bengaluru/kadalekai-parishe-2024-bengaluru-s-iconic-groundnut-fair-on-november-25-26-011-3991007.html. Travebrate also estimates 7 Dec 2026, and Incredible India says only 'November 2026'.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "dodda-basavana-gudi-bull-temple",
+     "t": "Dodda Basavana Gudi (Bull Temple)",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9418,
+      77.5687
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "The fair opens here with groundnut offerings and abhisheka to the 15-ft monolithic Nandi",
+     "u": "https://www.oneindia.com/bengaluru/basavanagudi-kadalekai-parishe-2025-five-day-groundnut-fair-runs-until-november-21-7919019.html",
+     "src": "oneindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "dodda-ganapathi-temple",
+     "t": "Dodda Ganapathi Temple",
+     "area": "Bull Temple Road, Basavanagudi",
+     "ll": [
+      12.9429,
+      77.5682
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Decorated with flowers and lights for the fair; the giant Ganesha is showered with groundnuts",
+     "u": "https://www.oneindia.com/bengaluru/kadalekai-parishe-2024-bengaluru-s-iconic-groundnut-fair-on-november-25-26-011-3991007.html",
+     "src": "oneindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "bull-temple-road-fair-stretch",
+     "t": "Bull Temple Road fair stretch",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9441,
+      77.5678
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Daily hours not published",
+     "p": 0,
+     "about": "Rows of groundnut stalls from Karnataka, Tamil Nadu and Andhra farmers. Closed to vehicles during the fair",
+     "u": "https://curlytales.com/bengalurus-kadlekai-parishe-begins-from-dec-9-what-it-is-traffic-curbs-and-more-inside/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2023
+    },
+    {
+     "id": "bugle-rock-park-evening-cultural-shows",
+     "t": "Bugle Rock Park (evening cultural shows)",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9421,
+      77.5693
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Shows from 6 pm (2025)",
+     "about": "Three-day series of music, comedy and Bharatanatyam during the 2025 fair",
+     "u": "https://www.oneindia.com/bengaluru/basavanagudi-kadalekai-parishe-2025-five-day-groundnut-fair-runs-until-november-21-7919019.html",
+     "src": "oneindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "kempambudhi-lake-teppotsava",
+     "t": "Kempambudhi Lake (Teppotsava)",
+     "area": "Basavanagudi / Chamarajpet",
+     "ll": [
+      12.9517,
+      77.5602
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "6 pm on the opening day (2025)",
+     "about": "Float festival on the lake on the fair's opening evening",
+     "u": "https://www.oneindia.com/bengaluru/basavanagudi-kadalekai-parishe-2025-five-day-groundnut-fair-runs-until-november-21-7919019.html",
+     "src": "oneindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "foodKey": "rajyotsava",
+   "cuisine": [
+    "karnataka",
+    "udupi",
+    "south-indian"
+   ]
+  },
+  {
+   "id": "vaikunta-ekadashi-2026",
+   "name": "Vaikunta Ekadashi",
+   "color": "#1A5E9A",
+   "from": "2026-12-20",
+   "to": "2026-12-20",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2026-12-20",
+     "label": "Vaikunta Ekadashi"
+    }
+   ],
+   "about": "Devotees queue from before dawn at Venkateswara and Vishnu temples to pass through the specially opened Vaikunta Dwara (north gate) and collect laddu prasada. Police put traffic curbs around the big temples.",
+   "keywords": [
+    "vaikunta ekadashi",
+    "vaikuntha ekadashi",
+    "mukkoti ekadashi",
+    "vaikunta dwara",
+    "venkateswara",
+    "ttd",
+    "iskcon",
+    "laddu",
+    "darshan",
+    "ekadashi",
+    "srinivasa"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/ekadashis/vaikuntha/vaikuntha-ekadashi-date-time.html?geoname-id=1277333&year=2026",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Sun 20 Dec 2026, Ekadashi tithi from 10:09 pm on 19 Dec to 8:14 pm on 20 Dec (https://www.drikpanchang.com/ekadashis/vaikuntha/vaikuntha-ekadashi-date-time.html?geoname-id=1277333&year=2026). ISKCON Bangalore also lists 20 Dec 2026 (https://www.iskconbangalore.org/sri-vaikuntha-ekadashi/).",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "ttd-sri-venkateswara-temple",
+     "t": "TTD Sri Venkateswara Temple",
+     "area": "Vyalikaval / Malleswaram",
+     "ll": [
+      13.0065,
+      77.5756
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "2:35 am-11:45 pm (30 Dec 2025)",
+     "p": 0,
+     "about": "Bengaluru's busiest Vaikunta Ekadashi temple: over 70,000 expected in 2025, with Srivari laddu sales from 2 am",
+     "u": "https://newsfirstprime.com/nation/vaikunta-ekadashi-draws-massive-crowds-in-bengaluru-over-70000-expected-at-vyalikaval-ttd-temple-10957398",
+     "src": "newsfirstprime.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "kote-venkataramana-swamy-temple",
+     "t": "Kote Venkataramana Swamy Temple",
+     "area": "Fort / KR Road, Chamarajpet (next to Tipu Sultan's Palace)",
+     "ll": [
+      12.9596,
+      77.5741
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Until 11 pm (2025)",
+     "p": 0,
+     "about": "Kilometre-long queues for the north-gate (Vaikunta Dwara) darshan",
+     "u": "https://newsfirstprime.com/nation/vaikunta-ekadashi-draws-massive-crowds-in-bengaluru-over-70000-expected-at-vyalikaval-ttd-temple-10957398",
+     "src": "newsfirstprime.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "iskcon-sri-radha-krishna-temple-hare-krishna-hil",
+     "t": "ISKCON Sri Radha Krishna Temple (Hare Krishna Hill)",
+     "area": "Rajajinagar (Chord Road)",
+     "ll": [
+      13.0099,
+      77.5511
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "8 am-10 pm on 20 Dec 2026 (ISKCON)",
+     "p": 0,
+     "about": "Golden Vaikuntha Dwara, maha abhisheka of Sri Srinivasa Govinda, and kalyanotsava",
+     "u": "https://www.iskconbangalore.org/sri-vaikuntha-ekadashi/",
+     "src": "iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "iskcon-vaikuntha-hill-sri-rajadhiraja-govinda-te",
+     "t": "ISKCON Vaikuntha Hill (Sri Rajadhiraja Govinda Temple)",
+     "area": "Vasanthapura, off Kanakapura Road",
+     "ll": [
+      12.8926,
+      77.5488
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "5:30 am-10 pm on 20 Dec 2026 (ISKCON)",
+     "p": 0,
+     "about": "Palanquin procession of the deities through the Vaikuntha Dwara",
+     "u": "https://www.iskconbangalore.org/sri-vaikuntha-ekadashi/",
+     "src": "iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "chip": "Festival: Vaikunta Ekadashi",
+   "cuisine": [
+    "udupi",
+    "south-indian"
+   ],
+   "veg": true
+  },
+  {
+   "id": "christmas-2026",
+   "name": "Christmas",
+   "chip": "Festival: Christmas",
+   "color": "#1B5E20",
+   "from": "2026-12-24",
+   "to": "2026-12-25",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2026-12-24",
+     "label": "Christmas Eve"
+    },
+    {
+     "date": "2026-12-25",
+     "label": "Christmas Day"
+    }
+   ],
+   "about": "Bengaluru's large Christian community fills its historic churches for Christmas Eve midnight Mass. Brigade Road, MG Road and Commercial Street are lit up, malls run Christmas markets, and Shivajinagar sells decorations and plum cake.",
+   "keywords": [
+    "christmas",
+    "xmas",
+    "midnight mass",
+    "carols",
+    "carol singing",
+    "plum cake",
+    "nativity",
+    "christmas market",
+    "christmas eve",
+    "santa",
+    "christmas tree",
+    "advent",
+    "yuletide"
+   ],
+   "sources": [
+    {
+     "name": "Dates: sakshipost.com",
+     "url": "https://www.sakshipost.com/news/national/karnataka-releases-2026-holiday-calendar-full-list-general-and-restricted-holidays",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Fixed date. Karnataka Govt 2026: Christmas Fri 25 Dec is a general holiday and Christmas Eve Thu 24 Dec a restricted holiday (https://www.sakshipost.com/news/national/karnataka-releases-2026-holiday-calendar-full-list-general-and-restricted-holidays). Churches usually post Mass times about a week ahead; none published as of 10 Oct 2026.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "st-mary-s-basilica",
+     "t": "St. Mary's Basilica",
+     "area": "Shivajinagar",
+     "ll": [
+      12.9844,
+      77.6043
+     ],
+     "hrs": [
+      6,
+      23.5
+     ],
+     "hoursText": "Midnight Mass on 24 Dec",
+     "p": 0,
+     "about": "Historic basilica with the city's biggest Christmas Eve crowds: queues and security checks on 24 Dec",
+     "u": "https://www.indiatvnews.com/lifestyle/events/christmas-in-bengaluru-churches-celebration-guide-2025-12-24-1023113",
+     "src": "indiatvnews.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "shivajinagar-christmas-stalls-russell-market",
+     "t": "Shivajinagar Christmas stalls & Russell Market",
+     "area": "Shivajinagar",
+     "ll": [
+      12.985,
+      77.6058
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "December pop-up stalls near St Mary's selling stars, tinsel and nativity sets. Plum-cake traders",
+     "u": "https://magicpin.com/blog/india/bangalore/Travel/christmas-decor-shopping-in-bangalore",
+     "src": "magicpin.com",
+     "checked": "2026-10-10"
+    },
+    {
+     "id": "st-patrick-s-church",
+     "t": "St. Patrick's Church",
+     "area": "Brigade Road / Residency Road",
+     "ll": [
+      12.9705,
+      77.6059
+     ],
+     "hrs": [
+      18,
+      24.5
+     ],
+     "hoursText": "Midnight Mass; arrive by 10:30 pm (2025)",
+     "p": 0,
+     "about": "1844 church with a choir; holds about 600, so arrive early",
+     "u": "https://beegru.com/blog/priya-ramachandran/christmas-bangalore-2025-neighborhoods-guide",
+     "src": "beegru.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "st-mark-s-cathedral",
+     "t": "St. Mark's Cathedral",
+     "area": "MG Road",
+     "ll": [
+      12.9761,
+      77.6004
+     ],
+     "hrs": [
+      18,
+      24.5
+     ],
+     "hoursText": "Carols and midnight service; arrive by 9:30 pm (2025)",
+     "p": 0,
+     "about": "1812 cathedral with carols and candlelight. By 11 pm the crowd spills onto the lawns",
+     "u": "https://beegru.com/blog/priya-ramachandran/christmas-bangalore-2025-neighborhoods-guide",
+     "src": "beegru.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "infant-jesus-church-shrine",
+     "t": "Infant Jesus Church (Shrine)",
+     "area": "Viveknagar",
+     "ll": [
+      12.9536,
+      77.6188
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Described as the city's most crowded church at Christmas, visited by people of all faiths",
+     "u": "https://beegru.com/blog/priya-ramachandran/christmas-bangalore-2025-neighborhoods-guide",
+     "src": "beegru.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "brigade-road-church-street-lights",
+     "t": "Brigade Road & Church Street lights",
+     "area": "Central Business District",
+     "ll": [
+      12.9699,
+      77.6066
+     ],
+     "hrs": [
+      18,
+      26
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Light tunnels and Christmas crowds. Church Street was barricaded and heavily policed in 2024",
+     "u": "https://www.deccanherald.com/india/karnataka/bengaluru/central-business-district-swamped-by-christmas-traffic-3332105",
+     "src": "deccanherald.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "ub-city",
+     "t": "UB City",
+     "area": "Vittal Mallya Road",
+     "ll": [
+      12.9723,
+      77.5961
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Tall Christmas tree, red-and-gold decor and holiday menus",
+     "u": "https://wanderon.in/blogs/christmas-celebration-in-bangalore",
+     "src": "wanderon.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "bhartiya-mall-of-bengaluru-christmas-market",
+     "t": "Bhartiya Mall of Bengaluru (Christmas market)",
+     "area": "Thanisandra / Bhartiya City",
+     "ll": [
+      13.0834,
+      77.6436
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "'Mistletoe' Christmas market from 6 Dec 2025, busiest on December weekends",
+     "u": "https://beegru.com/blog/priya-ramachandran/christmas-bangalore-2025-neighborhoods-guide",
+     "src": "beegru.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "foodKey": "christmas",
+   "cuisine": [
+    "bakery",
+    "anglo-indian",
+    "goan",
+    "mangalorean"
+   ]
+  },
+  {
+   "id": "avarebele-mela-2026-27",
+   "name": "Avarebele Mela",
+   "color": "#33691E",
+   "from": "2026-12-27",
+   "to": "2027-01-04",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2026-12-27",
+     "label": "Opening (expected)"
+    }
+   ],
+   "about": "A winter food festival of avarekai (hyacinth beans) started in 2000 by Vasavi Condiments of VV Puram. It sells about 100+ bean dishes, from avarebele dosa and holige to jalebi and ice cream, along with farmers' produce.",
+   "keywords": [
+    "avarebele mela",
+    "avarekai mela",
+    "avarekai",
+    "avarebele",
+    "hyacinth beans",
+    "food festival",
+    "vasavi condiments",
+    "national college grounds",
+    "basavanagudi",
+    "vv puram",
+    "avarebele dosa"
+   ],
+   "sources": [
+    {
+     "name": "Dates: thefederal.com",
+     "url": "https://thefederal.com/category/features/avarabele-mela-2025-bengalurus-unique-beans-festival-turns-25-158544",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "NOT ANNOUNCED as of 10 Oct 2026 (27th edition). The dates assume the recent pattern repeats: 25th edition 27 Dec 2024-5 Jan 2025 (https://thefederal.com/category/features/avarabele-mela-2025-bengalurus-unique-beans-festival-turns-25-158544); 26th edition 27 Dec 2025-4 Jan 2026 (ETV Bharat, 28 Dec 2025: https://www.etvbharat.com/en/state/visitors-flock-to-savour-traditional-new-dishes-at-26th-avarekai-mela-in-bengaluru-enn25122802524). Organiser: Sri Vasavi Condiments.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "national-college-grounds-mela-venue",
+     "t": "National College Grounds (mela venue)",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9505,
+      77.5729
+     ],
+     "hrs": [
+      10,
+      22
+     ],
+     "hoursText": "10 am-10 pm (2025-26 edition)",
+     "p": 0,
+     "about": "Main venue in recent editions, walkable from National College metro station",
+     "u": "https://www.etvbharat.com/en/state/visitors-flock-to-savour-traditional-new-dishes-at-26th-avarekai-mela-in-bengaluru-enn25122802524",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "sri-vasavi-condiments-vv-puram-food-street-organ",
+     "t": "Sri Vasavi Condiments, VV Puram Food Street (organiser's shop)",
+     "area": "Sajjan Rao Circle, VV Puram",
+     "ll": [
+      12.9523,
+      77.5768
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "The organiser's shop, where the mela started. Next to VV Puram's food street",
+     "u": "https://thefederal.com/category/features/avarabele-mela-2025-bengalurus-unique-beans-festival-turns-25-158544",
+     "src": "thefederal.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    }
+   ],
+   "chip": "Festival: Avarebele Mela",
+   "cuisine": [
+    "karnataka",
+    "udupi"
+   ]
+  },
+  {
+   "id": "new-years-eve-2026",
+   "name": "New Year's Eve",
+   "color": "#4A148C",
+   "from": "2026-12-31",
+   "to": "2027-01-01",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2026-12-31",
+     "label": "New Year's Eve"
+    },
+    {
+     "date": "2027-01-01",
+     "label": "New Year's Day"
+    }
+   ],
+   "about": "Lakhs of people gather on MG Road, Brigade Road and Church Street, and in the pubs of Koramangala and Indiranagar, for the midnight countdown. Police close the CBD to vehicles, shut flyovers and enforce a closing time of about 1 am for venues (2025 rules).",
+   "keywords": [
+    "new year's eve",
+    "new years eve",
+    "nye",
+    "new year party",
+    "new year bash",
+    "countdown"
+   ],
+   "sources": [
+    {
+     "name": "Dates: thenewsminute.com",
+     "url": "https://www.thenewsminute.com/amp/story/karnataka/heading-out-for-new-years-eve-here-are-bengalurus-traffic-restrictions-diversions",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Fixed date. Police rules for NYE 2026 are not announced yet. The 2025 rules were: venues close by about 1 am, CBD roads vehicle-free 8 pm-2 am, and all flyovers except the airport flyover closed 11 pm-6 am (The News Minute, 29 Dec 2025: https://www.thenewsminute.com/amp/story/karnataka/heading-out-for-new-years-eve-here-are-bengalurus-traffic-restrictions-diversions).",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "mg-road",
+     "t": "MG Road",
+     "area": "CBD",
+     "ll": [
+      12.9755,
+      77.6068
+     ],
+     "hrs": [
+      20,
+      26
+     ],
+     "hoursText": "No vehicles 8 pm on 31 Dec to 2 am on 1 Jan; no parking 4 pm-3 am (2025)",
+     "p": 0,
+     "about": "Main CBD celebration zone, closed to traffic",
+     "u": "https://www.thenewsminute.com/amp/story/karnataka/heading-out-for-new-years-eve-here-are-bengalurus-traffic-restrictions-diversions",
+     "src": "thenewsminute.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "brigade-road",
+     "t": "Brigade Road",
+     "area": "CBD",
+     "ll": [
+      12.9699,
+      77.6066
+     ],
+     "hrs": [
+      18,
+      26
+     ],
+     "hoursText": "Vehicle-free 8 pm-2 am (2025)",
+     "p": 0,
+     "about": "Vehicle-free zone. Pedestrians move one way, from the MG Road junction to Opera House (2025)",
+     "u": "https://newsfirstprime.com/bengaluru/new-years-eve-in-bengaluru-roads-shut-flyovers-closed-heavy-policing-planned-10958527",
+     "src": "newsfirstprime.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "church-street",
+     "t": "Church Street",
+     "area": "CBD",
+     "ll": [
+      12.9749,
+      77.6053
+     ],
+     "hrs": [
+      18,
+      26
+     ],
+     "hoursText": "Vehicle-free 8 pm-2 am (2025)",
+     "p": 0,
+     "about": "Pub and cafe street, part of the closed CBD zone",
+     "u": "https://www.thenewsminute.com/amp/story/karnataka/heading-out-for-new-years-eve-here-are-bengalurus-traffic-restrictions-diversions",
+     "src": "thenewsminute.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "koramangala-pub-belt-80-feet-road",
+     "t": "Koramangala pub belt (80 Feet Road)",
+     "area": "Koramangala",
+     "ll": [
+      12.9421,
+      77.6221
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Venues close by about 1 am (2025 rule)",
+     "p": 0,
+     "about": "Party hub with traffic curbs on nearby roads; parking at designated grounds",
+     "u": "https://www.thenewsminute.com/amp/story/karnataka/heading-out-for-new-years-eve-here-are-bengalurus-traffic-restrictions-diversions",
+     "src": "thenewsminute.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "indiranagar-100-feet-road",
+     "t": "Indiranagar 100 Feet Road",
+     "area": "Indiranagar",
+     "ll": [
+      12.9752,
+      77.6411
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Venues close by about 1 am (2025 rule)",
+     "p": 0,
+     "about": "Pub strip. No parking on 100 Ft Road and 12th Main; designated cab points (2025)",
+     "u": "https://www.thenewsminute.com/amp/story/karnataka/heading-out-for-new-years-eve-here-are-bengalurus-traffic-restrictions-diversions",
+     "src": "thenewsminute.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "phoenix-marketcity",
+     "t": "Phoenix Marketcity",
+     "area": "Mahadevapura, Whitefield Road",
+     "ll": [
+      12.9977,
+      77.6966
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "East Bengaluru mall hub. BMTC ran special late buses from here in 2025",
+     "u": "https://newsfirstprime.com/bengaluru/new-years-eve-in-bengaluru-roads-shut-flyovers-closed-heavy-policing-planned-10958527",
+     "src": "newsfirstprime.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "phoenix-mall-of-asia",
+     "t": "Phoenix Mall of Asia",
+     "area": "Byatarayanapura (Hebbal-Yelahanka road)",
+     "ll": [
+      13.0709,
+      77.5903
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "North Bengaluru mall hub. BMTC ran special late buses from here in 2025",
+     "u": "https://newsfirstprime.com/bengaluru/new-years-eve-in-bengaluru-roads-shut-flyovers-closed-heavy-policing-planned-10958527",
+     "src": "newsfirstprime.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "chip": "Festival: New Year's Eve"
+  },
+  {
+   "id": "chitra-santhe-2027",
+   "name": "Chitra Santhe",
+   "color": "#AD1457",
+   "from": "2027-01-03",
+   "to": "2027-01-03",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-01-03",
+     "label": "Chitra Santhe (expected)"
+    }
+   ],
+   "about": "A one-day open-air art fair run by Karnataka Chitrakala Parishath. About 1,500 artists from around 22 states set up stalls along Kumara Krupa Road, which is closed to traffic, and lakhs of visitors browse and buy art directly from them.",
+   "keywords": [
+    "chitra santhe",
+    "chitrasanthe",
+    "chithra santhe",
+    "art fair",
+    "kumara krupa road",
+    "chitrakala parishath",
+    "paintings",
+    "artists",
+    "street art",
+    "open-air gallery",
+    "art for all",
+    "kcp"
+   ],
+   "sources": [
+    {
+     "name": "Dates: thesouthfirst.com",
+     "url": "https://thesouthfirst.com/featured/streaming-street-art-bengalurus-flagship-art-fair-chithra-santhe-to-honour-indias-space-scientists-this-year",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "NOT ANNOUNCED as of 10 Oct 2026. The official site (chitrasanthe.in) still showed only the 23rd edition (4 Jan 2026) and was under maintenance when re-checked. Recent editions were held on the first Sunday of January: 21st on Sun 7 Jan 2024, 22nd on Sun 5 Jan 2025, 23rd on Sun 4 Jan 2026. That makes Sun 3 Jan 2027 the expected date. Sources: https://thesouthfirst.com/featured/streaming-street-art-bengalurus-flagship-art-fair-chithra-santhe-to-honour-indias-space-scientists-this-year ; https://www.deccanherald.com/india/karnataka/chitra-santhe-on-jan-5-artists-can-submit-entries-by-nov-30-2-3273714 ; https://www.latestly.com/india/news/chitra-santhe-2026-in-bengaluru-bmtc-announces-special-feeder-buses-for-event-organised-by-karnataka-chitrakala-parishath-check-routes-fares-and-traffic-curbs-7262199.html/amp",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "karnataka-chitrakala-parishath-campus",
+     "t": "Karnataka Chitrakala Parishath campus",
+     "area": "Kumara Krupa Road",
+     "ll": [
+      12.9893,
+      77.5807
+     ],
+     "hrs": [
+      8,
+      20
+     ],
+     "hoursText": "8 am-8 pm (2026)",
+     "about": "Organiser's campus and galleries. In 2026 it hosted a themed exhibition alongside the fair",
+     "u": "https://caleidoscope.in/art-culture/chitrasanthe-2026",
+     "src": "caleidoscope.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "kumara-krupa-road-stall-stretch",
+     "t": "Kumara Krupa Road stall stretch",
+     "area": "Kumara Krupa Road (Windsor Manor junction to Shivananda Circle)",
+     "ll": [
+      12.9912,
+      77.5826
+     ],
+     "hrs": [
+      8,
+      20
+     ],
+     "hoursText": "Road closed to vehicles 5 am-10 pm (2026); 6 am-9 pm in 2024-25",
+     "p": 0,
+     "about": "About 1 km of artists' stalls: paintings, prints, sculpture and crafts",
+     "u": "https://www.deccanherald.com/india/karnataka/bengaluru/chitra-santhe-2026-check-traffic-curbs-on-bengalurus-kumara-krupa-road-3850396",
+     "src": "deccanherald.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "shivananda-circle-bmtc-feeder-bus-point",
+     "t": "Shivananda Circle (BMTC feeder bus point)",
+     "area": "High Grounds / Seshadripuram",
+     "ll": [
+      12.9865,
+      77.5797
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Feeder buses every 10 min (2026)",
+     "about": "In 2026 feeder buses ran here from Majestic, Shivajinagar, Vidhana Soudha and Mantri Square metro",
+     "u": "https://www.latestly.com/india/news/chitra-santhe-2026-in-bengaluru-bmtc-announces-special-feeder-buses-for-event-organised-by-karnataka-chitrakala-parishath-check-routes-fares-and-traffic-curbs-7262199.html/amp",
+     "src": "latestly.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "seva-dal-ground-crescent-road-overflow-stalls",
+     "t": "Seva Dal ground & Crescent Road overflow stalls",
+     "area": "Kumara Park East / High Grounds",
+     "ll": [
+      12.9875,
+      77.5806
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Same day as the fair",
+     "p": 0,
+     "about": "About 300 extra stalls in 2024 at the Seva Dal ground and the service roads under the Shivananda flyover",
+     "u": "https://thesouthfirst.com/featured/streaming-street-art-bengalurus-flagship-art-fair-chithra-santhe-to-honour-indias-space-scientists-this-year",
+     "src": "thesouthfirst.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    }
+   ],
+   "chip": "Festival: Chitra Santhe"
+  },
+  {
+   "id": "makar-sankranti-2027",
+   "name": "Makara Sankranti",
+   "chip": "Festival: Makara Sankranti",
+   "color": "#BF4600",
+   "from": "2027-01-14",
+   "to": "2027-01-15",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2027-01-14",
+     "label": "Bhogi"
+    },
+    {
+     "date": "2027-01-15",
+     "label": "Sankranti"
+    }
+   ],
+   "about": "Families exchange ellu-bella (a sesame, jaggery, coconut and groundnut mix) and sugarcane and shop at the old markets. In the evening, crowds gather at Gavi Gangadhareshwara cave temple to watch sunlight pass between the Nandi's horns and touch the Shivalinga.",
+   "keywords": [
+    "sankranti",
+    "makara sankranti",
+    "makar sankranti",
+    "ellu bella",
+    "sugarcane",
+    "gavi gangadhareshwara",
+    "sun rays",
+    "uttarayana",
+    "suggi habba",
+    "pongal",
+    "kite",
+    "kicchu haisodu"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/sankranti/makar-sankranti-date-time.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Makara Sankranti Fri 15 Jan 2027, because the Sankranti moment is 9:14 pm on 14 Jan (https://www.drikpanchang.com/sankranti/makar-sankranti-date-time.html?geoname-id=1277333&year=2027). DoPT 2027 restricted list: Makar Sankranti Thu 14 Jan, Pongal Fri 15 Jan (https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html). DISAGREEMENT: unofficial Karnataka 2027 lists (CalendarLabs) say 14 Jan (https://www.calendarlabs.com/karnataka-state-holidays-2027/), but the Karnataka holiday list for 2027 has not been notified yet. In 2026 the state observed the day after the Sankranti moment. The evening sun-ray event at Gavi Gangadhareshwara will be on the state's Sankranti day; its 2027 time is not published.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "gavi-gangadhareshwara-temple-sun-ray-phenomenon",
+     "t": "Gavi Gangadhareshwara Temple (sun-ray phenomenon)",
+     "area": "Gavipuram",
+     "ll": [
+      12.9482,
+      77.563
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Rays expected about 5:00-5:02 pm on 15 Jan 2026. The 2027 time is not published",
+     "p": 0,
+     "about": "Sunlight enters the cave and touches the Shivalinga only around Sankranti. Big LED screens were set up outside in 2026",
+     "u": "https://www.etvbharat.com/en/state/devotees-throng-bengalurus-gavi-gangadhareshwara-temple-to-watch-annual-sunray-phenomenon-enn26011505453",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "kr-market-city-market",
+     "t": "KR Market (City Market)",
+     "area": "KR Market / City Market",
+     "ll": [
+      12.9657,
+      77.5763
+     ],
+     "hrs": [
+      6,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Sugarcane wholesale hub, with the rush from about 10 to 15 Jan. A bundle of 10 canes cost Rs 500-600 in 2026",
+     "u": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Fbengaluru-sugarcane-prices-to-surge-as-sankranti-demand-peaks-3857436",
+     "src": "deccanherald.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "gandhi-bazaar",
+     "t": "Gandhi Bazaar",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9459,
+      77.5706
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "About 6 am-9 pm",
+     "p": 0,
+     "about": "Flower and puja-item street for festive shopping",
+     "u": "https://en.wikipedia.org/wiki/Gandhi_Bazaar",
+     "src": "en.wikipedia.org",
+     "checked": "2026-10-10"
+    }
+   ],
+   "foodKey": "sankranti",
+   "cuisine": [
+    "karnataka",
+    "udupi",
+    "south-indian"
+   ]
+  },
+  {
+   "id": "lalbagh-republic-day-flower-show-2027",
+   "name": "Lalbagh Flower Show",
+   "chip": "Festival: Lalbagh Flower Show",
+   "color": "#2E7D32",
+   "from": "2027-01-15",
+   "to": "2027-01-26",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-01-26",
+     "label": "Republic Day"
+    }
+   ],
+   "about": "The Horticulture Department stages a themed floral installation in Lalbagh's Glass House over 11-13 days around Republic Day. Lakhs of visitors come (4.38 lakh in 2025), and weekends are very crowded.",
+   "keywords": [
+    "flower show",
+    "lalbagh",
+    "lalbagh flower show",
+    "glass house",
+    "phala pushpa",
+    "horticulture",
+    "republic day",
+    "botanical garden",
+    "floral",
+    "mysore horticultural society",
+    "hasiru"
+   ],
+   "sources": [
+    {
+     "name": "Dates: newskarnataka.com",
+     "url": "https://newskarnataka.com/karnataka/bengaluru/maharishi-valmiki-themed-republic-day-flower-show-at-lalbagh-draws-record-crowd/27012025/",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "NOT ANNOUNCED as of 10 Oct 2026 (no theme or dates yet). The Horticulture Department and Mysore Horticultural Society usually announce them in early January. The 'from' date is a placeholder based on past editions. Jan 2025 (217th): 16-26/27 Jan, theme Adikavi Maharshi Valmiki (https://newskarnataka.com/karnataka/bengaluru/maharishi-valmiki-themed-republic-day-flower-show-at-lalbagh-draws-record-crowd/27012025/). Jan 2026 (219th): 14-26 Jan, theme on K.P. Poornachandra Tejaswi (https://karnatakatourism.org/en/blogs/lalbagh-flower-show-2026).",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "lalbagh-glass-house-main-exhibit",
+     "t": "Lalbagh Glass House (main exhibit)",
+     "area": "Lalbagh, Mavalli",
+     "ll": [
+      12.9498,
+      77.5866
+     ],
+     "hrs": [
+      9,
+      18
+     ],
+     "hoursText": "9 am-6 pm (Jan 2026)",
+     "about": "Centrepiece floral replica. In 2026 it was Tejaswi's house 'Niruttara' and a floral Western Ghats",
+     "u": "https://www.goodreturns.in/news/bengaluru-lalbagh-flower-show-2026-ticket-prices-change-on-weekend-how-to-book-tickets-online-1482247.html",
+     "src": "goodreturns.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "lalbagh-west-gate-ticket-counter",
+     "t": "Lalbagh West Gate (ticket counter)",
+     "area": "Lalbagh West / RV Road",
+     "ll": [
+      12.9483,
+      77.58
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "As the show",
+     "about": "Closest gate to Lalbagh metro station (Green Line)",
+     "u": "https://karnatakatourism.org/en/blogs/lalbagh-flower-show-2026",
+     "src": "karnatakatourism.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "lalbagh-main-gate-ticket-counter",
+     "t": "Lalbagh Main Gate (ticket counter)",
+     "area": "Lalbagh Fort Road / Double Road side",
+     "ll": [
+      12.9537,
+      77.5858
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "As the show",
+     "about": "Main entrance. No vehicles inside the garden; limited parking nearby",
+     "u": "https://curlytales.com/india/trending/lalbagh-flower-show-begins-in-bengaluru-timings-ticket-prices-more/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ]
+  },
+  {
+   "id": "ramzan-2027",
+   "name": "Ramzan 2027 (iftar food nights)",
+   "from": "2027-02-09",
+   "to": "2027-03-09",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-02-09",
+     "label": "Expected first fast (crescent to be sighted on the evening of 8 Feb)"
+    },
+    {
+     "date": "2027-03-05",
+     "label": "Jumu'atul-Vida, the last Friday of Ramzan (DoPT restricted holiday)"
+    }
+   ],
+   "about": "After iftar, crowds head to the food streets of Muslim neighbourhoods for kebabs, haleem, pathar ka gosht, seekh and sharbat, usually from about 6:30 pm until late. Since 2024, stalls on the Mosque Road footpaths have been banned and restaurants run counters inside their own premises.",
+   "keywords": [
+    "ramzan",
+    "ramadan",
+    "iftar",
+    "haleem",
+    "kebab",
+    "seekh",
+    "pathar ka gosht",
+    "food street",
+    "ramzan food mela",
+    "sheer khurma",
+    "phirni",
+    "night food walk",
+    "mosque road"
+   ],
+   "sources": [
+    {
+     "name": "Dates: staffnews.in",
+     "url": "https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Moon-sighting dependent. timeanddate lists the start of Ramadan in India as Tue 9 Feb 2027 (tentative). This was seen in search results; the page itself returned 403. Jamat-ul-Vida Fri 5 Mar 2027 is from DoPT (https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html) and Drik Panchang. The month ends with Eid al-Fitr, expected on 10 Mar 2027.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "mosque-road",
+     "t": "Mosque Road",
+     "area": "Frazer Town",
+     "ll": [
+      12.9969,
+      77.6143
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Evenings after iftar (a 2023 curb required closing by 1 am)",
+     "p": 0,
+     "about": "Bengaluru's best-known iftar food street (Karama, Savera, Chichaba's Taj). Footpath stalls banned since 2024",
+     "u": "https://www.thenewsminute.com/karnataka/bbmp-tries-shut-down-ramzan-food-trail-frazer-town-later-allows-curbs-176070",
+     "src": "thenewsminute.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2023
+    },
+    {
+     "id": "shivajinagar-russell-market-jumma-masjid-road",
+     "t": "Shivajinagar (Russell Market / Jumma Masjid Road)",
+     "area": "Shivajinagar",
+     "ll": [
+      12.985,
+      77.6058
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "From about 6:30 pm",
+     "p": 0,
+     "about": "Kebab and haleem carts, and camel seekh",
+     "u": "https://curlytales.com/india/food/ramadan-best-food-streets-in-bengaluru-for-iftar-special-kebabs-haleem-shahtoot-malai/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "tannery-road",
+     "t": "Tannery Road",
+     "area": "Tannery Road / Richards Town",
+     "ll": [
+      13.0048,
+      77.6123
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Evenings",
+     "p": 0,
+     "about": "Murtabak, chicken chops and caramel custard during Ramzan",
+     "u": "https://curlytales.com/india/food/ramadan-best-food-streets-in-bengaluru-for-iftar-special-kebabs-haleem-shahtoot-malai/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "johnson-market-bilal-masjid-road",
+     "t": "Johnson Market / Bilal Masjid Road",
+     "area": "Richmond Town",
+     "ll": [
+      12.9642,
+      77.6062
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Evenings",
+     "p": 0,
+     "about": "Kuska, handi biryani and mohabbat ka sharbat",
+     "u": "https://curlytales.com/india/food/ramadan-best-food-streets-in-bengaluru-for-iftar-special-kebabs-haleem-shahtoot-malai/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Ramzan 2027 (iftar food nights)",
+   "foodKey": "ramzan",
+   "cuisine": [
+    "mughlai",
+    "kebabs",
+    "biryani"
+   ]
+  },
+  {
+   "id": "maha-shivaratri-2027",
+   "name": "Maha Shivaratri 2027",
+   "from": "2027-03-06",
+   "to": "2027-03-07",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2027-03-06",
+     "label": "Maha Shivaratri (Saturday): all-night jagarane; first prahar puja 6:29 pm"
+    },
+    {
+     "date": "2027-03-07",
+     "label": "Nishita kaal puja 12:07-12:55 am; vigil ends at dawn"
+    }
+   ],
+   "about": "Devotees queue at old Shiva temples for abhisheka and keep an all-night jagarane with bhajans. Big temples such as Shivoham run 24-hour programmes and light shows.",
+   "keywords": [
+    "shivaratri",
+    "maha shivaratri",
+    "mahashivratri",
+    "jagarane",
+    "jaagaran",
+    "abhisheka",
+    "rudrabhisheka",
+    "shiva",
+    "linga",
+    "night vigil",
+    "bhajan",
+    "om namah shivaya"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/festivals/maha-shivaratri/maha-shivaratri-date-time.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Sat 6 Mar 2027, Chaturdashi from 12:03 pm on 6 Mar to 1:46 pm on 7 Mar (https://www.drikpanchang.com/festivals/maha-shivaratri/maha-shivaratri-date-time.html?geoname-id=1277333&year=2027). DoPT 2027 restricted holiday: Maha Shivratri Sat 6 Mar (https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html). CalendarLabs' unofficial Karnataka list also gives 6 Mar.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "kadu-malleshwara-temple",
+     "t": "Kadu Malleshwara Temple",
+     "area": "Malleswaram",
+     "ll": [
+      13.0052,
+      77.5717
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "17th-century temple. Shivaratri is its main annual festival and draws thousands",
+     "u": "https://en.wikipedia.org/wiki/Kadu_Malleshwara_Temple",
+     "src": "en.wikipedia.org",
+     "checked": "2026-10-10"
+    },
+    {
+     "id": "sri-dakshinamukha-nandi-tirtha-kalyani-kshetra",
+     "t": "Sri Dakshinamukha Nandi Tirtha Kalyani Kshetra",
+     "area": "Malleswaram (opposite Kadu Malleshwara)",
+     "ll": [
+      13.0052,
+      77.5717
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "7:30 am-12 pm and 5-8:30 pm on regular days",
+     "p": 0,
+     "about": "Ancient shrine rediscovered in 1997: a Nandi pours water onto a linga and into a stepped tank. Big Shivaratri crowds",
+     "u": "https://en.wikipedia.org/wiki/Sri_Dakshinamukha_Nandi_Tirtha_Kalyani_Kshetra",
+     "src": "en.wikipedia.org",
+     "checked": "2026-10-10"
+    },
+    {
+     "id": "gavi-gangadhareshwara-temple",
+     "t": "Gavi Gangadhareshwara Temple",
+     "area": "Gavipuram",
+     "ll": [
+      12.9482,
+      77.563
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Extended hours on Shivaratri (times not published)",
+     "p": 0,
+     "about": "Rock-cut cave temple linked to Kempe Gowda",
+     "u": "https://en.wikipedia.org/wiki/Gavi_Gangadhareshwara_Temple",
+     "src": "en.wikipedia.org",
+     "checked": "2026-10-10"
+    },
+    {
+     "id": "halasuru-someshwara-temple",
+     "t": "Halasuru Someshwara Temple",
+     "area": "Halasuru (Ulsoor)",
+     "ll": [
+      12.9756,
+      77.6239
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Chola-era temple; over 1 lakh visitors on Shivaratri",
+     "u": "https://en.wikipedia.org/wiki/Halasuru_Someshwara_Temple",
+     "src": "en.wikipedia.org",
+     "checked": "2026-10-10"
+    },
+    {
+     "id": "shivoham-shiva-temple",
+     "t": "Shivoham Shiva Temple",
+     "area": "Old Airport Road, Murugeshpalya",
+     "ll": [
+      12.9578,
+      77.6564
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "2026: open 24 hours from 6 am; aarti every 2 hours; jaagaran 10 pm-4 am; light shows from 8:20 pm",
+     "about": "65-ft Shiva statue, with about 1-1.5 lakh Shivaratri visitors estimated. The 2026 schedule is from search results only, because the temple's page failed to load",
+     "u": "https://shivohamshivatemple.org/MSR2026/index.html",
+     "src": "shivohamshivatemple.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Maha Shivaratri 2027"
+  },
+  {
+   "id": "eid-al-fitr-2027",
+   "name": "Eid al-Fitr 2027",
+   "from": "2027-03-10",
+   "to": "2027-03-10",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-03-10",
+     "label": "Expected Eid (Wednesday): morning namaz at Eidgahs, subject to moon sighting"
+    }
+   ],
+   "about": "Morning Eid namaz at Eidgahs and the big mosques, followed by family visits with sheer khurma and biryani, and Eid shopping in Shivajinagar and Frazer Town.",
+   "keywords": [
+    "eid",
+    "eid ul fitr",
+    "eid al fitr",
+    "ramzan eid",
+    "eid mubarak",
+    "namaz",
+    "eidgah",
+    "idgah",
+    "sheer khurma",
+    "biryani",
+    "chand raat",
+    "eid special"
+   ],
+   "sources": [
+    {
+     "name": "Dates: staffnews.in",
+     "url": "https://www.staffnews.in/2026/07/list-of-holidays-for-the-year-2027-gazetted.html",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Moon-sighting dependent. DoPT 2027 gazetted holiday: Id-ul-Fitr Wed 10 Mar (https://www.staffnews.in/2026/07/list-of-holidays-for-the-year-2027-gazetted.html). Drik Panchang: Wed 10 Mar (https://www.drikpanchang.com/calendars/indian/muslim-festivals/eid-al-fitr/eid-al-fitr-date-time.html?year=2027). DISAGREEMENT: CalendarLabs' unofficial Karnataka list has Khutba-e-Ramzan on 9 Mar (https://www.calendarlabs.com/karnataka-state-holidays-2027/), and some Islamic calendars estimate 11 Mar. The final date depends on the crescent sighting on the evening of 9 Mar.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "idgah-maidan-eidgah-e-chamarajpet",
+     "t": "Idgah Maidan (Eidgah-e-Chamarajpet)",
+     "area": "Chamarajpet",
+     "ll": [
+      12.9584,
+      77.5629
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Namaz 9:30 am (2025, 2026)",
+     "p": 0,
+     "about": "The city's main Eidgah. A 2022 High Court order allows prayers here only on Ramzan Eid and Bakrid",
+     "u": "https://www.ibtimes.co.in/eid-ul-fitr-2026-namaz-timings-bengaluru-complete-list-mosques-eidgahs-899641",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "jamia-masjid",
+     "t": "Jamia Masjid",
+     "area": "City Market (KR Market)",
+     "ll": [
+      12.964,
+      77.5786
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Namaz 7:30 am (2026)",
+     "p": 0,
+     "about": "Historic mosque at KR Market",
+     "u": "https://www.ibtimes.co.in/eid-ul-fitr-2026-namaz-timings-bengaluru-complete-list-mosques-eidgahs-899641",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "haji-sir-ismail-sait-masjid",
+     "t": "Haji Sir Ismail Sait Masjid",
+     "area": "Frazer Town",
+     "ll": [
+      13.001,
+      77.6155
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Namaz 6:30 am and 7:30 am (2026)",
+     "p": 0,
+     "about": "Two jamaats. Mosque Road food street is close by",
+     "u": "https://www.ibtimes.co.in/eid-ul-fitr-2026-namaz-timings-bengaluru-complete-list-mosques-eidgahs-899641",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "mosque-road-eid-food",
+     "t": "Mosque Road (Eid food)",
+     "area": "Frazer Town",
+     "ll": [
+      12.9969,
+      77.6143
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Evenings",
+     "p": 0,
+     "about": "Eid-eve and Eid-day feasting at the Ramzan restaurants",
+     "u": "https://curlytales.com/india/food/ramadan-best-food-streets-in-bengaluru-for-iftar-special-kebabs-haleem-shahtoot-malai/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Eid al-Fitr 2027",
+   "foodKey": "eid",
+   "cuisine": [
+    "mughlai",
+    "kebabs",
+    "biryani"
+   ]
+  },
+  {
+   "id": "holi-2027",
+   "name": "Holi 2027",
+   "from": "2027-03-21",
+   "to": "2027-03-23",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-03-21",
+     "label": "Holika Dahan per Drik Panchang Bengaluru (6:30-8:53 pm)"
+    },
+    {
+     "date": "2027-03-22",
+     "label": "Rangwali Holi (colour day) per Drik Panchang; Holika Dahan per DoPT"
+    },
+    {
+     "date": "2027-03-23",
+     "label": "Holi as a central-government gazetted holiday (DoPT)"
+    }
+   ],
+   "about": "Mostly ticketed open-air colour parties with DJs, rain dances and foam zones at hotels, malls and event grounds (Whitefield, Palace Grounds, Sarjapur), plus community colour play in North-Indian neighbourhoods and apartments.",
+   "keywords": [
+    "holi",
+    "holi party",
+    "colours",
+    "rang",
+    "gulal",
+    "rain dance",
+    "foam party",
+    "pool party",
+    "organic colours",
+    "colour run",
+    "holika dahan",
+    "dhulandi",
+    "rang barse"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/festivals/holi/festivals-holika-dahan-timings.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "DISAGREEMENT on the colour day. Drik Panchang (Bengaluru) puts Holika Dahan on Sun 21 Mar and Rangwali Holi on Mon 22 Mar, with Purnima from 6:21 pm on 21 Mar to 4:13 pm on 22 Mar (https://www.drikpanchang.com/festivals/holi/festivals-holika-dahan-timings.html?geoname-id=1277333&year=2027). DoPT 2027 makes Holi a gazetted holiday on Tue 23 Mar (https://www.staffnews.in/2026/07/list-of-holidays-for-the-year-2027-gazetted.html) and Holika Dahan a restricted holiday on Mon 22 Mar (https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html). No 2027 Bengaluru Holi events are announced. Ticketed parties usually cluster on the nearest weekend: 2026 events ran 28 Feb-6 Mar and 2025 events 13-16 Mar.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "palace-grounds-holi-parties-e-g-great-indian-hol",
+     "t": "Palace Grounds Holi parties (e.g. Great Indian Holi Festival at Pebble)",
+     "area": "Palace Grounds",
+     "ll": [
+      12.9992,
+      77.5897
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "Several ticketed Holi events across the Palace Grounds venues each year (13-16 Mar 2025; 4 Mar 2026)",
+     "u": "https://www.thrillophilia.com/holi-events-in-bangalore",
+     "src": "thrillophilia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "kings-court-palace-grounds-gabbar-holi",
+     "t": "Kings Court, Palace Grounds (Gabbar Holi)",
+     "area": "Palace Grounds",
+     "ll": [
+      13.0078,
+      77.5854
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "From 11 am (2026)",
+     "about": "Gabbar Holi's 2026 Palace Grounds edition",
+     "u": "https://tourismquest.com/2026/03/02/ticket-to-holiwood-bengalurus-biggest-holi-2026-bashes-are-live-on-bookmyshow/",
+     "src": "tourismquest.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "radha-hometel-gulaaal-season-9",
+     "t": "Radha Hometel (Gulaaal Season 9)",
+     "area": "Whitefield (EPIP Zone)",
+     "ll": [
+      12.9775,
+      77.7134
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "From 11:30 am (2026)",
+     "about": "Recurring Gulaaal series. Season 9 ran 1-4 Mar 2026",
+     "u": "https://tourismquest.com/2026/03/02/ticket-to-holiwood-bengalurus-biggest-holi-2026-bashes-are-live-on-bookmyshow/",
+     "src": "tourismquest.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "bhoruka-tech-park-maha-holi",
+     "t": "Bhoruka Tech Park (Maha Holi)",
+     "area": "Whitefield / Hoodi",
+     "ll": [
+      12.9937,
+      77.7055
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "From 11 am (2026)",
+     "about": "Main stage, rain-dance arenas and foam zones (3-4 Mar 2026)",
+     "u": "https://tourismquest.com/2026/03/02/ticket-to-holiwood-bengalurus-biggest-holi-2026-bashes-are-live-on-bookmyshow/",
+     "src": "tourismquest.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "vivanta-bengaluru-whitefield-rang-e-bahaar",
+     "t": "Vivanta Bengaluru Whitefield (Rang-E-Bahaar)",
+     "area": "Whitefield",
+     "ll": [
+      12.9867,
+      77.7376
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "Premium hotel Holi party (14-16 Mar 2025; 1-4 Mar 2026)",
+     "u": "https://tourismquest.com/2026/03/02/ticket-to-holiwood-bengalurus-biggest-holi-2026-bashes-are-live-on-bookmyshow/",
+     "src": "tourismquest.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "phoenix-mall-of-asia-rang-vansh",
+     "t": "Phoenix Mall of Asia (Rang Vansh)",
+     "area": "Byatarayanapura",
+     "ll": [
+      13.0709,
+      77.5903
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "From 11 am (2026)",
+     "about": "Holi event in the mall's Eden event area, 4 Mar 2026",
+     "u": "https://tourismquest.com/2026/03/02/ticket-to-holiwood-bengalurus-biggest-holi-2026-bashes-are-live-on-bookmyshow/",
+     "src": "tourismquest.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "iskcon-sri-radha-krishna-temple-hare-krishna-hil",
+     "t": "ISKCON Sri Radha Krishna Temple (Hare Krishna Hill)",
+     "area": "Rajajinagar (Chord Road)",
+     "ll": [
+      13.0099,
+      77.5511
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "From 6 pm (2026)",
+     "p": 0,
+     "about": "Gaura Purnima on the Holi full moon: kirtan and pallakki utsava (no colour play listed)",
+     "u": "https://www.iskconbangalore.org/sri-gaura-purnima/",
+     "src": "iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Holi 2027"
+  },
+  {
+   "id": "ugadi-2027",
+   "name": "Ugadi 2027",
+   "from": "2027-04-06",
+   "to": "2027-04-07",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2027-04-06",
+     "label": "Ugadi eve: peak market shopping (pattern from 2026)"
+    },
+    {
+     "date": "2027-04-07",
+     "label": "Ugadi (Wednesday): bevu-bella, obbattu, new Shaka year 1949"
+    }
+   ],
+   "about": "Families buy mango leaves for the door toran, neem and jaggery for bevu-bella, and flowers and fruit at crowded markets the day before. They make or buy obbattu/holige and visit temples.",
+   "keywords": [
+    "ugadi",
+    "yugadi",
+    "bevu bella",
+    "obbattu",
+    "holige",
+    "mango leaves",
+    "toran",
+    "panchanga",
+    "kannada new year",
+    "hosa varsha",
+    "chandramana ugadi",
+    "festive market"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/festivals/yugadi/yugadi-newyear-date.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Yugadi Wed 7 Apr 2027, Padya tithi from 5:20 am on 7 Apr to 4:28 am on 8 Apr (https://www.drikpanchang.com/festivals/yugadi/yugadi-newyear-date.html?geoname-id=1277333&year=2027). DoPT 2027 restricted holiday: Chaitra Sukladi/Ugadi Wed 7 Apr (https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html). DISAGREEMENT: CalendarLabs and publicholidays.in (unofficial) give 8 Apr (https://www.calendarlabs.com/karnataka-state-holidays-2027/). The Karnataka 2027 list has not been notified yet.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "kr-market-city-market",
+     "t": "KR Market (City Market)",
+     "area": "KR Market / City Market",
+     "ll": [
+      12.9657,
+      77.5763
+     ],
+     "hrs": [
+      6,
+      21
+     ],
+     "hoursText": "From early morning",
+     "p": 0,
+     "about": "Busiest Ugadi market. In 2026 mango leaves cost Rs 25-30 a bunch and neem Rs 20",
+     "u": "https://newsable.asianetnews.com/karnataka-news/ugadi-2026-festive-shopping-peaks-in-bengaluru-prices-slightly-higher-articleshow-6ey9o19",
+     "src": "newsable.asianetnews.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "malleswaram-8th-cross-market",
+     "t": "Malleswaram 8th Cross market",
+     "area": "Malleswaram",
+     "ll": [
+      12.9982,
+      77.5714
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Brisk Ugadi-eve trade in flowers, mango leaves and fruit (2026)",
+     "u": "https://newsable.asianetnews.com/karnataka-news/ugadi-2026-festive-shopping-peaks-in-bengaluru-prices-slightly-higher-articleshow-6ey9o19",
+     "src": "newsable.asianetnews.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "yeshwanthpur-market",
+     "t": "Yeshwanthpur market",
+     "area": "Yeshwanthpur",
+     "ll": [
+      13.0206,
+      77.5546
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Heavy Ugadi shopping crowds in 2026",
+     "u": "https://newsable.asianetnews.com/karnataka-news/ugadi-2026-festive-shopping-peaks-in-bengaluru-prices-slightly-higher-articleshow-6ey9o19",
+     "src": "newsable.asianetnews.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "jayanagar-market",
+     "t": "Jayanagar market",
+     "area": "Jayanagar 4th Block",
+     "ll": [
+      12.9298,
+      77.5843
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "One of the busy Ugadi markets reported in 2026",
+     "u": "https://newsable.asianetnews.com/karnataka-news/ugadi-2026-festive-shopping-peaks-in-bengaluru-prices-slightly-higher-articleshow-6ey9o19",
+     "src": "newsable.asianetnews.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "mane-holige",
+     "t": "Mane Holige",
+     "area": "DVG Road, Basavanagudi",
+     "ll": [
+      12.9454,
+      77.5713
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "9 am-8 pm",
+     "about": "Small holige/obbattu shop: dal, coconut and fig holige",
+     "u": "https://lbb.in/bangalore/mane-holige-for-traditional-obbattu-and-pampering-of-the-sweet-tooth/",
+     "src": "lbb.in",
+     "checked": "2026-10-10"
+    },
+    {
+     "id": "halasuru-someshwara-temple",
+     "t": "Halasuru Someshwara Temple",
+     "area": "Halasuru (Ulsoor)",
+     "ll": [
+      12.9756,
+      77.6239
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Chola-era temple. Yugadi is among its listed festivals",
+     "u": "https://en.wikipedia.org/wiki/Halasuru_Someshwara_Temple",
+     "src": "en.wikipedia.org",
+     "checked": "2026-10-10"
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Ugadi 2027",
+   "foodKey": "ugadi",
+   "cuisine": [
+    "karnataka",
+    "udupi",
+    "south-indian"
+   ]
+  },
+  {
+   "id": "sri-rama-navami-2027",
+   "name": "Sri Rama Navami 2027",
+   "from": "2027-04-07",
+   "to": "2027-05-03",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2027-04-07",
+     "label": "89th Sree Ramanavami Global Music Festival opens (Fort High School grounds)"
+    },
+    {
+     "date": "2027-04-15",
+     "label": "Sri Rama Navami (Thursday): madhyahna muhurat 11:05 am-1:34 pm; panaka and kosambari"
+    },
+    {
+     "date": "2027-05-03",
+     "label": "Music festival closes"
+    }
+   ],
+   "about": "Temples hand out panaka (jaggery drink), kosambari (lentil salad) and buttermilk. Chamarajpet hosts the month-long Ramanavami classical music festival, running since 1939.",
+   "keywords": [
+    "ram navami",
+    "rama navami",
+    "ramanavami",
+    "sri rama navami",
+    "panaka",
+    "kosambari",
+    "majjige",
+    "carnatic",
+    "classical music",
+    "fort high school",
+    "ramaseva mandali",
+    "music festival"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/dashavatara/rama-navami/rama-navami-date-time.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Rama Navami Thu 15 Apr 2027 (https://www.drikpanchang.com/dashavatara/rama-navami/rama-navami-date-time.html?geoname-id=1277333&year=2027). DoPT 2027 gazetted holiday: Ram Navami Thu 15 Apr (https://www.staffnews.in/2026/07/list-of-holidays-for-the-year-2027-gazetted.html). Sree Ramaseva Mandali (organiser) announces the 89th festival from 7 Apr to 3 May 2027 and will release the schedule on 1 Jan 2027 (https://www.ramanavami.org/).",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "sree-ramaseva-mandali-ramanavami-global-music-fe",
+     "t": "Sree Ramaseva Mandali Ramanavami Global Music Festival",
+     "area": "Old Fort High School grounds, KR Road, Chamarajpet",
+     "ll": [
+      12.9585,
+      77.5736
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Evening concerts, 7 Apr-3 May 2027 (schedule due 1 Jan 2027)",
+     "about": "About four weeks of concerts by top Carnatic and Hindustani artists in a special pandal. Nearest metro: KR Market",
+     "u": "https://www.ramanavami.org/",
+     "src": "ramanavami.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2027
+    },
+    {
+     "id": "iskcon-sri-radha-krishna-temple-hare-krishna-hil",
+     "t": "ISKCON Sri Radha Krishna Temple (Hare Krishna Hill)",
+     "area": "Rajajinagar (Chord Road)",
+     "ll": [
+      13.0099,
+      77.5511
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "Evening programme",
+     "p": 0,
+     "about": "Rama Taraka homa and pallakki utsava; panaka and kosambari for all visitors",
+     "u": "https://www.iskconbangalore.org/sri-rama-navami-2024-celebrations/",
+     "src": "iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Sri Rama Navami 2027"
+  },
+  {
+   "id": "bengaluru-karaga-2027",
+   "name": "Bengaluru Karaga 2027",
+   "from": "2027-04-13",
+   "to": "2027-04-21",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-04-13",
+     "label": "Expected start: flag hoisting (Chaitra Shukla Saptami)"
+    },
+    {
+     "date": "2027-04-20",
+     "label": "Expected main Karaga procession night (Chaitra Purnima). It leaves the temple after midnight, about 1:30-2:10 am in 2025-26"
+    },
+    {
+     "date": "2027-04-21",
+     "label": "Procession returns in the morning (about 9:30-10 am in 2026)"
+    }
+   ],
+   "about": "A 9-11 day festival of the Thigala community at the Dharmaraya Swamy Temple. On Chaitra Purnima night a priest dressed as Draupadi carries the flower Karaga through the old pete areas, escorted by sword-bearing Veerakumaras, and stops at a Sufi dargah. More than 10 lakh people watched in 2026.",
+   "keywords": [
+    "karaga",
+    "bengaluru karaga",
+    "draupadi",
+    "dharmaraya",
+    "dharmaraya swamy",
+    "thigala",
+    "veerakumara",
+    "chaitra purnima",
+    "karaga procession",
+    "hasi karaga",
+    "pete",
+    "old bengaluru"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/vrats/purnimasidates.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "NOT ANNOUNCED as of 10 Oct 2026. The procession is held on Chaitra Purnima night. Drik Panchang (Bengaluru) puts Chaitra Purnima on Tue 20 Apr 2027, from 4:51 am on 20 Apr to 3:56 am on 21 Apr (https://www.drikpanchang.com/vrats/purnimasidates.html?geoname-id=1277333&year=2027). The start date assumes the usual roughly week-long run before Purnima. Past dates: 2024 ran 15-23 Apr (https://english.udayavani.com/article/bengaluru-karaga-festival-begins-today/1629707); 2025 procession on the night of 12 Apr (https://www.etvbharat.com/en/!state/bengaluru-karaga-lights-up-tech-city-with-spirit-tradition-and-togetherness-enn25041302646); 2026 ran from 26 Mar per Karnataka Tourism (https://karnatakatourism.org/en/experiences/bengaluru-karaga/), with the procession on the night of 1-2 Apr. Sources disagree on the 2026 start (DH reports flag hoisting about 24 Mar).",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "sri-dharmaraya-swamy-temple",
+     "t": "Sri Dharmaraya Swamy Temple",
+     "area": "Thigalarapete / Nagarathpete",
+     "ll": [
+      12.9655,
+      77.5833
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Procession leaves after midnight (about 2:10 am in 2026) and returns about 9:30-10 am",
+     "p": 0,
+     "about": "The Karaga starts and ends here after visiting 26 temples on a route of about 22 km",
+     "u": "https://www.etvbharat.com/en/state/bengaluru-karaga-festival-ends-with-devotion-and-harmony-lakhs-witness-sacred-tradition-enn26040205876",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "hazrat-tawakkal-mastan-dargah",
+     "t": "Hazrat Tawakkal Mastan Dargah",
+     "area": "Cottonpet",
+     "ll": [
+      12.9732,
+      77.5714
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Procession night",
+     "p": 0,
+     "about": "The Karaga circles the Sufi shrine three times, a symbol of Hindu-Muslim harmony",
+     "u": "https://www.etvbharat.com/en/state/bengaluru-karaga-festival-ends-with-devotion-and-harmony-lakhs-witness-sacred-tradition-enn26040205876",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "avenue-road-city-market-stretch-of-the-route",
+     "t": "Avenue Road / City Market stretch of the route",
+     "area": "Old city (pete)",
+     "ll": [
+      12.9698,
+      77.5797
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "2026 traffic curbs: 9 pm on 1 Apr to 7 pm on 2 Apr",
+     "p": 0,
+     "about": "Route stretch closed to vehicles from City Market Circle to Mysore Bank Circle",
+     "u": "https://www.countryandpolitics.in/2026/04/01/traffic-restrictions-announced-for-karaga-festival/",
+     "src": "countryandpolitics.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "sampangi-lake",
+     "t": "Sampangi Lake",
+     "area": "Sampangi Rama Nagar",
+     "ll": [
+      12.9683,
+      77.5903
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "The Karaga priest performs rituals here before the main Hoovina Karaga",
+     "u": "https://en.wikipedia.org/wiki/Bangalore_Karaga",
+     "src": "en.wikipedia.org",
+     "checked": "2026-10-10"
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Bengaluru Karaga 2027"
+  },
+  {
+   "id": "eid-al-adha-2027",
+   "name": "Eid al-Adha (Bakrid) 2027",
+   "from": "2027-05-17",
+   "to": "2027-05-17",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-05-17",
+     "label": "Expected Bakrid (Monday): early-morning namaz, subject to moon sighting"
+    }
+   ],
+   "about": "Early-morning Bakrid namaz at Eidgahs, followed by qurbani and family feasts. Police divert traffic around Chamarajpet and other prayer grounds.",
+   "keywords": [
+    "bakrid",
+    "bakri eid",
+    "eid al adha",
+    "eid ul adha",
+    "id-ul-zuha",
+    "qurbani",
+    "namaz",
+    "eidgah",
+    "idgah",
+    "eid mubarak",
+    "mutton biryani"
+   ],
+   "sources": [
+    {
+     "name": "Dates: staffnews.in",
+     "url": "https://www.staffnews.in/2026/07/list-of-holidays-for-the-year-2027-gazetted.html",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Moon-sighting dependent (10 Dhul Hijjah). DoPT 2027 gazetted: Id-ul-Zuha Mon 17 May (https://www.staffnews.in/2026/07/list-of-holidays-for-the-year-2027-gazetted.html). Drik Panchang: Mon 17 May (https://www.drikpanchang.com/calendars/indian/muslim-festivals/bakrid/eid-al-adha-date-time.html?year=2027). CalendarLabs' Karnataka list also gives 17 May. Some Islamic calendars estimate Sun 16 May.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "idgah-maidan-eidgah-e-chamarajpet",
+     "t": "Idgah Maidan (Eidgah-e-Chamarajpet)",
+     "area": "Chamarajpet",
+     "ll": [
+      12.9584,
+      77.5629
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Namaz 9:30 am (2025)",
+     "p": 0,
+     "about": "Biggest Bakrid gathering in the city; Mysore Road traffic is diverted",
+     "u": "https://www.ibtimes.co.in/eid-namaz-timings-bengaluru-2025-complete-list-mosques-eidgahs-bakrid-eid-al-adha-prayers-883980",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "jamia-masjid",
+     "t": "Jamia Masjid",
+     "area": "City Market (KR Market)",
+     "ll": [
+      12.964,
+      77.5786
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Namaz 7 am (2025)",
+     "p": 0,
+     "about": "Central mosque prayers at KR Market",
+     "u": "https://www.ibtimes.co.in/eid-namaz-timings-bengaluru-2025-complete-list-mosques-eidgahs-bakrid-eid-al-adha-prayers-883980",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "quddus-saheb-eidgah",
+     "t": "Quddus Saheb Eidgah",
+     "area": "Millers Road / Cantonment",
+     "ll": [
+      12.9949,
+      77.6012
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Namaz 9:30 am (2025)",
+     "p": 0,
+     "about": "Large open Eidgah on Millers Road",
+     "u": "https://www.ibtimes.co.in/eid-namaz-timings-bengaluru-2025-complete-list-mosques-eidgahs-bakrid-eid-al-adha-prayers-883980",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "haji-sir-ismail-sait-masjid",
+     "t": "Haji Sir Ismail Sait Masjid",
+     "area": "Frazer Town",
+     "ll": [
+      13.001,
+      77.6155
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Namaz 6:05 am and 7:15 am (2025)",
+     "p": 0,
+     "about": "Two jamaats. Mosque Road eateries are close by",
+     "u": "https://www.ibtimes.co.in/eid-namaz-timings-bengaluru-2025-complete-list-mosques-eidgahs-bakrid-eid-al-adha-prayers-883980",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "shivajinagar-food-streets-russell-market-area",
+     "t": "Shivajinagar food streets (Russell Market area)",
+     "area": "Shivajinagar",
+     "ll": [
+      12.985,
+      77.6058
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Kebab and biryani hub. No Bakrid-specific event source was found",
+     "u": "https://curlytales.com/india/food/ramadan-best-food-streets-in-bengaluru-for-iftar-special-kebabs-haleem-shahtoot-malai/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Eid al-Adha (Bakrid) 2027",
+   "foodKey": "eid",
+   "cuisine": [
+    "mughlai",
+    "kebabs",
+    "biryani"
+   ]
+  },
+  {
+   "id": "lalbagh-independence-day-flower-show-2027",
+   "name": "Lalbagh Independence Day Flower Show 2027",
+   "from": "2027-08-06",
+   "to": "2027-08-17",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-08-15",
+     "label": "Independence Day (Sunday), the peak crowd day"
+    }
+   ],
+   "about": "The second annual Lalbagh Glass House flower show, about 12 days around 15 August, with a themed floral replica of a heritage monument. More than 60,000 visitors came in the first two days of the 2026 show.",
+   "keywords": [
+    "flower show",
+    "lalbagh",
+    "lalbagh flower show",
+    "glass house",
+    "independence day",
+    "phala pushpa",
+    "horticulture",
+    "august",
+    "floral replica",
+    "botanical garden",
+    "hasiru"
+   ],
+   "sources": [
+    {
+     "name": "Dates: oneindia.com",
+     "url": "https://www.oneindia.com/bengaluru/lalbagh-independence-day-flower-show-2025-know-date-timings-ticket-price-and-more-7799727.html",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "NOT ANNOUNCED as of 10 Oct 2026. The dates are a placeholder based on past editions. Aug 2025 (218th): 7-18 Aug, theme Kittur Rani Chennamma and Sangolli Rayanna (https://www.oneindia.com/bengaluru/lalbagh-independence-day-flower-show-2025-know-date-timings-ticket-price-and-more-7799727.html). Aug 2026 (220th): 6-17 Aug, theme the Western Ganga dynasty (https://www.oneindia.com/bengaluru/lalbagh-independence-day-flower-show-2026-know-august-date-timings-entry-ticket-price-and-metro-d-8170135.html).",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "lalbagh-glass-house-main-exhibit",
+     "t": "Lalbagh Glass House (main exhibit)",
+     "area": "Lalbagh, Mavalli",
+     "ll": [
+      12.9498,
+      77.5866
+     ],
+     "hrs": [
+      9,
+      18
+     ],
+     "hoursText": "7 am-7 pm (Aug 2026)",
+     "about": "2026 centrepiece: a 50-ft floral Begur Panchalingeshwara temple and Talakad temples",
+     "u": "https://www.nativeplanet.com/travel-guide/lalbagh-independence-day-flower-show-2026-guide-tickets-parking-photo-spots-011-23561.html",
+     "src": "nativeplanet.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "lalbagh-west-gate-ticket-counter",
+     "t": "Lalbagh West Gate (ticket counter)",
+     "area": "Lalbagh West / RV Road",
+     "ll": [
+      12.9483,
+      77.58
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "As the show",
+     "about": "Metro-side entry (Lalbagh station)",
+     "u": "https://www.nativeplanet.com/travel-guide/lalbagh-independence-day-flower-show-2026-guide-tickets-parking-photo-spots-011-23561.html",
+     "src": "nativeplanet.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "lalbagh-main-gate-ticket-counter",
+     "t": "Lalbagh Main Gate (ticket counter)",
+     "area": "Lalbagh Fort Road / Double Road side",
+     "ll": [
+      12.9537,
+      77.5858
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "As the show",
+     "about": "Main entrance. Double Road and Siddapura gates also sell tickets",
+     "u": "https://www.oneindia.com/bengaluru/lalbagh-flower-show-2025-in-august-over-35-000-blooms-1-million-guests-expected-for-independence-day-7818777.html",
+     "src": "oneindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Lalbagh Independence Day Flower Show 2027"
+  },
+  {
+   "id": "varamahalakshmi-2027",
+   "name": "Varamahalakshmi Vrata 2027",
+   "from": "2027-08-12",
+   "to": "2027-08-13",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2027-08-12",
+     "label": "Festival eve: night-time flower market rush (in 2026 it ran from midnight to about 3 am)"
+    },
+    {
+     "date": "2027-08-13",
+     "label": "Varamahalakshmi Vrata (Friday before Shravana Purnima)"
+    }
+   ],
+   "about": "Families do the vrata at home with a decorated Lakshmi kalasha or a ready-made Lakshmi idol. The night before and on the festival morning, flower and fruit markets are packed, and prices double or triple.",
+   "keywords": [
+    "varamahalakshmi",
+    "varalakshmi",
+    "varalakshmi vratam",
+    "lakshmi puja",
+    "shravana friday",
+    "kalasha",
+    "kumkumarchane",
+    "flower market",
+    "kanakambara",
+    "mallige",
+    "jasmine",
+    "lakshmi idol"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/festivals/varalakshmi-vratam/varalakshmi-vratam-date-time.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Varalakshmi Vratam Fri 13 Aug 2027 (https://www.drikpanchang.com/festivals/varalakshmi-vratam/varalakshmi-vratam-date-time.html?geoname-id=1277333&year=2027). Rule: the Friday before Shravana Purnima, which falls on 17 Aug 2027 (https://www.drikpanchang.com/vrats/purnimasidates.html?geoname-id=1277333&year=2027). The Karnataka 2027 restricted-holiday list is not yet notified.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "kr-market-city-market",
+     "t": "KR Market (City Market)",
+     "area": "KR Market / City Market",
+     "ll": [
+      12.9657,
+      77.5763
+     ],
+     "hrs": [
+      6,
+      21
+     ],
+     "hoursText": "Festival rush from midnight to about 3 am (2026); flower lanes busiest 4:30-8 am",
+     "p": 0,
+     "about": "In 2026 kanakambara sold for up to Rs 5,000/kg and ready-made Lakshmi idols for Rs 2,000-8,000",
+     "u": "https://www.etvbharat.com/en/state/bengaluru-celebrates-varamahalakshmi-festival-amid-soaring-flower-prices-and-massive-shopping-rush-enn26082105226",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "malleswaram-8th-cross-market",
+     "t": "Malleswaram 8th Cross market",
+     "area": "Malleswaram",
+     "ll": [
+      12.9982,
+      77.5714
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Flowers, fruit and ready-made Lakshmi idols",
+     "u": "https://www.thehansindia.com/news/cities/bengaluru/varamahalakshmi-festival-shopping-picks-up-in-city-1111550",
+     "src": "thehansindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "gandhi-bazaar",
+     "t": "Gandhi Bazaar",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9459,
+      77.5706
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Flower and puja-item street; Lakshmi idols on sale in 2026",
+     "u": "https://www.thehansindia.com/news/cities/bengaluru/varamahalakshmi-festival-shopping-picks-up-in-city-1111550",
+     "src": "thehansindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "jayanagar-4th-block-market",
+     "t": "Jayanagar 4th Block market",
+     "area": "Jayanagar",
+     "ll": [
+      12.9298,
+      77.5843
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Ready-made Lakshmi idols and festival items (2026)",
+     "u": "https://www.thehansindia.com/news/cities/bengaluru/varamahalakshmi-festival-shopping-picks-up-in-city-1111550",
+     "src": "thehansindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "yeshwanthpur-market",
+     "t": "Yeshwanthpur market",
+     "area": "Yeshwanthpur",
+     "ll": [
+      13.0206,
+      77.5546
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Among the busiest festival markets in 2026",
+     "u": "https://www.thehansindia.com/news/cities/bengaluru/varamahalakshmi-festival-shopping-picks-up-in-city-1111550",
+     "src": "thehansindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "sri-prasanna-veeranjaneya-swamy-temple-12-ft-mah",
+     "t": "Sri Prasanna Veeranjaneya Swamy Temple (12-ft Mahalakshmi)",
+     "area": "Mahalakshmi Layout",
+     "ll": [
+      13.009,
+      77.5466
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "6 am-12:30 pm and 4:30-8:30 pm",
+     "p": 0,
+     "about": "A 12-ft Mahalakshmi on a lotus at the entrance and Shravana Lakshmi poojas. About 320 m from Mahalakshmi metro",
+     "u": "https://simple.wikipedia.org/wiki/Sri_Prasanna_Veeranjeneya_Swami_Temple",
+     "src": "simple.wikipedia.org",
+     "checked": "2026-10-10"
+    },
+    {
+     "id": "iskcon-vaikuntha-hill-sri-rajadhiraja-govinda-te",
+     "t": "ISKCON Vaikuntha Hill (Sri Rajadhiraja Govinda Temple)",
+     "area": "Vasanthapura, off Kanakapura Road",
+     "ll": [
+      12.8926,
+      77.5488
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Varamahalakshmi puja with kumkumarchana and abhisheka to Rajalakshmi Padmavati (2026)",
+     "u": "https://donations.iskconbangalore.org/varamahalakshmi-puja/",
+     "src": "donations.iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Varamahalakshmi Vrata 2027",
+   "cuisine": [
+    "karnataka",
+    "udupi"
+   ],
+   "veg": true
+  },
+  {
+   "id": "krishna-janmashtami-2027",
+   "name": "Sri Krishna Janmashtami 2027",
+   "from": "2027-08-25",
+   "to": "2027-08-26",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2027-08-25",
+     "label": "Krishna Janmashtami (Wednesday): fast, then nishita puja 11:59 pm-12:45 am"
+    },
+    {
+     "date": "2027-08-26",
+     "label": "Dahi Handi / Nandotsava"
+    }
+   ],
+   "about": "Devotees fast and crowd ISKCON's three Bengaluru venues for two days of abhishekas, pallakki processions and the midnight Maha Mangala Arati. Krishna temples hold special pujas, and ISKCON's KTPO venue runs dahi handi and children's Krishna-costume contests.",
+   "keywords": [
+    "janmashtami",
+    "krishna janmashtami",
+    "gokulashtami",
+    "krishnashtami",
+    "sri krishna jayanti",
+    "iskcon",
+    "midnight abhisheka",
+    "dahi handi",
+    "mosaru kudike",
+    "uriyadi",
+    "krishna costume",
+    "nandotsava"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/dashavatara/lord-krishna/krishna-janmashtami-date-time.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Wed 25 Aug 2027; Dahi Handi Thu 26 Aug (https://www.drikpanchang.com/dashavatara/lord-krishna/krishna-janmashtami-date-time.html?geoname-id=1277333&year=2027). DoPT 2027 gazetted: Janmashtami (Vaishnav) Wed 25 Aug (https://www.staffnews.in/2026/07/list-of-holidays-for-the-year-2027-gazetted.html). ISKCON Bangalore has not published its 2027 dates. In 2025 its main day was one day after the Smarta date. Udupi/Madhva mutts follow their own panchanga.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "iskcon-sri-radha-krishna-temple-hare-krishna-hil",
+     "t": "ISKCON Sri Radha Krishna Temple (Hare Krishna Hill)",
+     "area": "Rajajinagar (Chord Road)",
+     "ll": [
+      13.0099,
+      77.5511
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "2026: 8 am-10 pm on day 1; 8 am-midnight on Janmashtami",
+     "p": 0,
+     "about": "Midnight maha abhisheka and arati, jhulan seva and a 108-item bhog. Tens of thousands attended in 2025",
+     "u": "https://www.iskconbangalore.org/sri-krishna-janmashtami/",
+     "src": "iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "iskcon-vaikuntha-hill-sri-rajadhiraja-govinda-te",
+     "t": "ISKCON Vaikuntha Hill (Sri Rajadhiraja Govinda Temple)",
+     "area": "Vasanthapura, off Kanakapura Road",
+     "ll": [
+      12.8926,
+      77.5488
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "2026: 8 am-10 pm on day 1; 8 am-midnight on Janmashtami",
+     "p": 0,
+     "about": "9 pm abhisheka of Rajagopala with Rukmini and Satyabhama, then the midnight arati. Shuttles from parking lots",
+     "u": "https://www.iskconbangalore.org/sri-krishna-janmashtami/",
+     "src": "iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "iskcon-hare-krishna-dham-at-ktpo",
+     "t": "ISKCON Hare Krishna Dham at KTPO",
+     "area": "Whitefield",
+     "ll": [
+      12.9794,
+      77.7199
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "2026: 8 am-midnight on Janmashtami; 8 am-9 pm the next day",
+     "p": 0,
+     "about": "Large east-Bengaluru celebration: dahi handi, children's contests and concerts (2025-26)",
+     "u": "https://www.iskconbangalore.org/sri-krishna-janmashtami/",
+     "src": "iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "kote-venkataramana-swamy-temple",
+     "t": "Kote Venkataramana Swamy Temple",
+     "area": "Fort / KR Road, Chamarajpet (next to Tipu Sultan's Palace)",
+     "ll": [
+      12.9596,
+      77.5741
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Historic Venkataramana temple listed among Bengaluru's Janmashtami temples in 2025",
+     "u": "https://www.deccanherald.com/india/krishna-janmashtami-2025-celebration-temples-to-visit-in-bengaluru-krishna-song-tracks-in-kannada-3683784",
+     "src": "deccanherald.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Sri Krishna Janmashtami 2027",
+   "cuisine": [
+    "udupi",
+    "gujarati",
+    "sweets"
+   ],
+   "veg": true
+  },
+  {
+   "id": "gowri-ganesha-2027",
+   "name": "Gowri-Ganesha 2027",
+   "from": "2027-09-03",
+   "to": "2027-09-14",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2027-09-03",
+     "label": "Gowri Habba (Swarna Gowri Vrata)"
+    },
+    {
+     "date": "2027-09-04",
+     "label": "Ganesh Chaturthi (Saturday); madhyahna puja 11:05 am-12:25 pm"
+    },
+    {
+     "date": "2027-09-14",
+     "label": "Anant Chaturdashi: last big visarjan day"
+    }
+   ],
+   "about": "Families buy Gowri and clay Ganesha idols and puja kits, and neighbourhood pandals go up with permission. Idols are immersed on days 1, 3, 5 and later at lake kalyanis and mobile tanks. Basavanagudi's Bengaluru Ganesh Utsava runs about two weeks of poojas and big concerts. PoP idols and DJs were banned in 2026.",
+   "keywords": [
+    "ganesh chaturthi",
+    "ganesha",
+    "gowri ganesha",
+    "gowri habba",
+    "ganeshotsava",
+    "ganesh utsava",
+    "visarjan",
+    "immersion",
+    "clay ganesha",
+    "eco-friendly idol",
+    "pandal",
+    "kalyani",
+    "vinayaka"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/festivals/gowri-habba/swarna-gowri-vratha-date.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Gowri Habba Fri 3 Sep (https://www.drikpanchang.com/festivals/gowri-habba/swarna-gowri-vratha-date.html?geoname-id=1277333&year=2027); Ganesh Chaturthi Sat 4 Sep and Anant Chaturdashi Tue 14 Sep (https://www.drikpanchang.com/festivals/ganesh-chaturthi/ganesh-chaturthi-date-time.html?geoname-id=1277333&year=2027). DoPT 2027 restricted holiday: Ganesh Chaturthi Sat 4 Sep (https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html). CalendarLabs' Karnataka list also gives Varasiddhi Vinayaka Vrata on 4 Sep. The 2027 Bengaluru Ganesh Utsava dates are not announced.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "bengaluru-ganesh-utsava-sri-vidyaranya-yuvaka-sa",
+     "t": "Bengaluru Ganesh Utsava (Sri Vidyaranya Yuvaka Sangha)",
+     "area": "APS College grounds, Basavanagudi",
+     "ll": [
+      12.9378,
+      77.5692
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "2026: pooja 8:30-9:30 am and 4:30-6 pm; concerts from 6 pm daily",
+     "p": 0,
+     "about": "About two weeks of poojas and big-name concerts. The 64th edition ran 14-26 Sep 2026 and ended with a procession",
+     "u": "https://www.bgu.co.in/64thbgu.html",
+     "src": "bgu.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "dodda-ganapathi-temple",
+     "t": "Dodda Ganapathi Temple",
+     "area": "Bull Temple Road, Basavanagudi",
+     "ll": [
+      12.9429,
+      77.5682
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Giant monolithic Ganesha known for its benne (butter) alankara; heavy festival crowds",
+     "u": "https://www.outlookindia.com/brand-studio/top-ganesh-temples-in-bangalore-to-visit-during-ganesh-chaturthi",
+     "src": "outlookindia.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "halasuru-ulsoor-lake-immersion-kalyani",
+     "t": "Halasuru (Ulsoor) Lake immersion kalyani",
+     "area": "Halasuru",
+     "ll": [
+      12.9824,
+      77.6192
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "2026: immersion on alternate days only",
+     "p": 0,
+     "about": "Major immersion point, clay idols only (over 1 lakh expected in 2026). Cranes run 24 hours, and mobile tanks take small idols",
+     "u": "https://urbanacres.in/ulsoor-lake-sets-strict-plan-for-1-lakh-ganesha-idol-immersions/",
+     "src": "urbanacres.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "sankey-tank-immersion-kalyani",
+     "t": "Sankey Tank immersion kalyani",
+     "area": "Malleswaram / Sadashivanagar",
+     "ll": [
+      13.01,
+      77.5738
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Until 8 pm daily (2026)",
+     "p": 0,
+     "about": "Purpose-built immersion tank; one of the main immersion points",
+     "u": "https://www.etvbharat.com/en/state/bengaluru-gears-up-for-gowri-ganesha-festival-shopping-surges-despite-soaring-flower-fruit-prices-enn26091303009",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "yediyur-lake-immersion-pond",
+     "t": "Yediyur Lake immersion pond",
+     "area": "Jayanagar 6th Block",
+     "ll": [
+      12.9338,
+      77.5767
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Until 8 pm daily (2026)",
+     "p": 0,
+     "about": "Main immersion point for south Bengaluru",
+     "u": "https://www.etvbharat.com/en/state/bengaluru-gears-up-for-gowri-ganesha-festival-shopping-surges-despite-soaring-flower-fruit-prices-enn26091303009",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "hebbal-lake-immersion-point",
+     "t": "Hebbal Lake immersion point",
+     "area": "Hebbal",
+     "ll": [
+      13.0472,
+      77.5867
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Until 8 pm daily (2026)",
+     "p": 0,
+     "about": "One of the four major immersion lakes in 2026",
+     "u": "https://www.etvbharat.com/en/state/bengaluru-gears-up-for-gowri-ganesha-festival-shopping-surges-despite-soaring-flower-fruit-prices-enn26091303009",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "mavalli-rv-road-idol-stalls",
+     "t": "Mavalli / RV Road idol stalls",
+     "area": "Mavalli, near Lalbagh West Gate",
+     "ll": [
+      12.9528,
+      77.582
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Gowri and Ganesha idol shopping; in 2026 eco idols cost Rs 500-5,000 and Gowri kits Rs 400-600",
+     "u": "https://www.socialnews.xyz/2026/09/13/bengaluru-ganesha-festival-shopping-underway-gallery/",
+     "src": "socialnews.xyz",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Gowri-Ganesha 2027",
+   "cuisine": [
+    "karnataka",
+    "udupi",
+    "south-indian"
+   ]
+  },
+  {
+   "id": "onam-2027",
+   "name": "Onam 2027",
+   "from": "2027-09-03",
+   "to": "2027-09-12",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2027-09-03",
+     "label": "Atham, Onam day 1 (pookalam season begins)"
+    },
+    {
+     "date": "2027-09-11",
+     "label": "Uthradom (first Onam)"
+    },
+    {
+     "date": "2027-09-12",
+     "label": "Thiruvonam, the main Onam day (Sunday)"
+    }
+   ],
+   "about": "Bengaluru's large Malayali community holds Kerala Samajam Onam fairs, pookalam and thiruvathira contests, and apartment pookalams. Restaurants across Indiranagar, Koramangala and JP Nagar sell banana-leaf Onam sadya, dine-in and takeaway.",
+   "keywords": [
+    "onam",
+    "thiruvonam",
+    "sadya",
+    "sadhya",
+    "onam sadya",
+    "pookalam",
+    "athapookalam",
+    "thiruvathira",
+    "kerala",
+    "malayali",
+    "kerala samajam",
+    "onam chantha",
+    "payasam",
+    "kasavu"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/festivals/onam/onam-calendar.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru) Onam calendar: Atham Fri 3 Sep to Thiruvonam Sun 12 Sep 2027 (https://www.drikpanchang.com/festivals/onam/onam-calendar.html?geoname-id=1277333&year=2027). DoPT 2027 restricted holiday: Onam Sun 12 Sep (https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html). Restaurant sadyas usually run from about 10 days before to a few days after Thiruvonam. No 2027 Samajam dates are published yet.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "kerala-samajam-dooravaninagar-onam-chantha-onam-",
+     "t": "Kerala Samajam Dooravaninagar Onam Chantha (Onam fair)",
+     "area": "Jubilee English High School, T.C. Palya (Ramamurthy Nagar)",
+     "ll": [
+      13.016,
+      77.6911
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Four days before Thiruvonam",
+     "about": "Onam fair held since 1984: Onam goods, homemade pickles and cultural programmes",
+     "u": "https://keralasamajam.co.in/events/",
+     "src": "keralasamajam.co.in",
+     "checked": "2026-10-10"
+    },
+    {
+     "id": "salt-mango-tree",
+     "t": "Salt Mango Tree",
+     "area": "Indiranagar",
+     "ll": [
+      12.9704,
+      77.6399
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "2026 sadya: 22-30 Aug, 11:30 am-4:30 pm",
+     "about": "Week-long Onam sadya, dine-in or takeaway",
+     "u": "https://www.ibtimes.co.in/onam-2026-5-places-enjoy-traditional-sadya-bengaluru-905001",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "moplah-s",
+     "t": "Moplah's",
+     "area": "Koramangala",
+     "ll": [
+      12.9335,
+      77.621
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Onam day (5 Sep 2025)",
+     "about": "26-dish Onam sadya",
+     "u": "https://www.sakshipost.com/news/food/onam-2025-10-best-places-serving-grand-sadhya-bengaluru-447602",
+     "src": "sakshipost.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "kappa-chakka-kandhari",
+     "t": "Kappa Chakka Kandhari",
+     "area": "Koramangala 5th Block",
+     "ll": [
+      12.9405,
+      77.6236
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "2026: 25-26 Aug",
+     "about": "Onam sadya, with a takeaway meal box for groups",
+     "u": "https://www.ibtimes.co.in/onam-2026-5-places-enjoy-traditional-sadya-bengaluru-905001",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "kalpaney",
+     "t": "Kalpaney",
+     "area": "JP Nagar (also Indiranagar)",
+     "ll": [
+      12.9061,
+      77.5897
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "2026: Onam day lunch and dinner",
+     "about": "27-dish sadya",
+     "u": "https://www.ibtimes.co.in/onam-2026-5-places-enjoy-traditional-sadya-bengaluru-905001",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "anju-s-cafe-at-ranga-shankara",
+     "t": "Anju's Cafe at Ranga Shankara",
+     "area": "JP Nagar 2nd Phase",
+     "ll": [
+      12.9116,
+      77.5871
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "2026: sittings at 12 pm and 1:30 pm",
+     "about": "Theatre cafe that has served an Onam sadya for about two decades",
+     "u": "https://www.ibtimes.co.in/onam-2026-5-places-enjoy-traditional-sadya-bengaluru-905001",
+     "src": "ibtimes.co.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Onam 2027",
+   "foodKey": "onam",
+   "cuisine": [
+    "kerala"
+   ]
+  },
+  {
+   "id": "navaratri-dasara-2027",
+   "name": "Navaratri / Dasara 2027",
+   "from": "2027-09-30",
+   "to": "2027-10-10",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-09-30",
+     "label": "Ghatasthapana, Navaratri day 1"
+    },
+    {
+     "date": "2027-10-07",
+     "label": "Durga Ashtami (Drik Panchang, Bengaluru)"
+    },
+    {
+     "date": "2027-10-08",
+     "label": "Maha Navami begins (Navami tithi from 6:27 am)"
+    },
+    {
+     "date": "2027-10-09",
+     "label": "Ayudha Puja (Drik Panchang); Vijayadashami per Drik's Bengaluru page and DoPT"
+    },
+    {
+     "date": "2027-10-10",
+     "label": "Expected Karnataka Vijayadashami and Mysuru Jamboo Savari (Drik Mysore Dasara page)"
+    }
+   ],
+   "about": "Same pattern every year: Bombe Habba doll displays at home, doll markets, daily temple alankaras, Ayudha Puja for tools and vehicles on Mahanavami, and garba and dandiya nights.",
+   "keywords": [
+    "dasara",
+    "dussehra",
+    "navaratri",
+    "navratri",
+    "gombe",
+    "bombe",
+    "golu",
+    "doll",
+    "garba",
+    "dandiya",
+    "ayudha puja",
+    "vijayadashami",
+    "alankara",
+    "saraswati puja",
+    "sharannavaratri",
+    "jamboo savari"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/navratri/durga-puja/ayudha-puja-date-time.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Ghatasthapana Thu 30 Sep, Durga Ashtami 7 Oct, Ayudha Puja Sat 9 Oct (https://www.drikpanchang.com/navratri/durga-puja/ayudha-puja-date-time.html?geoname-id=1277333&year=2027) and Vijayadashami Sat 9 Oct (https://www.drikpanchang.com/festivals/vijayadashami/vijayadashami-date-time.html?geoname-id=1277333&year=2027). DoPT 2027: Dussehra Sat 9 Oct (https://www.staffnews.in/2026/07/list-of-holidays-for-the-year-2027-gazetted.html); Mahanavmi 8 Oct (https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html). DISAGREEMENT: Drik's Mysore Dasara page gives Sun 10 Oct 2027 (https://www.drikpanchang.com/dasara/mysore/mysore-dasara-date-time.html?year=2027), and unofficial Karnataka lists give Mahanavami 9 Oct and Vijayadashami 10 Oct (https://www.calendarlabs.com/karnataka-state-holidays-2027/). This is the same pattern as 2026, when Karnataka followed the Mysuru date, one day after the national date. Expected until the Karnataka 2027 holiday list and the Mysuru Dasara schedule are out.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "gandhi-bazaar-dasara-doll-gombe-shops",
+     "t": "Gandhi Bazaar Dasara doll (gombe) shops",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9459,
+      77.5706
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Clay and painted doll sets for Bombe Habba displays. Crowds were building ahead of Dasara 2026 (2026 details; recurs annually)",
+     "u": "https://newsable.asianetnews.com/gallery/karnataka-news/bengaluru-colourful-navaratri-dolls-draw-crowds-to-gandhi-bazaar-ahead-of-dasara-2026-udt9238",
+     "src": "newsable.asianetnews.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "malleswaram-8th-cross-doll-shops",
+     "t": "Malleswaram 8th Cross doll shops",
+     "area": "Malleswaram",
+     "ll": [
+      12.9982,
+      77.5714
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Lane of doll shops off 8th Cross selling Tamil Nadu clay dolls for gombe displays (2026 details; recurs annually)",
+     "u": "https://www.ranjanascraftblog.com/dasara-gombehabba-where-to-buy-dolls-in-bangalore/",
+     "src": "ranjanascraftblog.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2017
+    },
+    {
+     "id": "yuva-dasara-by-yuvaka-sangha-yuvapatha",
+     "t": "Yuva Dasara by Yuvaka Sangha (Yuvapatha)",
+     "area": "Jayanagar 4th T Block",
+     "ll": [
+      12.9273,
+      77.5871
+     ],
+     "hrs": [
+      10,
+      21
+     ],
+     "hoursText": "Dasara doll exhibition 10 am-8 pm; concerts from 5:45 pm (10-21 Oct 2026)",
+     "about": "Dasara doll exhibition plus nightly concerts, Yakshagana and bhajans for all of Navaratri (2026 details; recurs annually)",
+     "u": "https://yuvakasangha.org/yuvadasara/",
+     "src": "yuvakasangha.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "sri-banashankari-amma-temple",
+     "t": "Sri Banashankari Amma Temple",
+     "area": "Banashankari (Kanakapura Road)",
+     "ll": [
+      12.916,
+      77.5731
+     ],
+     "hrs": [
+      6.5,
+      20.5
+     ],
+     "hoursText": "6:30 am-1 pm and 4:30-8:30 pm on regular days (state temple portal)",
+     "p": 0,
+     "about": "Special alankaras and big crowds through Navaratri and on Vijayadashami (2026 details; recurs annually)",
+     "u": "https://www.etvbharat.com/en/!state/vijayadashami-in-bengaluru-a-festival-of-faith-unity-and-harmony-enn25100203929",
+     "src": "etvbharat.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "sri-sringeri-shankara-math-sharadamba-shankarapu",
+     "t": "Sri Sringeri Shankara Math (Sharadamba), Shankarapuram",
+     "area": "Shankarapuram, Basavanagudi",
+     "ll": [
+      12.9507,
+      77.57
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Sharannavaratri Mahotsava, with a different alankara of Goddess Sharada each day. 2026 edition announced (2026 details; recurs annually)",
+     "u": "https://www.sringeri.net/branches/karnataka/bangalore/shankarapuram",
+     "src": "sringeri.net",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "kr-market-flower-market-ayudha-puja-shopping",
+     "t": "KR Market flower market (Ayudha Puja shopping)",
+     "area": "KR Market / City Market",
+     "ll": [
+      12.9657,
+      77.5763
+     ],
+     "hrs": [
+      6,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Ash gourds, flowers and banana stems for Ayudha Puja. Prices spike in the days before (2026 details; recurs annually)",
+     "u": "https://newskarnataka.com/bengaluru/festive-rush-in-bengaluru-markets-sends-ash-gourd-and-flower-prices-soaring/01102025/",
+     "src": "newskarnataka.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "garba-nights-sri-bangalore-vaishnav-samaj-navrat",
+     "t": "Garba nights: Sri Bangalore Vaishnav Samaj Navratri Utsav",
+     "area": "Palace Grounds (Gate 5)",
+     "ll": [
+      12.9992,
+      77.5897
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "From 8:30 pm (2025)",
+     "about": "Traditional Gujarati garba (101st edition in 2025). Other ticketed dandiya nights also run across the Palace Grounds venues (2026 details; recurs annually)",
+     "u": "https://www.deccanherald.com/india/karnataka/bengaluru/garba-dandiya-nights-across-bengaluru-keep-it-traditional-this-navratri-3743395",
+     "src": "deccanherald.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Navaratri / Dasara 2027",
+   "foodKey": "navratri",
+   "cuisine": [
+    "gujarati",
+    "rajasthani",
+    "udupi",
+    "south-indian"
+   ],
+   "veg": true
+  },
+  {
+   "id": "durga-puja-2027",
+   "name": "Durga Puja 2027",
+   "from": "2027-10-05",
+   "to": "2027-10-10",
+   "status": "expected",
+   "days": [
+    {
+     "date": "2027-10-05",
+     "label": "Maha Shashthi: Bodhon, Kalparambha"
+    },
+    {
+     "date": "2027-10-06",
+     "label": "Maha Saptami: Nabapatrika (Kolabou) puja"
+    },
+    {
+     "date": "2027-10-07",
+     "label": "Maha Ashtami: Kumari Puja"
+    },
+    {
+     "date": "2027-10-08",
+     "label": "Sandhi Puja; Maha Navami begins"
+    },
+    {
+     "date": "2027-10-09",
+     "label": "Maha Navami (Bengal reckoning)"
+    },
+    {
+     "date": "2027-10-10",
+     "label": "Bijoya Dashami: sindoor khela and visarjan"
+    }
+   ],
+   "about": "The same community pujas recur every year, with pandal-hopping, bhog, cultural nights, dhunuchi naach and sindoor khela. Venues sometimes move (BARSHA moved to Electronic City in 2026), so check again in September 2027.",
+   "keywords": [
+    "durga",
+    "durga puja",
+    "pujo",
+    "puja pandal",
+    "pandal",
+    "durgotsav",
+    "dhunuchi",
+    "sindoor",
+    "sindur khela",
+    "bhog",
+    "pushpanjali",
+    "anandamela",
+    "dhak",
+    "sarbojanin",
+    "bijoya",
+    "shashthi",
+    "sandhi puja"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/navratri/durga-puja/durga-puja-calendar.html?geoname-id=1275004&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Kolkata): Bodhon/Kalparambha Tue 5 Oct, Nabapatrika 6 Oct, Kumari Puja 7 Oct, Sandhi Puja 8 Oct, Navami 8-9 Oct, Sindoor Utsav/visarjan Sun 10 Oct (https://www.drikpanchang.com/navratri/durga-puja/durga-puja-calendar.html?geoname-id=1275004&year=2027). Drik's Bengaluru page labels 5 Oct Shashthi through 10 Oct Dashami (https://www.drikpanchang.com/navratri/durga-puja/durga-puja-calendar.html?geoname-id=1277333&year=2027). PublicHolidays.in shifts Ashtami to 8 Oct. Bengaluru puja committees publish their own panjika-based schedules in September (in 2026 they differed by one day), so treat this as expected.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "the-bengalee-association-durga-puja",
+     "t": "The Bengalee Association Durga Puja",
+     "area": "Ulsoor / Cox Town (Assaye Road)",
+     "ll": [
+      12.9881,
+      77.6196
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "One of the city's oldest community pujas, at the association's Assaye Road premises. Anandamela on 15 Oct 2026 (2026 details; recurring puja, re-check venue)",
+     "u": "https://newsable.asianetnews.com/gallery/lifestyle/bengaluru-durga-puja-guide-2026-10-pandals-to-visit-for-memorable-celebration-pq2n2lo",
+     "src": "newsable.asianetnews.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "rt-nagar-socio-cultural-trust-sarbojanin-durga-p",
+     "t": "RT Nagar Socio Cultural Trust (Sarbojanin) Durga Puja",
+     "area": "Palace Grounds (Gate 9), Bellary Road",
+     "ll": [
+      12.9992,
+      77.5897
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "Billed as the city's biggest puja: Krishnanagar idol-makers, Chandannagar lights, about 90 food stalls (2025) (2026 details; recurring puja, re-check venue)",
+     "u": "https://www.theweek.in/wire-updates/national/2025/09/24/mds4-ka-bengali-durga-pooja.html",
+     "src": "theweek.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "jayamahal-sarbajanin-durga-puja",
+     "t": "Jayamahal Sarbajanin Durga Puja",
+     "area": "Jayamahal",
+     "ll": [
+      13.0013,
+      77.5976
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "Running for over 70 years, at the Jayamahal Ladies Club ground: community bhog and dhunuchi naach (2026 details; recurring puja, re-check venue)",
+     "u": "https://lbb.in/bangalore/durga-pujo-pandal-bangalore/",
+     "src": "lbb.in",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    },
+    {
+     "id": "sarathi-socio-cultural-trust-durga-puja",
+     "t": "Sarathi Socio-Cultural Trust Durga Puja",
+     "area": "Koramangala (KHB Colony)",
+     "ll": [
+      12.9369,
+      77.6168
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "At Mangala Kalyana Mantapa. Stage shows and a dhaki contest; 24th year in 2026 (2026 details; recurring puja, re-check venue)",
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "mytravellingstilettos.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "socio-cultural-association-durga-puja",
+     "t": "Socio-Cultural Association Durga Puja",
+     "area": "New Thippasandra / HAL 3rd Stage (near Indiranagar)",
+     "ll": [
+      12.9735,
+      77.6557
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "58th year in 2026, on the Sishu Griha Senior School ground (2026 details; recurring puja, re-check venue)",
+     "u": "https://mytravellingstilettos.com/top-places-to-see-durga-puja-in-bangalore/",
+     "src": "mytravellingstilettos.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    },
+    {
+     "id": "east-bengaluru-cultural-association-ebca-durga-p",
+     "t": "East Bengaluru Cultural Association (EBCA) Durga Puja",
+     "area": "Kattamanallur, Whitefield side",
+     "ll": [
+      13.0518,
+      77.7641
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Daily bhog 11:30 am-1 pm; evening prasad 7-8:30 pm (2026)",
+     "p": 0,
+     "about": "Bengali book fair, patachitra demonstration, dhunuchi and dandiya on Navami, sindur khela on Dashami (2026 details; recurring puja, re-check venue)",
+     "u": "https://ebcafamily.com/durga-puja-bangalore-2026.php",
+     "src": "ebcafamily.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2026
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Durga Puja 2027",
+   "foodKey": "durga-puja",
+   "cuisine": [
+    "bengali",
+    "odia",
+    "assamese"
+   ]
+  },
+  {
+   "id": "deepavali-2027",
+   "name": "Deepavali 2027",
+   "from": "2027-10-27",
+   "to": "2027-10-31",
+   "status": "confirmed",
+   "days": [
+    {
+     "date": "2027-10-27",
+     "label": "Dhanteras"
+    },
+    {
+     "date": "2027-10-28",
+     "label": "Naraka Chaturdashi (DoPT restricted holiday)"
+    },
+    {
+     "date": "2027-10-29",
+     "label": "Lakshmi Puja / Deepavali (DoPT gazetted holiday)"
+    },
+    {
+     "date": "2027-10-30",
+     "label": "Balipadyami / Bali Pratipada and Govardhan Puja"
+    },
+    {
+     "date": "2027-10-31",
+     "label": "Bhai Dooj"
+    }
+   ],
+   "about": "Same pattern as 2026: shopping in the old markets for diyas, lights and silks, green crackers from licensed stalls (bursting 8-10 pm only), and Balipadyami as the main Karnataka holiday.",
+   "keywords": [
+    "deepavali",
+    "diwali",
+    "deepotsava",
+    "diya",
+    "green crackers",
+    "crackers",
+    "lakshmi puja",
+    "naraka chaturdashi",
+    "balipadyami",
+    "bali padyami",
+    "akash kandil",
+    "rangoli",
+    "festival of lights",
+    "govardhan puja",
+    "bhai dooj"
+   ],
+   "sources": [
+    {
+     "name": "Dates: drikpanchang.com",
+     "url": "https://www.drikpanchang.com/diwali/diwali-puja-calendar.html?geoname-id=1277333&year=2027",
+     "date": "2026-10-10"
+    }
+   ],
+   "dateNote": "Drik Panchang (Bengaluru): Dhanteras 27 Oct, Narak Chaturdashi 28 Oct, Lakshmi Puja Fri 29 Oct, Bali Pratipada/Govardhan Puja Sat 30 Oct, Bhaiya Dooj Sun 31 Oct 2027 (https://www.drikpanchang.com/diwali/diwali-puja-calendar.html?geoname-id=1277333&year=2027). DoPT 2027: Diwali Fri 29 Oct (gazetted, https://www.staffnews.in/2026/07/list-of-holidays-for-the-year-2027-gazetted.html); Naraka Chaturdasi 28 Oct, Govardhan Puja 30 Oct, Bhai Duj 31 Oct (restricted, https://www.staffnews.in/2026/07/list-of-restricted-holidays-for-the-year-2027.html). Not yet notified: the Karnataka 2027 list. CalendarLabs' unofficial list puts Naraka Chaturdashi on 28 Oct and 'Balipadyami/Deepavali' on 29 Oct (https://www.calendarlabs.com/karnataka-state-holidays-2027/), so which day is the state holiday is still expected.",
+   "checked": "2026-10-10",
+   "places": [
+    {
+     "id": "chickpet-market-bvk-iyengar-road",
+     "t": "Chickpet market & BVK Iyengar Road",
+     "area": "Chickpet",
+     "ll": [
+      12.9698,
+      77.5757
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Silk sarees and jewellery for Deepavali, plus lights and lamps on BVK Iyengar Road (2024-25 info; recurring market)",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "commercial-street",
+     "t": "Commercial Street",
+     "area": "Shivajinagar / Tasker Town",
+     "ll": [
+      12.9822,
+      77.6083
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Festive clothes, sarees, decor and jewellery shopping (2024-25 info; recurring market)",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "jayanagar-4th-block-market",
+     "t": "Jayanagar 4th Block market",
+     "area": "Jayanagar",
+     "ll": [
+      12.9298,
+      77.5843
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Akash kandils, clay diyas and marigold or jasmine garlands (2024-25 info; recurring market)",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "malleswaram-8th-cross-market",
+     "t": "Malleswaram 8th Cross market",
+     "area": "Malleswaram",
+     "ll": [
+      12.9982,
+      77.5714
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Diyas, torans, puja items, fairy lights and lanterns (2024-25 info; recurring market)",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "gandhi-bazaar",
+     "t": "Gandhi Bazaar",
+     "area": "Basavanagudi",
+     "ll": [
+      12.9459,
+      77.5706
+     ],
+     "hrs": [
+      9,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "p": 0,
+     "about": "Earthen diyas, puja items, sweets and Mysore silk (2024-25 info; recurring market)",
+     "u": "https://curlytales.com/best-diwali-markets-in-bengaluru/",
+     "src": "curlytales.com",
+     "checked": "2026-10-10",
+     "year_of_info": 2024
+    },
+    {
+     "id": "iskcon-sri-radha-krishna-temple-hare-krishna-hil",
+     "t": "ISKCON Sri Radha Krishna Temple (Hare Krishna Hill)",
+     "area": "Rajajinagar (Chord Road)",
+     "ll": [
+      13.0099,
+      77.5511
+     ],
+     "hrs": [
+      8,
+      21
+     ],
+     "hoursText": "Hours not published yet",
+     "about": "Month-long Kartika Deepotsava lamp offering (7 Oct-5 Nov in 2025) and Govardhana Puja (2025 info; recurs annually)",
+     "u": "https://donations.iskconbangalore.org/festivalsevaslist",
+     "src": "donations.iskconbangalore.org",
+     "checked": "2026-10-10",
+     "year_of_info": 2025
+    }
+   ],
+   "draft": true,
+   "chip": "Festival: Deepavali 2027",
+   "foodKey": "deepavali",
+   "cuisine": [
+    "sweets",
+    "gujarati",
+    "rajasthani",
+    "north-indian"
+   ]
+  }
+ ]
+}
