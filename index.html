@@ -340,14 +340,10 @@ details.more .more-body { display: flex; flex-direction: column; gap: 18px; padd
   #quiz { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; overscroll-behavior: contain; padding: 2px 12px 12px 2px; scrollbar-width: thin; }
 }
 
-/* Phones: who's coming, then the plan, then everything else, with a bar along the bottom. */
+/* Phones: the questions, then the plan, with a bar along the bottom that jumps to the plan. */
 .sumbar, .dock { display: none; }
 @media (max-width: 920px) {
   .grid { display: flex; flex-direction: column; align-items: stretch; gap: 26px; }
-  .grid > form { display: contents; }
-  .grid > form > * { order: 3; }
-  .grid > form > #secWho { order: 1; }
-  .right { order: 2; }
   .sumbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--muted); background: color-mix(in srgb, var(--purple) 6%, var(--surface)); border-radius: 10px; padding: 8px 12px; }
   .sumbar b { color: var(--ink); font-weight: 600; }
   body { padding-bottom: 80px; }
@@ -1748,7 +1744,7 @@ footer details p { margin: 0 0 8px; }
     var when = p.dates.length > 1 ? fmt(p.dates[0]) + "–" + fmt(p.dates[p.dates.length - 1]) : fmt(p.dates[0], { weekday: "short", day: "numeric", month: "short" });
     return '<div class="sumbar"><span><b>' + esc(when) + "</b> · " + esc(DURS[p.durI].l) + " · " + esc(bud ? bud[1] : "") + " · from " + esc(p.start) + '</span><button type="button" class="linkbtn" data-edit>Change</button></div>';
   }
-  function editAnswers() { var s = document.getElementById("secWhat"); s.scrollIntoView({ behavior: smooth(), block: "start" }); }
+  function editAnswers() { var s = document.getElementById("secWho"); s.scrollIntoView({ behavior: smooth(), block: "start" }); }
   function smooth() { try { return matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"; } catch (e) { return "auto"; } }
 
   // Plans 1, 2, 3… like the pages of search results.
@@ -1763,8 +1759,12 @@ footer details p { margin: 0 0 8px; }
     state.page = n; render(); track("plan-page");
     planEl.scrollIntoView({ behavior: smooth(), block: "start" }); focusPlan();
   }
-  // When the plan is off screen (you're answering questions below it), the bar offers a way back up to it.
-  function dockState() { var r = planEl.getBoundingClientRect(); document.getElementById("dock").classList.toggle("away", r.bottom < 120 || r.top > innerHeight * 0.7); }
+  // When the plan is off screen (you're answering the questions above it, or reading on below), the bar offers a way to it.
+  function dockState() {
+    var r = planEl.getBoundingClientRect(), below = r.top > innerHeight * 0.7;
+    document.getElementById("dock").classList.toggle("away", r.bottom < 120 || below);
+    document.getElementById("dockSee").textContent = "See your plan " + (below ? "↓" : "↑");
+  }
   function updateDock(pages) {
     dockState();
     var pos = document.getElementById("dockPos"), pg = document.querySelector(".dock-pg");
